@@ -1,4 +1,4 @@
 # BCA Notes
-Personal notes for my course course.
+My personal notes for the college degree that I'm pursuing.
 
 Course Name: Bachelor of Compter Applications (BCA)
