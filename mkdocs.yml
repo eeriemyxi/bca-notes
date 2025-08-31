@@ -5,6 +5,7 @@ docs_dir: notes/
 repo_name: "eeriemyxi/bca-notes"
 repo_url: "https://github.com/eeriemyxi/bca-notes"
 nav:
+  - Home: index.md
   - 1st Semester:
     - "AEC: Alternative English":
       - Syllabus: sem1/aec-eng/syllabus.md
