@@ -18,6 +18,11 @@ nav:
         - Sets: sem1/math/u1/sets.md
         - Relations: sem1/math/u1/relations.md
         - Functions: sem1/math/u1/functions.md
+      - Unit 2:
+        - Definition and Types: sem1/math/u2/first.md
+        - Operations: sem1/math/u2/second.md
+        - Identities and Inverses: sem1/math/u2/three.md
+        - Applications and Properties: sem1/math/u2/four.md
       - Previous Year Papers:
         - 2024: sem1/math/pyq/2024.md
     - "Computer Fundamentals":
