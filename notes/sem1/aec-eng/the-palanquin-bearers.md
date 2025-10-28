@@ -19,13 +19,15 @@
 * We bear her along like a pearl on a string.
 
 ## Summary
-This poem is about palki (palanquin) bearers who are carrying a dulhan (bride) in her doli.
+This poem is about a group of men, known as palanquin bearers, who are carrying a noble bride to her new home. They are singing happily as they walk.
 
-They are very happy and singing a geet (song) as they walk. They say the bride is very light and delicate. They are carrying her very softly and gently (naram se).
+The bearers feel that the bride is very light and easy to carry. They say they carry her "lightly" and "softly." They are happy and proud of their job, moving smoothly and "gaily" as they sing. They feel she is extremely precious and delicate, comparing her to a "pearl on a string."
 
-In their song, they say she is beautiful and moves gently, just like a phool (flower) in the wind or a bird on a river. They feel she is very precious, like a moti (pearl) on a necklace.
+The poem uses many comparisons to describe the bride's gentle movements as they walk. She sways gently like a "flower in the wind." She moves gracefully, like a "bird" skimming the top of a stream. She seems ethereal and joyful, like a "laugh from the lips of a dream." She is beautiful and bright, hanging like a "star" in the air or springing like a "beam" of light on an ocean wave.
 
-The song has mixed feelings. It is happy, but it also mentions a "tear from the eyes of a bride." This shows that the dulhan feels both khushi (happiness) for her new life and a little sadness for leaving her family's home.
+The poem also captures the mixed emotions of the moment. One comparison describes the bride falling "like a tear from the eyes of a bride." This single line shows that while the occasion is happy, the bride is also experiencing the natural sadness of leaving her childhood home.
+
+Overall, the poem paints a picture of a joyful, delicate, and precious moment, celebrating the beauty of the bride and the happiness of the bearers who are carefully carrying her.
 
 ## Questions
 1.  Who are the speakers in the poem "The Palanquin Bearers"?
