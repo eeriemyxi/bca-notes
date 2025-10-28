@@ -61,30 +61,53 @@ PDF Page: 10-17
 
 ## Answers
 
-1.  Basanta brings the spring festival of Bohag Bihu.
-2.  Kuli-ketaki’s cooing is mentioned as melodious in the beginning.
-3.  Prafulla's greatest ambition was to give a talk on the radio. If not a talk, at least a role in a play.
-4.  Prafulla went to Guwahati to pursue his ambition.
-5.  Dipak was a radio announcer at the radio station.
-6.  Because Dipak has been employed only recently. Also only had a part-time job there. He didn’t have much influence there yet.
-7.  Prafulla’s major drawback according to the story was his voice.
-8.  Due to all the backslash he received for his voice, he took an oath — a Bhishma Pratigya — that he would never sing again, under any circumstances.
-9.  After completing his BA, he took a job as a temporary teacher in one of the school in his village.
-10.  The radio authorities never invited any artiste from outside Guwahati because it would involve providing travelling and lodging allowances.
-11.  Prafulla doesn’t care about payment for his role, he is only interested in performing a drama role. He would rather pay to play a role than get payment.
-12.  Because just hearing it was enough to drive her crazy, the story claims.
-13.  The neighbor was sympathetic in her reaction. She was the voice of reason to his mother’s complaints. The neighbor backed the boy saying a man’s voice is to be sonorous, he isn’t going to sing songs or play the harmonium.
-14.  The girls were looking at him while giggling, covering their mouths with their chador-ends.
-15.  Because in the story it is mentioned that no girl has ever loved him, even though he loved countless number of girls.
-16.  The Bhishma Pratigya he took was to never sing again under any circumstances.
-17.  That every man sings a line or two after his marriage in front of his newly wedded wife.
-18.  Prafulla was afraid of the mic and so Dipak in an effort to encourage him said that the courage needed stand before a microphone is the same as standing before a stuffed tiger.
-19.  The name Bimbadhara frightened him, he thought it was a dangerous name, enough to cause his heartbeat to rise. He was also scared knowing that it was a Miss, due to his past rejections from women.
-20.  Dipak couldn’t stay with Prafulla during the audition because it was against the rules but also because he didn’t have the time for it anyway.
-21.  The audition was at three in the afternoon.
-22.  He reached the audition half an hour earlier.
-23.  When he reached the audition, he met one or two people who were returning from the audition. Which led him to fear if the audition was already over.
-24.  She was telling him to come inside in a strained voice. She was also calling to god. All signs of fatigue and stress from work.
-25.  The object that he was carrying was a musical instrument.
-26.  Prafulla was asked to sing.
-27.  Prafulla looked as if he had seen a ghost when he was asked to sing.
+1. Bohag Bihu.
+2. The kuli-ketaki.
+3. To give a talk on the radio or get a role in a play.
+4. Guwahati.
+5. A radio announcer.
+6. Dipak was new, had a part-time job, and auditions were mostly for show.
+7. His voice.
+8. That he would never sing again.
+9. A temporary teacher in a village school.
+10. To avoid paying for their travel and lodging (stay).
+11. He did not want any payment and was willing to pay them for a role.
+12. Because his voice was terrible and drove her crazy.
+13. She defended him, saying a man's voice should be deep (sonorous).
+14. They looked at him and laughed (giggled).
+15. He was not attractive, was an average student, and couldn't join cultural functions.
+16. That he would never sing again.
+17. That it is the bride's first test of the groom.
+18. To show that the microphone is harmless and not scary.
+19. He clutched his heart and thought it was a dangerous name.
+20. It was against the rules and he was busy in the announcing booth.
+21. Three in the afternoon.
+22. Half an hour early.
+23. He saw other people returning from the audition.
+24. She seemed tired (strained voice) but told him to come inside.
+25. A musical instrument.
+26. To sing.
+27. He was confused and asked, "Sing? What will I sing?"
+28. A Hindi song (Mere dil ne pukara aaja) and a Bihu song.
+29. Miss Bimbadhara fell off her chair laughing and the engineer turned off the switch.
+30. A motorcycle.
+31. Three months.
+32. He was furious (very angry).
+33. Because she had just failed him and laughed at him.
+34. Mr Das.
+35. A singing audition.
+36. Around fifteen.
+37. She was worried about losing her job.
+38. To pass him, give him a part in a drama, and ask for forgiveness.
+39. His vow (Bhishma Pratigya) to never sing again.
+40. That Prafulla might have committed suicide.
+41. It suggests they are disorganized, unfair, and rely on connections rather than talent.
+42. He is very determined to be on the radio, but he has a terrible voice.
+43. Because he was a very close friend and felt sorry for Prafulla.
+44. It uses Prafulla's terrible voice and the reactions to it (like the motorcycle sound) to make the situation funny.
+45. By describing his voice spreading over the universe or him wanting to live in a well.
+46. It implies that on radio, how you look or who you are doesn't matter, only the sound.
+47. The embarrassment at the well made him take a serious vow (Bhishma Pratigya) never to sing again.
+48. It causes the main problem; Prafulla went to the wrong audition (singing) by mistake.
+49. Dipak would have realized it was the wrong audition and taken Prafulla to the correct one.
+50. That small misunderstandings and poor organization can lead to big, embarrassing failures.
