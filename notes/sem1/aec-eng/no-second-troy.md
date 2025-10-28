@@ -19,11 +19,11 @@
 * Was there another Troy for her to burn?
 
 ## Summary
-The poet asks why he should blame a specific woman for making him miserable or for encouraging violent actions among common people.
+The speaker starts by asking why he should blame a certain woman for making him personally miserable. He also asks why he should blame her for encouraging poor, uneducated men to use violence in a political uprising, essentially turning the poor against the rich and powerful. He notes that the uprising failed only because the men's courage did not match their desire for change.
 
-He describes her as having a powerful and intense mind, like a fire, and a beauty that is tense and dangerous, like a tightened bow. He feels that her personality—proud, lonely, and serious—is out of place in the modern world.
-
-He concludes that he can't blame her for her actions because it's just her nature. He compares her to the famous Helen of Troy, who caused a great city to be destroyed. The poet asks, since she is so powerful, was there another great city like Troy for her to burn down? He implies that her destructive power is too great for the small conflicts of his time.
+The speaker then answers his own question. He says it was impossible for her to be peaceful because of her personality. He describes her mind as being noble but also intense and destructive, like a fire. He describes her beauty as being tense and dangerous, like a tightly pulled bow. He feels that this kind of serious, intense, and solitary person is old-fashioned and does not belong in the modern world.
+e
+He concludes that, given her nature, she had no other choice. He compares her to Helen of Troy, a famous beauty from mythology who caused the destruction of the great city of Troy. The speaker implies this woman has the same epic, destructive quality. Since there was no ancient, legendary city like Troy for her to destroy in modern times, she had to cause this smaller, political conflict instead. It was simply her destiny to cause destruction.
 
 ## Questions
 1.  Who is the author of the poem "No Second Troy"?
