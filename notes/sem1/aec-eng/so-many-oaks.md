@@ -1,7 +1,7 @@
 # Sujata Bhatt: So Many Oaks
 
 <figure markdown="span">
-  ![](https://img.notionusercontent.com/s3/prod-files-secure%2F7d8c4c50-8c92-4c59-ae55-a39d09d5e166%2Ff96a99a2-a2c7-4e2c-8102-dd2723234636%2FCnP_27082025_125501.png/size/w=2000?exp=1756728613&sig=cYQUYh_ALLaOUZhAMympVqCce_9_HnOBVPlr3uQjTw4&id=25c0e4ce-4d2f-800e-ac4e-d63621345360&table=block&userId=65e1bf10-15bc-42a5-a58f-f71b0b6f55f5){ width="500" }
+  ![](https://files.catbox.moe/k39vj9.png){ width="500" }
   <figcaption>Standing among ancient trees, where timeless nature witnesses the stories of our world</figcaption>
 </figure>
 
