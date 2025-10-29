@@ -1,0 +1,2826 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes for my college course.">
+      
+      
+        <meta name="author" content="myxi">
+      
+      
+      
+        <link rel="prev" href="../../syllabus/">
+      
+      
+        <link rel="next" href="../relations/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Sets - BCA Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="BCA Notes" class="md-header__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BCA Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="BCA Notes" class="md-nav__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BCA Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1st Semester
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/so-many-oaks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/the-palanquin-bearers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/no-second-troy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/photograph-of-me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/audition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/the-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-a-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of a Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of a Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#representation-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representation of Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-sets-in-mathematics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Sets in Mathematics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardinality-of-a-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardinality of a Set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification of Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finite-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finite Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Countable Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncountable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncountable Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-on-sets-and-venn-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations on Sets and Venn Diagrams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operations on Sets and Venn Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-set-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      Universal Set (U)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#venn-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Venn Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Set Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Set Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Union of Sets (∪)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection of Sets (∩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference-of-sets-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference of Sets (− or \)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-of-a-set-a-or-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complement of a Set (A' or Aᶜ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-difference-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetric Difference (Δ or ⊕)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laws-of-set-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Laws of Set Algebra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laws of Set Algebra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#de-morgans-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan's Laws
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principle-of-inclusion-and-exclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principle of Inclusion and Exclusion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principle of Inclusion and Exclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pie-for-two-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIE for Two Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pie-for-three-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIE for Three Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-general-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The General Principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of PIE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multisets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multisets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-of-a-multiset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardinality of a Multiset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submultisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submultisets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-multisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations on Multisets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operations on Multisets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    <span class="md-ellipsis">
+      Union
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-multisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of Multisets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basics-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-sets-and-venn-diagrams_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations on Sets and Venn Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-inclusion-and-exclusion-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principle of Inclusion and Exclusion (PIE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multisets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multisets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definition and Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/second/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/three/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/four/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications and Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pyq/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/unit-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction to C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-ii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-iii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-a-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of a Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of a Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#representation-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representation of Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-sets-in-mathematics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Sets in Mathematics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardinality-of-a-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardinality of a Set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification of Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finite-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finite Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Countable Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncountable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncountable Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-on-sets-and-venn-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations on Sets and Venn Diagrams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operations on Sets and Venn Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-set-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      Universal Set (U)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#venn-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Venn Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Set Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Set Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Union of Sets (∪)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection of Sets (∩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference-of-sets-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference of Sets (− or \)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-of-a-set-a-or-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complement of a Set (A' or Aᶜ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-difference-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetric Difference (Δ or ⊕)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laws-of-set-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Laws of Set Algebra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laws of Set Algebra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#de-morgans-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan's Laws
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principle-of-inclusion-and-exclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principle of Inclusion and Exclusion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principle of Inclusion and Exclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pie-for-two-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIE for Two Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pie-for-three-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIE for Three Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-general-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The General Principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of PIE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multisets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multisets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-of-a-multiset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardinality of a Multiset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submultisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submultisets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-multisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations on Multisets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operations on Multisets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    <span class="md-ellipsis">
+      Union
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-multisets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of Multisets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basics-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-sets-and-venn-diagrams_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations on Sets and Venn Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-inclusion-and-exclusion-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principle of Inclusion and Exclusion (PIE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multisets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multisets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="sets">Sets<a class="headerlink" href="#sets" title="Permanent link">&para;</a></h1>
+<h3 id="definition-of-a-set">Definition of a Set<a class="headerlink" href="#definition-of-a-set" title="Permanent link">&para;</a></h3>
+<p>In mathematics, a <strong>set</strong> is a well-defined collection of distinct objects, considered as an object in its own right. The objects that make up a set are called its <strong>elements</strong> or <strong>members</strong>. The key characteristics of a set are:</p>
+<ul>
+<li><strong>Well-defined:</strong> It must be clear and unambiguous whether an object belongs to the set or not. For example, "the set of tall students in a class" is not well-defined because "tall" is subjective. However, "the set of students in a class taller than 170 cm" is well-defined.</li>
+<li><strong>Distinct:</strong> A set does not contain duplicate elements. Each element is unique.</li>
+<li><strong>Unordered:</strong> The order in which elements are listed does not matter. The set <span class="arithmatex">\(\{a, b, c\}\)</span> is the same as <span class="arithmatex">\(\{c, a, b\}\)</span>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Notation</p>
+<ul>
+<li>Sets are usually denoted by capital letters (e.g., <span class="arithmatex">\(A, B, S\)</span>).</li>
+<li>Elements are usually denoted by lowercase letters (e.g., <span class="arithmatex">\(a, b, x\)</span>).</li>
+<li>If <span class="arithmatex">\(x\)</span> is an element of a set <span class="arithmatex">\(A\)</span>, we write <span class="arithmatex">\(x \in A\)</span> (read as "x belongs to A").</li>
+<li>If <span class="arithmatex">\(x\)</span> is not an element of a set <span class="arithmatex">\(A\)</span>, we write <span class="arithmatex">\(x \notin A\)</span> (read as "x does not belong to A").</li>
+</ul>
+</div>
+<h4 id="representation-of-sets">Representation of Sets<a class="headerlink" href="#representation-of-sets" title="Permanent link">&para;</a></h4>
+<p>There are two primary ways to represent a set:</p>
+<ol>
+<li>
+<p><strong>Roster or Tabular Form:</strong>
+    All the elements of the set are listed, separated by commas and enclosed within curly braces <span class="arithmatex">\(\{\}\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Roster Form</p>
+<ul>
+<li>The set <span class="arithmatex">\(V\)</span> of vowels in the English alphabet: <span class="arithmatex">\(V = \{a, e, i, o, u\}\)</span></li>
+<li>The set <span class="arithmatex">\(N\)</span> of the first 5 natural numbers: <span class="arithmatex">\(N = \{1, 2, 3, 4, 5\}\)</span></li>
+<li>The set of integers <span class="arithmatex">\(\mathbb{Z}\)</span>: <span class="arithmatex">\(\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}\)</span></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Set-Builder or Rule Form:</strong>
+    A set is described by stating a property that its elements must satisfy. The general form is <span class="arithmatex">\(A = \{x \mid P(x)\}\)</span> or <span class="arithmatex">\(A = \{x : P(x)\}\)</span>, which is read as "the set of all elements <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(x\)</span> satisfies the property <span class="arithmatex">\(P(x)\)</span>".</p>
+<div class="admonition example">
+<p class="admonition-title">Set-Builder Form</p>
+<ul>
+<li>The set <span class="arithmatex">\(V\)</span> of vowels in the English alphabet: <span class="arithmatex">\(V = \{x \mid x \text{ is a vowel in the English alphabet}\}\)</span></li>
+<li>The set <span class="arithmatex">\(E\)</span> of all even integers: <span class="arithmatex">\(E = \{x \mid x \in \mathbb{Z} \text{ and } x = 2k \text{ for some integer } k\}\)</span></li>
+<li>The set <span class="arithmatex">\(Q\)</span> of rational numbers: <span class="arithmatex">\(Q = \{x \mid x = p/q, \text{ where } p, q \in \mathbb{Z} \text{ and } q \neq 0\}\)</span></li>
+</ul>
+</div>
+</li>
+</ol>
+<h4 id="important-sets-in-mathematics">Important Sets in Mathematics<a class="headerlink" href="#important-sets-in-mathematics" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(\emptyset\)</span> or <span class="arithmatex">\(\{\}\)</span>: The <strong>empty set</strong> or <strong>null set</strong>, which contains no elements.</li>
+<li><span class="arithmatex">\(\mathbb{N}\)</span>: The set of <strong>Natural Numbers</strong> <span class="arithmatex">\(\{1, 2, 3, \dots\}\)</span>.</li>
+<li><span class="arithmatex">\(\mathbb{W}\)</span>: The set of <strong>Whole Numbers</strong> <span class="arithmatex">\(\{0, 1, 2, 3, \dots\}\)</span>.</li>
+<li><span class="arithmatex">\(\mathbb{Z}\)</span>: The set of <strong>Integers</strong> <span class="arithmatex">\(\{\dots, -2, -1, 0, 1, 2, \dots\}\)</span>.</li>
+<li><span class="arithmatex">\(\mathbb{Q}\)</span>: The set of <strong>Rational Numbers</strong> (fractions).</li>
+<li><span class="arithmatex">\(\mathbb{R}\)</span>: The set of <strong>Real Numbers</strong> (includes all rational and irrational numbers).</li>
+<li><span class="arithmatex">\(\mathbb{C}\)</span>: The set of <strong>Complex Numbers</strong>.</li>
+</ul>
+<h3 id="cardinality-of-a-set">Cardinality of a Set<a class="headerlink" href="#cardinality-of-a-set" title="Permanent link">&para;</a></h3>
+<p>The <strong>cardinality</strong> of a set is a measure of the "number of elements" of the set. For a finite set, the cardinality is simply the count of its elements.</p>
+<div class="admonition note">
+<p class="admonition-title">Notation</p>
+<p>The cardinality of a set <span class="arithmatex">\(A\)</span> is denoted by <span class="arithmatex">\(|A|\)</span>, <span class="arithmatex">\(n(A)\)</span>, or <span class="arithmatex">\(card(A)\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Cardinality</p>
+<ul>
+<li>If <span class="arithmatex">\(A = \{1, 2, 3, 4\}\)</span>, then <span class="arithmatex">\(|A| = 4\)</span>.</li>
+<li>If <span class="arithmatex">\(V = \{a, e, i, o, u\}\)</span>, then <span class="arithmatex">\(|V| = 5\)</span>.</li>
+<li>For the empty set, <span class="arithmatex">\(|\emptyset| = 0\)</span>.</li>
+<li>For the set <span class="arithmatex">\(B = \{a, b, \{c, d\}\}\)</span>, <span class="arithmatex">\(|B| = 3\)</span>. The elements are <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, and the set <span class="arithmatex">\(\{c, d\}\)</span>.</li>
+</ul>
+</div>
+<h3 id="classification-of-sets">Classification of Sets<a class="headerlink" href="#classification-of-sets" title="Permanent link">&para;</a></h3>
+<p>Based on their cardinality, sets can be classified into finite, countable, and infinite.</p>
+<h4 id="finite-sets">Finite Sets<a class="headerlink" href="#finite-sets" title="Permanent link">&para;</a></h4>
+<p>A set is called <strong>finite</strong> if it is either empty or contains a specific, countable number of elements. In other words, if the process of counting its elements can eventually come to an end.</p>
+<p>Formally, a set <span class="arithmatex">\(S\)</span> is finite if there exists a one-to-one correspondence (a bijection) between its elements and the set <span class="arithmatex">\(\{1, 2, 3, \dots, n\}\)</span> for some non-negative integer <span class="arithmatex">\(n\)</span>. The cardinality of such a set is <span class="arithmatex">\(|S| = n\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Finite Sets</p>
+<ul>
+<li>The set of days in a week: <span class="arithmatex">\(|\{\text{Sun, Mon, Tue, Wed, Thu, Fri, Sat}\}| = 7\)</span>.</li>
+<li>The set of students in your classroom.</li>
+<li>The set of all prime numbers less than 100.</li>
+</ul>
+</div>
+<h4 id="infinite-sets">Infinite Sets<a class="headerlink" href="#infinite-sets" title="Permanent link">&para;</a></h4>
+<p>A set that is not finite is called an <strong>infinite set</strong>. The process of counting its elements would never end.</p>
+<div class="admonition example">
+<p class="admonition-title">Infinite Sets</p>
+<ul>
+<li>The set of natural numbers <span class="arithmatex">\(\mathbb{N} = \{1, 2, 3, \dots\}\)</span>.</li>
+<li>The set of all points on a line.</li>
+<li>The set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span>.</li>
+</ul>
+</div>
+<p>Infinite sets can be further divided into two categories: countable and uncountable.</p>
+<h4 id="countable-sets">Countable Sets<a class="headerlink" href="#countable-sets" title="Permanent link">&para;</a></h4>
+<p>A set is <strong>countable</strong> if its elements can be put into a one-to-one correspondence with the set of natural numbers <span class="arithmatex">\(\mathbb{N}\)</span>. This essentially means we can "list" all the elements of the set in a sequence <span class="arithmatex">\(a_1, a_2, a_3, \dots\)</span>, even if the list goes on forever.</p>
+<ul>
+<li><strong>All finite sets are countable.</strong></li>
+<li>An infinite set that is countable is called <strong>countably infinite</strong> or <strong>denumerable</strong>.</li>
+</ul>
+<p>The cardinality of a countably infinite set is denoted by the symbol <span class="arithmatex">\(\aleph_0\)</span> (aleph-null). Thus, <span class="arithmatex">\(|\mathbb{N}| = \aleph_0\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Key Countably Infinite Sets</p>
+<ul>
+<li><strong>The Set of Natural Numbers (<span class="arithmatex">\(\mathbb{N}\)</span>):</strong> This is the fundamental example of a countably infinite set. <span class="arithmatex">\(|\mathbb{N}| = \aleph_0\)</span>.</li>
+<li><strong>The Set of Integers (<span class="arithmatex">\(\mathbb{Z}\)</span>):</strong> This set is also countably infinite. We can list its elements like this: <span class="arithmatex">\(0, 1, -1, 2, -2, 3, -3, \dots\)</span>. This ensures every integer appears exactly once in the list. So, <span class="arithmatex">\(|\mathbb{Z}| = \aleph_0\)</span>.</li>
+<li><strong>The Set of Rational Numbers (<span class="arithmatex">\(\mathbb{Q}\)</span>):</strong> Surprisingly, the set of all fractions is also countably infinite. Although they seem much more "dense" than integers, it can be proven that they can be systematically listed without missing any. So, <span class="arithmatex">\(|\mathbb{Q}| = \aleph_0\)</span>.</li>
+</ul>
+</div>
+<h4 id="uncountable-sets">Uncountable Sets<a class="headerlink" href="#uncountable-sets" title="Permanent link">&para;</a></h4>
+<p>An infinite set that is not countable is called an <strong>uncountable set</strong> (or <strong>uncountably infinite</strong>). It is impossible to list all the elements of an uncountable set in a sequence. These sets are "larger" in size than countably infinite sets.</p>
+<div class="admonition warning">
+<p class="admonition-title">Uncountable Sets are 'Bigger' Infinities</p>
+<p>The existence of uncountable sets implies that there are different sizes of infinity. The cardinality of countably infinite sets (<span class="arithmatex">\(\aleph_0\)</span>) is the "smallest" infinity.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Uncountable Sets</p>
+<ul>
+<li><strong>The Set of Real Numbers (<span class="arithmatex">\(\mathbb{R}\)</span>):</strong> This is the most common example of an uncountable set. The famous <strong>Cantor's diagonalization argument</strong> proves that the real numbers between 0 and 1 alone cannot be put into a one-to-one correspondence with <span class="arithmatex">\(\mathbb{N}\)</span>. Therefore, the set of all real numbers is uncountable. Its cardinality is denoted by <span class="arithmatex">\(c\)</span> (for continuum) or <span class="arithmatex">\(\aleph_1\)</span>. We know that <span class="arithmatex">\(\aleph_0 &lt; c\)</span>.</li>
+<li><strong>The Power Set of <span class="arithmatex">\(\mathbb{N}\)</span>:</strong> The set of all subsets of the natural numbers, denoted <span class="arithmatex">\(P(\mathbb{N})\)</span>, is also uncountable.</li>
+</ul>
+</div>
+<h4 id="summary-table">Summary Table<a class="headerlink" href="#summary-table" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Definition</th>
+<th>Cardinality</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Finite</strong></td>
+<td>Empty or has <span class="arithmatex">\(n\)</span> elements for some <span class="arithmatex">\(n \in \mathbb{W}\)</span>.</td>
+<td>(</td>
+<td>A</td>
+</tr>
+<tr>
+<td><strong>Infinite</strong></td>
+<td>Not finite.</td>
+<td>Infinite</td>
+<td><span class="arithmatex">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;<strong>Countably Infinite</strong></td>
+<td>Can be put in 1-to-1 correspondence with <span class="arithmatex">\(\mathbb{N}\)</span>.</td>
+<td>(</td>
+<td>A</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;<strong>Uncountably Infinite</strong></td>
+<td>Cannot be put in 1-to-1 correspondence with <span class="arithmatex">\(\mathbb{N}\)</span>.</td>
+<td>(</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operations-on-sets-and-venn-diagrams">Operations on Sets and Venn Diagrams<a class="headerlink" href="#operations-on-sets-and-venn-diagrams" title="Permanent link">&para;</a></h2>
+<h3 id="universal-set-u">Universal Set (U)<a class="headerlink" href="#universal-set-u" title="Permanent link">&para;</a></h3>
+<p>Before diving into operations, it's crucial to understand the <strong>Universal Set</strong>, denoted by <span class="arithmatex">\(U\)</span>. The universal set is the set containing all possible elements under consideration for a particular problem. All other sets are considered subsets of the universal set.</p>
+<ul>
+<li><strong>Example</strong>: If we are discussing sets of vowels, the universal set could be <span class="arithmatex">\(U = \{a, e, i, o, u\}\)</span>. If we are discussing sets of single-digit numbers, <span class="arithmatex">\(U = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}\)</span>.</li>
+</ul>
+<h3 id="venn-diagrams">Venn Diagrams<a class="headerlink" href="#venn-diagrams" title="Permanent link">&para;</a></h3>
+<p>A <strong>Venn diagram</strong> is a visual representation of the relationship between sets. It uses overlapping circles or other shapes to illustrate the logical relationships between two or more sets. The universal set is typically represented by a rectangle, and subsets are represented by circles within this rectangle.</p>
+<figure>
+  <img alt="" src="https://www.onlinemathlearning.com/image-files/universal-set.png" />
+</figure>
+<h3 id="basic-set-operations">Basic Set Operations<a class="headerlink" href="#basic-set-operations" title="Permanent link">&para;</a></h3>
+<p>Let's consider two sets, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, which are subsets of a universal set <span class="arithmatex">\(U\)</span>.</p>
+<h4 id="union-of-sets">Union of Sets (∪)<a class="headerlink" href="#union-of-sets" title="Permanent link">&para;</a></h4>
+<p>The <strong>union</strong> of two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted by <span class="arithmatex">\(A \cup B\)</span>, is the set of all elements that are in set <span class="arithmatex">\(A\)</span>, or in set <span class="arithmatex">\(B\)</span>, or in both.</p>
+<ul>
+<li><strong>Set-Builder Notation</strong>: <span class="arithmatex">\(A \cup B = \{x \mid x \in A \lor x \in B\}\)</span></li>
+<li><strong>Explanation</strong>: It combines all unique elements from both sets.</li>
+<li><strong>Example</strong>:<ul>
+<li>Let <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{3, 4, 5\}\)</span>.</li>
+<li>Then, <span class="arithmatex">\(A \cup B = \{1, 2, 3, 4, 5\}\)</span>.</li>
+</ul>
+</li>
+</ul>
+<h5 id="venn-diagram-for-union">Venn Diagram for Union<a class="headerlink" href="#venn-diagram-for-union" title="Permanent link">&para;</a></h5>
+<p>The union is represented by shading the entire area covered by both circles <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.</p>
+<figure>
+  <img alt="" src="https://mathmonks.com/wp-content/uploads/2024/05/Set-Union.jpg" />
+</figure>
+<h4 id="intersection-of-sets">Intersection of Sets (∩)<a class="headerlink" href="#intersection-of-sets" title="Permanent link">&para;</a></h4>
+<p>The <strong>intersection</strong> of two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted by <span class="arithmatex">\(A \cap B\)</span>, is the set of all elements that are common to both set <span class="arithmatex">\(A\)</span> and set <span class="arithmatex">\(B\)</span>.</p>
+<ul>
+<li><strong>Set-Builder Notation</strong>: <span class="arithmatex">\(A \cap B = \{x \mid x \in A \land x \in B\}\)</span></li>
+<li><strong>Explanation</strong>: It includes only the elements that exist in both sets simultaneously.</li>
+<li><strong>Example</strong>:<ul>
+<li>Let <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{3, 4, 5\}\)</span>.</li>
+<li>Then, <span class="arithmatex">\(A \cap B = \{3\}\)</span>.</li>
+</ul>
+</li>
+</ul>
+<p>If <span class="arithmatex">\(A \cap B = \emptyset\)</span> (the empty set), then <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are called <strong>disjoint sets</strong>.</p>
+<h5 id="venn-diagram-for-intersection">Venn Diagram for Intersection<a class="headerlink" href="#venn-diagram-for-intersection" title="Permanent link">&para;</a></h5>
+<p>The intersection is represented by shading only the overlapping area of circles <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.</p>
+<h4 id="difference-of-sets-or">Difference of Sets (− or \)<a class="headerlink" href="#difference-of-sets-or" title="Permanent link">&para;</a></h4>
+<p>The <strong>difference</strong> between two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted by <span class="arithmatex">\(A - B\)</span> or <span class="arithmatex">\(A \setminus B\)</span>, is the set of all elements that are in set <span class="arithmatex">\(A\)</span> but not in set <span class="arithmatex">\(B\)</span>.</p>
+<ul>
+<li><strong>Set-Builder Notation</strong>: <span class="arithmatex">\(A - B = \{x \mid x \in A \land x \notin B\}\)</span></li>
+<li><strong>Explanation</strong>: Start with set <span class="arithmatex">\(A\)</span> and remove all elements that are also present in set <span class="arithmatex">\(B\)</span>. Note that <span class="arithmatex">\(A - B \neq B - A\)</span> in general.</li>
+<li><strong>Example</strong>:<ul>
+<li>Let <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{3, 4, 5\}\)</span>.</li>
+<li>Then, <span class="arithmatex">\(A - B = \{1, 2\}\)</span>.</li>
+<li>And, <span class="arithmatex">\(B - A = \{4, 5\}\)</span>.</li>
+</ul>
+</li>
+</ul>
+<h5 id="venn-diagram-for-difference">Venn Diagram for Difference<a class="headerlink" href="#venn-diagram-for-difference" title="Permanent link">&para;</a></h5>
+<p>The difference <span class="arithmatex">\(A - B\)</span> is represented by shading the area of circle <span class="arithmatex">\(A\)</span> that does not overlap with circle <span class="arithmatex">\(B\)</span>.</p>
+<h4 id="complement-of-a-set-a-or-ac">Complement of a Set (A' or Aᶜ)<a class="headerlink" href="#complement-of-a-set-a-or-ac" title="Permanent link">&para;</a></h4>
+<p>The <strong>complement</strong> of a set <span class="arithmatex">\(A\)</span>, denoted by <span class="arithmatex">\(A'\)</span> or <span class="arithmatex">\(A^c\)</span>, is the set of all elements in the universal set <span class="arithmatex">\(U\)</span> that are not in set <span class="arithmatex">\(A\)</span>.</p>
+<ul>
+<li><strong>Set-Builder Notation</strong>: <span class="arithmatex">\(A' = \{x \in U \mid x \notin A\}\)</span></li>
+<li><strong>Explanation</strong>: It's essentially <span class="arithmatex">\(U - A\)</span>.</li>
+<li><strong>Example</strong>:<ul>
+<li>Let <span class="arithmatex">\(U = \{1, 2, 3, 4, 5, 6\}\)</span> and <span class="arithmatex">\(A = \{1, 2, 3\}\)</span>.</li>
+<li>Then, <span class="arithmatex">\(A' = \{4, 5, 6\}\)</span>.</li>
+</ul>
+</li>
+</ul>
+<h5 id="venn-diagram-for-complement">Venn Diagram for Complement<a class="headerlink" href="#venn-diagram-for-complement" title="Permanent link">&para;</a></h5>
+<p>The complement of <span class="arithmatex">\(A\)</span> is represented by shading the area inside the universal set's rectangle but outside the circle <span class="arithmatex">\(A\)</span>.</p>
+<h4 id="symmetric-difference-or">Symmetric Difference (Δ or ⊕)<a class="headerlink" href="#symmetric-difference-or" title="Permanent link">&para;</a></h4>
+<p>The <strong>symmetric difference</strong> of two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted by <span class="arithmatex">\(A \Delta B\)</span>, is the set of all elements that are in either of the sets, but not in their intersection.</p>
+<ul>
+<li><strong>Set-Builder Notation</strong>: <span class="arithmatex">\(A \Delta B = \{x \mid (x \in A \land x \notin B) \lor (x \in B \land x \notin A)\}\)</span></li>
+<li><strong>Relationship with other operations</strong>:<ul>
+<li><span class="arithmatex">\(A \Delta B = (A - B) \cup (B - A)\)</span></li>
+<li><span class="arithmatex">\(A \Delta B = (A \cup B) - (A \cap B)\)</span></li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li>Let <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{3, 4, 5\}\)</span>.</li>
+<li><span class="arithmatex">\(A \cup B = \{1, 2, 3, 4, 5\}\)</span></li>
+<li><span class="arithmatex">\(A \cap B = \{3\}\)</span></li>
+<li>Then, <span class="arithmatex">\(A \Delta B = \{1, 2, 3, 4, 5\} - \{3\} = \{1, 2, 4, 5\}\)</span>.</li>
+</ul>
+</li>
+</ul>
+<h5 id="venn-diagram-for-symmetric-difference">Venn Diagram for Symmetric Difference<a class="headerlink" href="#venn-diagram-for-symmetric-difference" title="Permanent link">&para;</a></h5>
+<p>The symmetric difference is represented by shading all parts of circles <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> except for their overlapping intersection.</p>
+<h3 id="laws-of-set-algebra">Laws of Set Algebra<a class="headerlink" href="#laws-of-set-algebra" title="Permanent link">&para;</a></h3>
+<p>Just like algebra with numbers, set operations follow certain laws.</p>
+<table>
+<thead>
+<tr>
+<th>Law</th>
+<th>Union</th>
+<th>Intersection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Commutative Law</strong></td>
+<td><span class="arithmatex">\(A \cup B = B \cup A\)</span></td>
+<td><span class="arithmatex">\(A \cap B = B \cap A\)</span></td>
+</tr>
+<tr>
+<td><strong>Associative Law</strong></td>
+<td><span class="arithmatex">\((A \cup B) \cup C = A \cup (B \cup C)\)</span></td>
+<td><span class="arithmatex">\((A \cap B) \cap C = A \cap (B \cap C)\)</span></td>
+</tr>
+<tr>
+<td><strong>Distributive Law</strong></td>
+<td><span class="arithmatex">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</span></td>
+<td><span class="arithmatex">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span></td>
+</tr>
+<tr>
+<td><strong>Identity Law</strong></td>
+<td><span class="arithmatex">\(A \cup \emptyset = A\)</span></td>
+<td><span class="arithmatex">\(A \cap U = A\)</span></td>
+</tr>
+<tr>
+<td><strong>Complement Law</strong></td>
+<td><span class="arithmatex">\(A \cup A' = U\)</span></td>
+<td><span class="arithmatex">\(A \cap A' = \emptyset\)</span></td>
+</tr>
+<tr>
+<td><strong>Idempotent Law</strong></td>
+<td><span class="arithmatex">\(A \cup A = A\)</span></td>
+<td><span class="arithmatex">\(A \cap A = A\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="de-morgans-laws">De Morgan's Laws<a class="headerlink" href="#de-morgans-laws" title="Permanent link">&para;</a></h4>
+<p>De Morgan's laws are two fundamental rules that relate union, intersection, and complementation.</p>
+<ol>
+<li>
+<p><strong>First Law</strong>: The complement of the union of two sets is the intersection of their complements.</p>
+<ul>
+<li><span class="arithmatex">\((A \cup B)' = A' \cap B'\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Second Law</strong>: The complement of the intersection of two sets is the union of their complements.</p>
+<ul>
+<li><span class="arithmatex">\((A \cap B)' = A' \cup B'\)</span></li>
+</ul>
+</li>
+</ol>
+<h2 id="principle-of-inclusion-and-exclusion">Principle of Inclusion and Exclusion<a class="headerlink" href="#principle-of-inclusion-and-exclusion" title="Permanent link">&para;</a></h2>
+<iframe width="710" height="399" src="https://www.youtube.com/embed/szUTQRJU76Q" title="Ch9Pr4: Inclusion/Exclusion Principle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>The <strong>Principle of Inclusion and Exclusion (PIE)</strong> is a fundamental counting technique in combinatorics. It provides a systematic way to find the number of elements in the union of multiple sets by adding the sizes of the individual sets and then compensating for the elements that have been counted multiple times.</p>
+<p>The core idea is to <strong>"include"</strong> the sizes of the individual sets, then <strong>"exclude"</strong> the sizes of their pairwise intersections, then <strong>"include"</strong> the sizes of their three-way intersections, and so on, with alternating signs.</p>
+<hr />
+<h4 id="pie-for-two-sets">PIE for Two Sets<a class="headerlink" href="#pie-for-two-sets" title="Permanent link">&para;</a></h4>
+<p>For two finite sets, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, the number of elements in their union <span class="arithmatex">\(A \cup B\)</span> is the sum of the number of elements in each set minus the number of elements in their intersection.</p>
+<p>The formula is:</p>
+<div class="arithmatex">\[ |A \cup B| = |A| + |B| - |A \cap B| \]</div>
+<ul>
+<li><span class="arithmatex">\(|A|\)</span>: The cardinality (number of elements) of set A.</li>
+<li><span class="arithmatex">\(|B|\)</span>: The cardinality of set B.</li>
+<li><span class="arithmatex">\(|A \cap B|\)</span>: The cardinality of the intersection of A and B (elements common to both).</li>
+</ul>
+<p>We subtract <span class="arithmatex">\(|A \cap B|\)</span> because these elements were counted twice: once in <span class="arithmatex">\(|A|\)</span> and once in <span class="arithmatex">\(|B|\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: Students and Subjects</p>
+<p>In a class of 50 students, 30 students passed in Mathematics (<span class="arithmatex">\(M\)</span>), 25 passed in Science (<span class="arithmatex">\(S\)</span>), and 15 passed in both subjects. How many students passed in at least one of the two subjects?</p>
+<ul>
+<li>Let <span class="arithmatex">\(M\)</span> be the set of students who passed in Mathematics, so <span class="arithmatex">\(|M| = 30\)</span>.</li>
+<li>Let <span class="arithmatex">\(S\)</span> be the set of students who passed in Science, so <span class="arithmatex">\(|S| = 25\)</span>.</li>
+<li>The set of students who passed in both is <span class="arithmatex">\(M \cap S\)</span>, so <span class="arithmatex">\(|M \cap S| = 15\)</span>.</li>
+</ul>
+<p>We want to find the number of students who passed in at least one subject, which is <span class="arithmatex">\(|M \cup S|\)</span>.</p>
+<p>Using the Principle of Inclusion and Exclusion:
+[ |M \cup S| = |M| + |S| - |M \cap S| ]
+[ |M \cup S| = 30 + 25 - 15 = 40 ]
+Therefore, <strong>40 students</strong> passed in at least one of the two subjects.</p>
+</div>
+<hr />
+<h4 id="pie-for-three-sets">PIE for Three Sets<a class="headerlink" href="#pie-for-three-sets" title="Permanent link">&para;</a></h4>
+<p>For three finite sets, <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, and <span class="arithmatex">\(C\)</span>, the principle is extended. We add the sizes of the sets, subtract the sizes of all pairwise intersections, and finally add back the size of the three-way intersection.</p>
+<p>The formula is:</p>
+<div class="arithmatex">\[ |A \cup B \cup C| = |A| + |B| + |C| - (|A \cap B| + |A \cap C| + |B \cap C|) + |A \cap B \cap C| \]</div>
+<ul>
+<li><strong>Inclusion:</strong> We first add <span class="arithmatex">\(|A|\)</span>, <span class="arithmatex">\(|B|\)</span>, and <span class="arithmatex">\(|C|\)</span>. This overcounts elements in the intersections.</li>
+<li><strong>Exclusion:</strong> We subtract <span class="arithmatex">\(|A \cap B|\)</span>, <span class="arithmatex">\(|A \cap C|\)</span>, and <span class="arithmatex">\(|B \cap C|\)</span> to correct for the double-counting. However, this over-corrects for the elements in <span class="arithmatex">\(A \cap B \cap C\)</span>, which were initially counted three times and have now been subtracted three times.</li>
+<li><strong>Inclusion:</strong> We add back <span class="arithmatex">\(|A \cap B \cap C|\)</span> to ensure these elements are counted exactly once.</li>
+</ul>
+<hr />
+<h4 id="the-general-principle">The General Principle<a class="headerlink" href="#the-general-principle" title="Permanent link">&para;</a></h4>
+<p>The principle can be generalized to find the cardinality of the union of <span class="arithmatex">\(n\)</span> finite sets, <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span>.</p>
+<p>The general formula is:</p>
+<div class="arithmatex">\[ |A_1 \cup A_2 \cup \dots \cup A_n| = \sum_{1 \le i \le n} |A_i| - \sum_{1 \le i &lt; j \le n} |A_i \cap A_j| + \sum_{1 \le i &lt; j &lt; k \le n} |A_i \cap A_j \cap A_k| - \dots + (-1)^{n-1} |A_1 \cap \dots \cap A_n| \]</div>
+<p>In a more compact summation notation:</p>
+<div class="arithmatex">\[ |\bigcup_{i=1}^{n} A_i| = \sum_{k=1}^{n} (-1)^{k-1} \sum_{1 \le i_1 &lt; \dots &lt; i_k \le n} |A_{i_1} \cap \dots \cap A_{i_k}| \]</div>
+<div class="admonition note">
+<p class="admonition-title">Complementary Form</p>
+<p>Often, we are interested in finding the number of elements that are in <strong>none</strong> of the sets. If <span class="arithmatex">\(U\)</span> is the universal set, this is given by <span class="arithmatex">\(|\overline{A_1} \cap \overline{A_2} \cap \dots \cap \overline{A_n}|\)</span>.
+By De Morgan's laws, this is equal to <span class="arithmatex">\(|\overline{A_1 \cup A_2 \cup \dots \cup A_n}|\)</span>.</p>
+<div class="arithmatex">\[ |\overline{A_1} \cap \dots \cap \overline{A_n}| = |U| - |A_1 \cup A_2 \cup \dots \cup A_n| \]</div>
+</div>
+<hr />
+<h4 id="applications-of-pie">Applications of PIE<a class="headerlink" href="#applications-of-pie" title="Permanent link">&para;</a></h4>
+<p>The Principle of Inclusion and Exclusion has several important applications in combinatorics and number theory.</p>
+<h5 id="counting-integers-with-specific-properties">Counting Integers with Specific Properties<a class="headerlink" href="#counting-integers-with-specific-properties" title="Permanent link">&para;</a></h5>
+<p>PIE is used to count the number of integers in a range that are divisible by a certain set of numbers.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: Divisibility</p>
+<p>How many positive integers not exceeding 1000 are divisible by 5, 7, or 11?</p>
+<ul>
+<li><strong>Universal Set:</strong> <span class="arithmatex">\(U = \{1, 2, \dots, 1000\}\)</span>, so <span class="arithmatex">\(|U|=1000\)</span>.</li>
+<li>
+<p><strong>Sets:</strong></p>
+<ul>
+<li>Let <span class="arithmatex">\(A\)</span> be the set of integers divisible by 5. <span class="arithmatex">\(|A| = \lfloor \frac{1000}{5} \rfloor = 200\)</span>.</li>
+<li>Let <span class="arithmatex">\(B\)</span> be the set of integers divisible by 7. <span class="arithmatex">\(|B| = \lfloor \frac{1000}{7} \rfloor = 142\)</span>.</li>
+<li>Let <span class="arithmatex">\(C\)</span> be the set of integers divisible by 11. <span class="arithmatex">\(|C| = \lfloor \frac{1000}{11} \rfloor = 90\)</span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pairwise Intersections (divisible by pairs of numbers):</strong></p>
+<ul>
+<li><span class="arithmatex">\(|A \cap B|\)</span> (divisible by 5 and 7, i.e., 35): <span class="arithmatex">\( \lfloor \frac{1000}{35} \rfloor = 28\)</span>.</li>
+<li><span class="arithmatex">\(|A \cap C|\)</span> (divisible by 5 and 11, i.e., 55): <span class="arithmatex">\( \lfloor \frac{1000}{55} \rfloor = 18\)</span>.</li>
+<li><span class="arithmatex">\(|B \cap C|\)</span> (divisible by 7 and 11, i.e., 77): <span class="arithmatex">\( \lfloor \frac{1000}{77} \rfloor = 12\)</span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Three-way Intersection (divisible by 5, 7, and 11, i.e., 385):</strong></p>
+<ul>
+<li><span class="arithmatex">\(|A \cap B \cap C|\)</span>: <span class="arithmatex">\( \lfloor \frac{1000}{385} \rfloor = 2\)</span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Applying PIE:</strong></p>
+</li>
+</ul>
+<div class="arithmatex">\[ |A \cup B \cup C| = (|A| + |B| + |C|) - (|A \cap B| + |A \cap C| + |B \cap C|) + |A \cap B \cap C| \]</div>
+<div class="arithmatex">\[ |A \cup B \cup C| = (200 + 142 + 90) - (28 + 18 + 12) + 2 \]</div>
+<div class="arithmatex">\[ |A \cup B \cup C| = 432 - 58 + 2 = 376 \]</div>
+<p>So, <strong>376 integers</strong> not exceeding 1000 are divisible by 5, 7, or 11.</p>
+</div>
+<h5 id="derangements">Derangements<a class="headerlink" href="#derangements" title="Permanent link">&para;</a></h5>
+<p>A <strong>derangement</strong> is a permutation of the elements of a set such that no element appears in its original position. The number of derangements of <span class="arithmatex">\(n\)</span> elements is denoted by <span class="arithmatex">\(D_n\)</span> or <span class="arithmatex">\(!n\)</span>.</p>
+<ul>
+<li><strong>Problem:</strong> Find the number of derangements of <span class="arithmatex">\(n\)</span> objects.</li>
+<li><strong>Approach:</strong> We find the total number of permutations (<span class="arithmatex">\(n!\)</span>) and subtract the number of permutations where at least one element is in its correct place.</li>
+</ul>
+<p>Let <span class="arithmatex">\(U\)</span> be the set of all <span class="arithmatex">\(n!\)</span> permutations. Let <span class="arithmatex">\(A_i\)</span> be the set of permutations where the <span class="arithmatex">\(i\)</span>-th element is in its original position. We want to find the number of permutations that are in none of these sets, i.e., <span class="arithmatex">\(|U| - |A_1 \cup A_2 \cup \dots \cup A_n|\)</span>.</p>
+<ul>
+<li>The size of <span class="arithmatex">\(A_i\)</span> is <span class="arithmatex">\((n-1)!\)</span> (fix element <span class="arithmatex">\(i\)</span> and permute the other <span class="arithmatex">\(n-1\)</span>). There are <span class="arithmatex">\(\binom{n}{1}\)</span> such sets.</li>
+<li>The size of <span class="arithmatex">\(A_i \cap A_j\)</span> is <span class="arithmatex">\((n-2)!\)</span>. There are <span class="arithmatex">\(\binom{n}{2}\)</span> such intersections.</li>
+<li>The size of a <span class="arithmatex">\(k\)</span>-wise intersection is <span class="arithmatex">\((n-k)!\)</span>. There are <span class="arithmatex">\(\binom{n}{k}\)</span> such intersections.</li>
+</ul>
+<p>Using PIE, the number of permutations with at least one fixed point is:</p>
+<div class="arithmatex">\[ |A_1 \cup \dots \cup A_n| = \binom{n}{1}(n-1)! - \binom{n}{2}(n-2)! + \dots + (-1)^{n-1}\binom{n}{n}(n-n)! \]</div>
+<p>Simplifying <span class="arithmatex">\(\binom{n}{k}(n-k)! = \frac{n!}{k!(n-k)!}(n-k)! = \frac{n!}{k!}\)</span>, we get:</p>
+<div class="arithmatex">\[ |A_1 \cup \dots \cup A_n| = \frac{n!}{1!} - \frac{n!}{2!} + \frac{n!}{3!} - \dots + (-1)^{n-1}\frac{n!}{n!} \]</div>
+<p>The number of derangements <span class="arithmatex">\(D_n\)</span> is:</p>
+<div class="arithmatex">\[ D_n = n! - |A_1 \cup \dots \cup A_n| \]</div>
+<div class="arithmatex">\[ D_n = n! - (\frac{n!}{1!} - \frac{n!}{2!} + \dots + (-1)^{n-1}\frac{n!}{n!}) \]</div>
+<div class="arithmatex">\[ D_n = n! \left( 1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \dots + \frac{(-1)^n}{n!} \right) = n! \sum_{k=0}^{n} \frac{(-1)^k}{k!} \]</div>
+<h5 id="number-of-surjective-onto-functions">Number of Surjective (Onto) Functions<a class="headerlink" href="#number-of-surjective-onto-functions" title="Permanent link">&para;</a></h5>
+<p>A function <span class="arithmatex">\(f: A \to B\)</span> is <strong>surjective</strong> (or onto) if every element in the codomain <span class="arithmatex">\(B\)</span> is an image of at least one element from the domain <span class="arithmatex">\(A\)</span>. PIE can be used to count the number of such functions.</p>
+<ul>
+<li><strong>Problem:</strong> Find the number of surjective functions from set <span class="arithmatex">\(A\)</span> with <span class="arithmatex">\(m\)</span> elements to set <span class="arithmatex">\(B\)</span> with <span class="arithmatex">\(n\)</span> elements, where <span class="arithmatex">\(m \ge n\)</span>.</li>
+<li><strong>Approach:</strong> Start with the total number of functions from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B\)</span>, which is <span class="arithmatex">\(n^m\)</span>. Then, subtract the functions that are <em>not</em> surjective. A function is not surjective if at least one element in <span class="arithmatex">\(B\)</span> is not in the image.</li>
+</ul>
+<p>Let <span class="arithmatex">\(B = \{b_1, b_2, \dots, b_n\}\)</span>. Let <span class="arithmatex">\(A_i\)</span> be the set of functions where the element <span class="arithmatex">\(b_i \in B\)</span> is <em>not</em> in the image of the function. We want to find the number of functions that are in none of these sets, which is <span class="arithmatex">\(n^m - |A_1 \cup A_2 \cup \dots \cup A_n|\)</span>.</p>
+<ul>
+<li>The size of <span class="arithmatex">\(A_i\)</span>: These are functions from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B - \{b_i\}\)</span>. There are <span class="arithmatex">\((n-1)\)</span> choices in the codomain for each of the <span class="arithmatex">\(m\)</span> elements in the domain. So, <span class="arithmatex">\(|A_i| = (n-1)^m\)</span>.</li>
+<li>The size of <span class="arithmatex">\(A_i \cap A_j\)</span>: These are functions that miss both <span class="arithmatex">\(b_i\)</span> and <span class="arithmatex">\(b_j\)</span>. So, <span class="arithmatex">\(|A_i \cap A_j| = (n-2)^m\)</span>.</li>
+<li>The size of a <span class="arithmatex">\(k\)</span>-wise intersection is <span class="arithmatex">\((n-k)^m\)</span>.</li>
+</ul>
+<p>The number of functions that are not surjective is <span class="arithmatex">\(|A_1 \cup \dots \cup A_n|\)</span>:</p>
+<div class="arithmatex">\[ \binom{n}{1}(n-1)^m - \binom{n}{2}(n-2)^m + \dots + (-1)^{n-1}\binom{n}{n}(n-n)^m \]</div>
+<p>The number of surjective functions is:</p>
+<div class="arithmatex">\[ n^m - \left[ \binom{n}{1}(n-1)^m - \binom{n}{2}(n-2)^m + \dots \right] \]</div>
+<p>This simplifies to the formula:</p>
+<div class="arithmatex">\[ \sum_{k=0}^{n} (-1)^k \binom{n}{k} (n-k)^m \]</div>
+<h2 id="multisets">Multisets<a class="headerlink" href="#multisets" title="Permanent link">&para;</a></h2>
+<p>A multiset is a modification of the concept of a set that, unlike a standard set, allows for multiple instances of each of its elements. The number of times an element appears in a multiset is called its <strong>multiplicity</strong>. Multisets are also sometimes called <strong>bags</strong>.</p>
+<p>For example, <span class="arithmatex">\(\{1, 1, 2, 2, 2, 3\}\)</span> and <span class="arithmatex">\(\{a, b, b, c, d, d, d\}\)</span> are multisets. In a standard set, these would be represented as <span class="arithmatex">\(\{1, 2, 3\}\)</span> and <span class="arithmatex">\(\{a, b, c, d\}\)</span>, respectively, as duplicates are not counted.</p>
+<h3 id="formal-definition">Formal Definition<a class="headerlink" href="#formal-definition" title="Permanent link">&para;</a></h3>
+<p>Formally, a multiset <span class="arithmatex">\(M\)</span> can be defined as an ordered pair <span class="arithmatex">\((S, m)\)</span>, where <span class="arithmatex">\(S\)</span> is the <strong>underlying set</strong> of distinct elements, and <span class="arithmatex">\(m\)</span> is a <strong>multiplicity function</strong> <span class="arithmatex">\(m: S \to \mathbb{Z}^+\)</span>, which maps each element in <span class="arithmatex">\(S\)</span> to a positive integer representing its multiplicity.</p>
+<p>For the multiset <span class="arithmatex">\(M = \{a, a, b, c, c, c\}\)</span>:</p>
+<ul>
+<li>The underlying set is <span class="arithmatex">\(S = \{a, b, c\}\)</span>.</li>
+<li>The multiplicity function <span class="arithmatex">\(m\)</span> is defined as:<ul>
+<li><span class="arithmatex">\(m(a) = 2\)</span></li>
+<li><span class="arithmatex">\(m(b) = 1\)</span></li>
+<li><span class="arithmatex">\(m(c) = 3\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="cardinality-of-a-multiset">Cardinality of a Multiset<a class="headerlink" href="#cardinality-of-a-multiset" title="Permanent link">&para;</a></h3>
+<p>The cardinality (or size) of a multiset is the total number of elements it contains, including repetitions. It is the sum of the multiplicities of all its distinct elements.</p>
+<p>If <span class="arithmatex">\(M = (S, m)\)</span> is a multiset, its cardinality, denoted as <span class="arithmatex">\(|M|\)</span> or <span class="arithmatex">\(card(M)\)</span>, is calculated as:
+[ |M| = \sum_{x \in S} m(x) ]
+<strong>Example:</strong>
+For the multiset <span class="arithmatex">\(M = \{1, 1, 2, 3, 3, 3, 4\}\)</span>:</p>
+<ul>
+<li>Underlying set <span class="arithmatex">\(S = \{1, 2, 3, 4\}\)</span>.</li>
+<li>Multiplicities are <span class="arithmatex">\(m(1)=2\)</span>, <span class="arithmatex">\(m(2)=1\)</span>, <span class="arithmatex">\(m(3)=3\)</span>, <span class="arithmatex">\(m(4)=1\)</span>.</li>
+<li>The cardinality is <span class="arithmatex">\(|M| = 2 + 1 + 3 + 1 = 7\)</span>.</li>
+</ul>
+<h3 id="submultisets">Submultisets<a class="headerlink" href="#submultisets" title="Permanent link">&para;</a></h3>
+<p>A multiset <span class="arithmatex">\(A\)</span> is a submultiset of a multiset <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A \subseteq B\)</span>, if the multiplicity of each element in <span class="arithmatex">\(A\)</span> is less than or equal to its multiplicity in <span class="arithmatex">\(B\)</span>.</p>
+<p>Formally, let <span class="arithmatex">\(A = (S_A, m_A)\)</span> and <span class="arithmatex">\(B = (S_B, m_B)\)</span>. Then <span class="arithmatex">\(A \subseteq B\)</span> if and only if for every element <span class="arithmatex">\(x \in S_A\)</span>, <span class="arithmatex">\(x\)</span> is also in <span class="arithmatex">\(S_B\)</span> and <span class="arithmatex">\(m_A(x) \le m_B(x)\)</span>.</p>
+<p><strong>Example:</strong>
+If <span class="arithmatex">\(A = \{a, a, b\}\)</span> and <span class="arithmatex">\(B = \{a, a, a, b, c\}\)</span>, then <span class="arithmatex">\(A\)</span> is a submultiset of <span class="arithmatex">\(B\)</span> because:</p>
+<ul>
+<li><span class="arithmatex">\(m_A(a) = 2\)</span> and <span class="arithmatex">\(m_B(a) = 3\)</span>, so <span class="arithmatex">\(2 \le 3\)</span>.</li>
+<li><span class="arithmatex">\(m_A(b) = 1\)</span> and <span class="arithmatex">\(m_B(b) = 1\)</span>, so <span class="arithmatex">\(1 \le 1\)</span>.</li>
+</ul>
+<h3 id="operations-on-multisets">Operations on Multisets<a class="headerlink" href="#operations-on-multisets" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> be two multisets. Let <span class="arithmatex">\(m_A(x)\)</span> and <span class="arithmatex">\(m_B(x)\)</span> be the multiplicities of an element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> respectively. (If an element is not in a multiset, its multiplicity is 0).</p>
+<h4 id="union">Union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h4>
+<p>The <strong>union</strong> of two multisets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A \cup B\)</span>, is a multiset where the multiplicity of an element is the <strong>maximum</strong> of its multiplicities in <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.
+[ m_{A \cup B}(x) = \max(m_A(x), m_B(x)) ]
+<strong>Example:</strong>
+Let <span class="arithmatex">\(A = \{1, 1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{1, 2, 2, 4\}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(m_A(1) = 2\)</span>, <span class="arithmatex">\(m_B(1) = 1 \implies \max(2, 1) = 2\)</span>. Multiplicity of 1 is 2.</li>
+<li><span class="arithmatex">\(m_A(2) = 1\)</span>, <span class="arithmatex">\(m_B(2) = 2 \implies \max(1, 2) = 2\)</span>. Multiplicity of 2 is 2.</li>
+<li><span class="arithmatex">\(m_A(3) = 1\)</span>, <span class="arithmatex">\(m_B(3) = 0 \implies \max(1, 0) = 1\)</span>. Multiplicity of 3 is 1.</li>
+<li><span class="arithmatex">\(m_A(4) = 0\)</span>, <span class="arithmatex">\(m_B(4) = 1 \implies \max(0, 1) = 1\)</span>. Multiplicity of 4 is 1.</li>
+</ul>
+<p>Therefore, <span class="arithmatex">\(A \cup B = \{1, 1, 2, 2, 3, 4\}\)</span>.</p>
+<h4 id="intersection">Intersection<a class="headerlink" href="#intersection" title="Permanent link">&para;</a></h4>
+<p>The <strong>intersection</strong> of two multisets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A \cap B\)</span>, is a multiset where the multiplicity of an element is the <strong>minimum</strong> of its multiplicities in <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.
+[ m_{A \cap B}(x) = \min(m_A(x), m_B(x)) ]
+<strong>Example:</strong>
+Let <span class="arithmatex">\(A = \{1, 1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{1, 2, 2, 4\}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(m_A(1) = 2\)</span>, <span class="arithmatex">\(m_B(1) = 1 \implies \min(2, 1) = 1\)</span>. Multiplicity of 1 is 1.</li>
+<li><span class="arithmatex">\(m_A(2) = 1\)</span>, <span class="arithmatex">\(m_B(2) = 2 \implies \min(1, 2) = 1\)</span>. Multiplicity of 2 is 1.</li>
+<li><span class="arithmatex">\(m_A(3) = 1\)</span>, <span class="arithmatex">\(m_B(3) = 0 \implies \min(1, 0) = 0\)</span>. Multiplicity of 3 is 0.</li>
+<li><span class="arithmatex">\(m_A(4) = 0\)</span>, <span class="arithmatex">\(m_B(4) = 1 \implies \min(0, 1) = 0\)</span>. Multiplicity of 4 is 0.</li>
+</ul>
+<p>Therefore, <span class="arithmatex">\(A \cap B = \{1, 2\}\)</span>.</p>
+<h4 id="sum">Sum<a class="headerlink" href="#sum" title="Permanent link">&para;</a></h4>
+<p>The <strong>sum</strong> of two multisets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A + B\)</span> or <span class="arithmatex">\(A \uplus B\)</span>, is a multiset where the multiplicity of an element is the <strong>sum</strong> of its multiplicities in <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. This operation is also known as the disjoint union.
+[ m_{A+B}(x) = m_A(x) + m_B(x) ]
+<strong>Example:</strong>
+Let <span class="arithmatex">\(A = \{a, b, b\}\)</span> and <span class="arithmatex">\(B = \{b, c\}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(m_A(a) = 1\)</span>, <span class="arithmatex">\(m_B(a) = 0 \implies 1 + 0 = 1\)</span>. Multiplicity of <span class="arithmatex">\(a\)</span> is 1.</li>
+<li><span class="arithmatex">\(m_A(b) = 2\)</span>, <span class="arithmatex">\(m_B(b) = 1 \implies 2 + 1 = 3\)</span>. Multiplicity of <span class="arithmatex">\(b\)</span> is 3.</li>
+<li><span class="arithmatex">\(m_A(c) = 0\)</span>, <span class="arithmatex">\(m_B(c) = 1 \implies 0 + 1 = 1\)</span>. Multiplicity of <span class="arithmatex">\(c\)</span> is 1.</li>
+</ul>
+<p>Therefore, <span class="arithmatex">\(A + B = \{a, b, b, b, c\}\)</span>.</p>
+<h4 id="difference">Difference<a class="headerlink" href="#difference" title="Permanent link">&para;</a></h4>
+<p>The <strong>difference</strong> of two multisets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A - B\)</span>, is a multiset where the multiplicity of an element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A - B\)</span> is the multiplicity of <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A\)</span> minus its multiplicity in <span class="arithmatex">\(B\)</span>, if the result is positive. Otherwise, the multiplicity is 0.
+[ m_{A-B}(x) = \max(0, m_A(x) - m_B(x)) ]
+<strong>Example:</strong>
+Let <span class="arithmatex">\(A = \{1, 1, 1, 2, 3, 3\}\)</span> and <span class="arithmatex">\(B = \{1, 1, 3, 4\}\)</span>.</p>
+<ul>
+<li>For element 1: <span class="arithmatex">\(m_A(1) - m_B(1) = 3 - 2 = 1\)</span>.</li>
+<li>For element 2: <span class="arithmatex">\(m_A(2) - m_B(2) = 1 - 0 = 1\)</span>.</li>
+<li>For element 3: <span class="arithmatex">\(m_A(3) - m_B(3) = 2 - 1 = 1\)</span>.</li>
+<li>For element 4: <span class="arithmatex">\(m_A(4) - m_B(4) = 0 - 1 = -1\)</span>. Since this is negative, the multiplicity is <span class="arithmatex">\(\max(0, -1) = 0\)</span>.</li>
+</ul>
+<p>Therefore, <span class="arithmatex">\(A - B = \{1, 2, 3\}\)</span>.</p>
+<h3 id="applications-of-multisets">Applications of Multisets<a class="headerlink" href="#applications-of-multisets" title="Permanent link">&para;</a></h3>
+<p>Multisets are useful in various fields of mathematics and computer science.</p>
+<ul>
+<li><strong>Prime Factorization:</strong> The prime factorization of an integer is a multiset of prime numbers. For example, the factorization of 120 is <span class="arithmatex">\(2^3 \cdot 3^1 \cdot 5^1\)</span>, which corresponds to the multiset <span class="arithmatex">\(\{2, 2, 2, 3, 5\}\)</span>.</li>
+<li><strong>Combinatorics:</strong> Multisets are used in counting problems, particularly for calculating permutations and combinations where repetitions are allowed. The number of permutations of a multiset of size <span class="arithmatex">\(n\)</span> is given by the multinomial coefficient.</li>
+<li><strong>Computer Science:</strong><ul>
+<li>In database systems, query results can often be multisets (bags) rather than sets, as duplicate rows might be returned.</li>
+<li>In data structures, a "bag" is an abstract data type that implements the multiset concept.</li>
+<li>Frequency analysis in text processing or data mining relies on counting occurrences, which is a multiset concept.</li>
+</ul>
+</li>
+</ul>
+<h2 id="problem-set">Problem Set<a class="headerlink" href="#problem-set" title="Permanent link">&para;</a></h2>
+<p>This problem set covers fundamental concepts of set theory, including operations, the Principle of Inclusion and Exclusion, and multisets, designed for Bachelor of Computer Applications (BCA) students.</p>
+<hr />
+<h3 id="basics-of-sets">Basics of Sets<a class="headerlink" href="#basics-of-sets" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Represent the set <span class="arithmatex">\(A = \{x | x \text{ is an integer and } -3 &lt; x \le 4\}\)</span> in Roster form.</li>
+<li>Represent the set <span class="arithmatex">\(B = \{1, 4, 9, 16, 25, \dots\}\)</span> in Set-builder notation.</li>
+<li>Which of the following are well-defined sets? Justify your answer.<ul>
+<li>The collection of all intelligent students in a class.</li>
+<li>The collection of all prime numbers less than 100.</li>
+<li>The collection of all beautiful flowers in a garden.</li>
+</ul>
+</li>
+<li>If <span class="arithmatex">\(S\)</span> is the set of letters in the word "DISCRETE", write <span class="arithmatex">\(S\)</span> in Roster form. What is the cardinality of <span class="arithmatex">\(S\)</span>?</li>
+<li>Let <span class="arithmatex">\(\mathbb{N}\)</span> be the set of natural numbers. Describe the set <span class="arithmatex">\(C = \{x \in \mathbb{N} | x = 2k \text{ for some } k \in \mathbb{N}\}\)</span> in words.</li>
+<li>Find the cardinality of the set <span class="arithmatex">\(A = \{x \in \mathbb{Z} | x^2 - 9 = 0\}\)</span>.</li>
+<li>If a set <span class="arithmatex">\(A\)</span> has 5 elements, what is the cardinality of its power set, <span class="arithmatex">\(|P(A)|\)</span>?</li>
+<li>Let <span class="arithmatex">\(A\)</span> be the set of all functions from <span class="arithmatex">\(\{1, 2\}\)</span> to <span class="arithmatex">\(\{a, b\}\)</span>. List all the elements of <span class="arithmatex">\(A\)</span>.</li>
+<li>Classify the following sets as finite, countably infinite, or uncountably infinite:<ul>
+<li>The set of all atoms in the universe.</li>
+<li>The set of all rational numbers <span class="arithmatex">\(\mathbb{Q}\)</span>.</li>
+<li>The set of all real numbers <span class="arithmatex">\(\mathbb{R}\)</span> between 0 and 1.</li>
+<li>The set of all lines in a plane.</li>
+</ul>
+</li>
+<li>Prove that the set of all integers, <span class="arithmatex">\(\mathbb{Z}\)</span>, is countably infinite by defining a bijective function <span class="arithmatex">\(f: \mathbb{N} \to \mathbb{Z}\)</span>.</li>
+<li>Explain why the set of all bit strings (strings of 0s and 1s) is countably infinite.</li>
+<li>Give an informal argument (e.g., Cantor's diagonalization) to explain why the power set of natural numbers, <span class="arithmatex">\(P(\mathbb{N})\)</span>, is uncountable.</li>
+<li>Is the set of all computer programs that can be written in Python finite, countably infinite, or uncountably infinite? Justify your reasoning.</li>
+<li>Let <span class="arithmatex">\(A_i = \{i, i+1, i+2, \dots\}\)</span> for <span class="arithmatex">\(i \in \mathbb{N}\)</span>. What is <span class="arithmatex">\(\bigcap_{i=1}^{\infty} A_i\)</span>?</li>
+<li>What is the cardinality of the Cartesian product of the set of vowels and the set of consonants in the English alphabet?</li>
+</ol>
+<hr />
+<h3 id="operations-on-sets-and-venn-diagrams_1">Operations on Sets and Venn Diagrams<a class="headerlink" href="#operations-on-sets-and-venn-diagrams_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Let <span class="arithmatex">\(U = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}\)</span>, <span class="arithmatex">\(A = \{1, 2, 3, 4, 5\}\)</span>, <span class="arithmatex">\(B = \{4, 5, 6, 7\}\)</span>, and <span class="arithmatex">\(C = \{5, 6, 8, 9\}\)</span>. Find:<ul>
+<li><span class="arithmatex">\(A \cup B\)</span></li>
+<li><span class="arithmatex">\(A \cap C\)</span></li>
+<li><span class="arithmatex">\(B - C\)</span></li>
+<li><span class="arithmatex">\(A^c\)</span></li>
+<li><span class="arithmatex">\(A \Delta B\)</span></li>
+</ul>
+</li>
+<li>Draw a Venn diagram for three sets A, B, and C, and shade the region corresponding to <span class="arithmatex">\((A \cup B) \cap C\)</span>.</li>
+<li>Draw a Venn diagram to represent <span class="arithmatex">\(A - (B \cup C)\)</span>.</li>
+<li>If <span class="arithmatex">\(|A| = 15\)</span>, <span class="arithmatex">\(|B| = 20\)</span>, and <span class="arithmatex">\(|A \cup B| = 30\)</span>, find <span class="arithmatex">\(|A \cap B|\)</span>.</li>
+<li>If <span class="arithmatex">\(A \subseteq B\)</span>, what are <span class="arithmatex">\(A \cup B\)</span>, <span class="arithmatex">\(A \cap B\)</span>, and <span class="arithmatex">\(A - B\)</span>?</li>
+<li>Prove the distributive law <span class="arithmatex">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span> using a membership table.</li>
+<li>Prove De Morgan's Law, <span class="arithmatex">\((A \cap B)^c = A^c \cup B^c\)</span>, using set builder notation and logical equivalences.</li>
+<li>Using the laws of set algebra, simplify the expression: <span class="arithmatex">\((A \cup B) \cap (A \cup B^c)\)</span>.</li>
+<li>Prove that for any sets A and B, <span class="arithmatex">\(A - B = A \cap B^c\)</span>.</li>
+<li>Prove the Absorption Law, <span class="arithmatex">\(A \cup (A \cap B) = A\)</span>, using set algebra laws.</li>
+<li>If <span class="arithmatex">\(A \Delta C = B \Delta C\)</span>, prove that <span class="arithmatex">\(A=B\)</span>. (Hint: Use the property <span class="arithmatex">\(X \Delta X = \emptyset\)</span>).</li>
+<li>For any two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, show that <span class="arithmatex">\(P(A) \cup P(B) \subseteq P(A \cup B)\)</span>. Is the reverse inclusion, <span class="arithmatex">\(P(A \cup B) \subseteq P(A) \cup P(B)\)</span>, always true? Provide a counterexample if not.</li>
+<li>Let <span class="arithmatex">\(A, B, C\)</span> be sets. Prove that <span class="arithmatex">\((A - B) - C = A - (B \cup C)\)</span>.</li>
+<li>Describe the symmetric difference <span class="arithmatex">\(A \Delta B\)</span> in terms of union, intersection, and complement. Shade the corresponding region in a Venn diagram.</li>
+<li>Let <span class="arithmatex">\(A = \{ \emptyset, \{\emptyset\} \}\)</span>. Find the power set <span class="arithmatex">\(P(A)\)</span>.</li>
+<li>Simplify the set expression <span class="arithmatex">\([(A' \cup B')' \cup (A' \cup B)']'\)</span>.</li>
+<li>What can you say about sets A and B if <span class="arithmatex">\(A - B = A\)</span>?</li>
+<li>What can you say about sets A and B if <span class="arithmatex">\(A - B = B - A\)</span>?</li>
+<li>Prove or disprove: If <span class="arithmatex">\(A \cup C = B \cup C\)</span>, then <span class="arithmatex">\(A = B\)</span>.</li>
+<li>Prove using set algebra that <span class="arithmatex">\((A \cap B) \cup (A - B) = A\)</span>.</li>
+</ol>
+<hr />
+<h3 id="principle-of-inclusion-and-exclusion-pie">Principle of Inclusion and Exclusion (PIE)<a class="headerlink" href="#principle-of-inclusion-and-exclusion-pie" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In a survey of 200 students, 120 study Chemistry, 100 study Physics, and 30 study neither. How many students study both Chemistry and Physics?</li>
+<li>Find the number of integers between 1 and 500 (inclusive) that are divisible by 3 or 5.</li>
+<li>A survey of 100 coffee drinkers found that 70 take sugar, 60 take cream, and 50 take both. How many take either sugar or cream? How many take neither?</li>
+<li>In a group of students, 150 are enrolled in Mathematics, 100 in Physics, and 80 in Chemistry. Also, 60 are in Mathematics and Physics, 50 in Physics and Chemistry, and 70 in Mathematics and Chemistry. 30 students are enrolled in all three courses. Find the total number of students in the group, assuming every student is in at least one course.</li>
+<li>Use the Principle of Inclusion and Exclusion to find the number of positive integers less than or equal to 100 that are not divisible by 2, 3, or 5.</li>
+<li>State the general formula for the Principle of Inclusion and Exclusion for four sets: <span class="arithmatex">\(|A \cup B \cup C \cup D|\)</span>.</li>
+<li>How many permutations of the set <span class="arithmatex">\(\{1, 2, 3, 4\}\)</span> leave no element in its original position? (i.e., find the number of derangements <span class="arithmatex">\(D_4\)</span>).</li>
+<li>A manager has 6 tasks to assign to 6 employees. In how many ways can the tasks be assigned so that no employee gets the task they are supposed to get (as per their job description)? Calculate <span class="arithmatex">\(D_6\)</span>.</li>
+<li>State the formula for the number of surjective (onto) functions from a set <span class="arithmatex">\(A\)</span> with <span class="arithmatex">\(m\)</span> elements to a set <span class="arithmatex">\(B\)</span> with <span class="arithmatex">\(n\)</span> elements.</li>
+<li>Find the number of onto functions from a set with 6 elements to a set with 3 elements.</li>
+<li>How many ways are there to distribute 5 distinct balls into 3 distinct bins such that no bin is left empty?</li>
+<li>How many bit strings of length 8 do not contain the substring "11"? (This is a more advanced application, can be solved with PIE or recurrence relations).</li>
+<li>Find the number of integers between 1 and 1000 that are divisible by 7 but not by 11.</li>
+<li>How many integers from 1 to 300 are divisible by at least one of 2, 3, 5?</li>
+<li>How many solutions does the equation <span class="arithmatex">\(x_1 + x_2 + x_3 = 11\)</span> have, where <span class="arithmatex">\(x_1, x_2, x_3\)</span> are non-negative integers such that <span class="arithmatex">\(x_1 \le 3\)</span>, <span class="arithmatex">\(x_2 \le 4\)</span>, and <span class="arithmatex">\(x_3 \le 6\)</span>? (Hint: Use PIE with upper bounds).</li>
+</ol>
+<hr />
+<h3 id="multisets_1">Multisets<a class="headerlink" href="#multisets_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define a multiset formally using a multiplicity function. Provide an example of a multiset with cardinality 8 and 4 distinct elements.</li>
+<li>Let <span class="arithmatex">\(M = \{a, b, b, c, c, c, d, d\}\)</span>.<ul>
+<li>What is the cardinality of M?</li>
+<li>List all submultisets of M with cardinality 3.</li>
+</ul>
+</li>
+<li>Let <span class="arithmatex">\(A = \{1, 1, 2, 3, 5\}\)</span> and <span class="arithmatex">\(B = \{1, 2, 2, 4, 5\}\)</span> be two multisets. Find:<ul>
+<li><span class="arithmatex">\(A \cup B\)</span> (Union)</li>
+<li><span class="arithmatex">\(A \cap B\)</span> (Intersection)</li>
+<li><span class="arithmatex">\(A + B\)</span> (Sum)</li>
+<li><span class="arithmatex">\(A - B\)</span> (Difference)</li>
+</ul>
+</li>
+<li>Explain the key difference between the union (<span class="arithmatex">\(\cup\)</span>) and sum (<span class="arithmatex">\(+\)</span>) operations on multisets. If <span class="arithmatex">\(A = \{a, b\}\)</span> and <span class="arithmatex">\(B = \{a, c\}\)</span>, calculate <span class="arithmatex">\(A \cup B\)</span> and <span class="arithmatex">\(A + B\)</span>.</li>
+<li>Let <span class="arithmatex">\(M_1\)</span> and <span class="arithmatex">\(M_2\)</span> be multisets drawn from a universal set <span class="arithmatex">\(U\)</span>. If <span class="arithmatex">\(k_1(x)\)</span> and <span class="arithmatex">\(k_2(x)\)</span> are the multiplicities of an element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(M_1\)</span> and <span class="arithmatex">\(M_2\)</span> respectively, define the multiplicity of <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(M_1 \cup M_2\)</span> and <span class="arithmatex">\(M_1 \cap M_2\)</span>.</li>
+<li>Find the number of 5-element multisets that can be formed from the set <span class="arithmatex">\(\{a, b, c, d\}\)</span>. (This is equivalent to combinations with repetition).</li>
+<li>In how many ways can a bakery sell a dozen (12) donuts if they offer 5 different varieties?</li>
+<li>Find the number of non-negative integer solutions to the equation <span class="arithmatex">\(x_1 + x_2 + x_3 + x_4 = 20\)</span>. Explain the connection between this problem and multisets.</li>
+<li>Find the number of integer solutions to <span class="arithmatex">\(y_1 + y_2 + y_3 = 10\)</span> where <span class="arithmatex">\(y_i \ge 1\)</span> for all <span class="arithmatex">\(i\)</span>. (Hint: Make a substitution).</li>
+<li>Let <span class="arithmatex">\(A\)</span> be a multiset with <span class="arithmatex">\(k\)</span> distinct elements and infinite copies of each. How many submultisets of size <span class="arithmatex">\(r\)</span> does <span class="arithmatex">\(A\)</span> have? Give the formula.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+      
+    
+  </body>
+</html>

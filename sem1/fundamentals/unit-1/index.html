@@ -1,0 +1,3128 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes for my college course.">
+      
+      
+        <meta name="author" content="myxi">
+      
+      
+      
+        <link rel="prev" href="../syllabus/">
+      
+      
+        <link rel="next" href="../../c/syllabus/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Unit 1 - BCA Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#number-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BCA Notes" class="md-header__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BCA Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unit 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BCA Notes" class="md-nav__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BCA Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1st Semester
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/so-many-oaks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/the-palanquin-bearers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/no-second-troy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/photograph-of-me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/audition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/the-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u1/sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u1/relations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u1/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definition and Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/second/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/three/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/four/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications and Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/pyq/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Number Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Number Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Number Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decimal-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decimal Number System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Number System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octal-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Octal Number System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexadecimal-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hexadecimal Number System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-system-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number System Conversions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number System Conversions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decimal-to-other-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decimal to Other Bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-bases-to-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Bases to Decimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-between-binary-octal-and-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions Between Binary, Octal, and Hexadecimal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computer Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-and-basic-components-of-a-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition and Basic Components of a Computer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition and Basic Components of a Computer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#central-processing-unit-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Central Processing Unit (CPU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motherboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motherboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bus Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bus Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#address-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Address Bus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Bus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Bus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-and-generations-of-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution and Generations of Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolution and Generations of Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-generation-1940-1956-vacuum-tubes" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Generation (1940-1956): Vacuum Tubes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-generation-1956-1963-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Generation (1956-1963): Transistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-generation-1964-1971-integrated-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Third Generation (1964-1971): Integrated Circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourth-generation-1971-present-microprocessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fourth Generation (1971-Present): Microprocessors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifth-generation-present-and-beyond-artificial-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fifth Generation (Present and Beyond): Artificial Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-of-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification of Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification of Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification-by-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification by Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-by-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification by Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-by-data-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification by Data Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-representation-in-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Representation in Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Representation in Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascii-american-standard-code-for-information-interchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASCII (American Standard Code for Information Interchange)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-ascii-vs-unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison: ASCII vs. Unicode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-systems-40-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number Systems (40 Problems)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number Systems (40 Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-and-core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction and Core Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-decimal-to-other-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions: Decimal to Other Bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-other-bases-to-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions: Other Bases to Decimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-between-binary-octal-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions: Between Binary, Octal, &amp; Hexadecimal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-fundamentals-40-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Fundamentals (40 Problems)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computer Fundamentals (40 Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-and-basic-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition and Basic Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-architecture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bus Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-and-generations-of-computers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution and Generations of Computers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-of-computers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification of Computers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-representation-20-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Representation (20 Problems)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Representation (20 Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASCII
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction to C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u1-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u1-ii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u1-iii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Number Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Number Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Number Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decimal-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decimal Number System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Number System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octal-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Octal Number System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexadecimal-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hexadecimal Number System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-system-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number System Conversions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number System Conversions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decimal-to-other-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decimal to Other Bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-bases-to-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Bases to Decimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-between-binary-octal-and-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions Between Binary, Octal, and Hexadecimal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computer Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-and-basic-components-of-a-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition and Basic Components of a Computer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition and Basic Components of a Computer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#central-processing-unit-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Central Processing Unit (CPU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motherboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motherboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bus Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bus Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#address-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Address Bus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Bus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Bus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-and-generations-of-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution and Generations of Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolution and Generations of Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-generation-1940-1956-vacuum-tubes" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Generation (1940-1956): Vacuum Tubes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-generation-1956-1963-transistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Generation (1956-1963): Transistors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-generation-1964-1971-integrated-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Third Generation (1964-1971): Integrated Circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourth-generation-1971-present-microprocessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fourth Generation (1971-Present): Microprocessors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifth-generation-present-and-beyond-artificial-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fifth Generation (Present and Beyond): Artificial Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-of-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification of Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification of Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification-by-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification by Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-by-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification by Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-by-data-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification by Data Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-representation-in-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Representation in Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Representation in Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascii-american-standard-code-for-information-interchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASCII (American Standard Code for Information Interchange)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-ascii-vs-unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison: ASCII vs. Unicode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-systems-40-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number Systems (40 Problems)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number Systems (40 Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-and-core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction and Core Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-decimal-to-other-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions: Decimal to Other Bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-other-bases-to-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions: Other Bases to Decimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversions-between-binary-octal-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversions: Between Binary, Octal, &amp; Hexadecimal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-fundamentals-40-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Fundamentals (40 Problems)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computer Fundamentals (40 Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-and-basic-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition and Basic Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-architecture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bus Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-and-generations-of-computers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution and Generations of Computers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-of-computers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification of Computers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-representation-20-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Representation (20 Problems)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Representation (20 Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASCII
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h2 id="number-systems">Number Systems<a class="headerlink" href="#number-systems" title="Permanent link">&para;</a></h2>
+<h3 id="introduction-to-number-systems">Introduction to Number Systems<a class="headerlink" href="#introduction-to-number-systems" title="Permanent link">&para;</a></h3>
+<p>A <strong>number system</strong> is a systematic way to represent numbers with symbolic characters and uses a base value to conveniently group numbers in a compact form. The base of a number system is also called its <strong>radix</strong>. It is the total number of distinct symbols or digits used to represent numbers in that system.</p>
+<p>In any number system, the value of a digit depends on its position within the number. This is known as <strong>positional notation</strong>. The value is determined by the digit itself, its position in the number, and the base of the system.</p>
+<p>The value of a number can be expressed as a sum of products of each digit with the base raised to the power of its position.
+For a number with digits <span class="arithmatex">\(d_n d_{n-1} ... d_1 d_0 . d_{-1} d_{-2} ... d_{-m}\)</span>, its value <span class="arithmatex">\(V\)</span> in base <span class="arithmatex">\(b\)</span> is:</p>
+<div class="arithmatex">\[
+V = \sum_{i=-m}^{n} (d_i \times b^i)
+\]</div>
+<p>Where <span class="arithmatex">\(d_i\)</span> is the digit at position <span class="arithmatex">\(i\)</span>.</p>
+<hr />
+<h3 id="types-of-number-systems">Types of Number Systems<a class="headerlink" href="#types-of-number-systems" title="Permanent link">&para;</a></h3>
+<h4 id="decimal-number-system">Decimal Number System<a class="headerlink" href="#decimal-number-system" title="Permanent link">&para;</a></h4>
+<p>The decimal number system is the most common number system used in our daily lives.</p>
+<ul>
+<li><strong>Base (Radix):</strong> 10</li>
+<li><strong>Digits Used:</strong> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</li>
+<li><strong>Positional Values:</strong> Powers of 10 (<span class="arithmatex">\(10^0, 10^1, 10^2, \dots\)</span>).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: <span class="arithmatex">\( (452.73)_{10} \)</span></p>
+<p>The number <span class="arithmatex">\(452.73\)</span> in decimal can be represented as:</p>
+<div class="arithmatex">\[
+(4 \times 10^2) + (5 \times 10^1) + (2 \times 10^0) + (7 \times 10^{-1}) + (3 \times 10^{-2})
+\]</div>
+<div class="arithmatex">\[
+= (4 \times 100) + (5 \times 10) + (2 \times 1) + (7 \times 0.1) + (3 \times 0.01)
+\]</div>
+<div class="arithmatex">\[
+= 400 + 50 + 2 + 0.7 + 0.03 = 452.73
+\]</div>
+</div>
+<h4 id="binary-number-system">Binary Number System<a class="headerlink" href="#binary-number-system" title="Permanent link">&para;</a></h4>
+<p>The binary number system is the fundamental language of computers. It uses only two digits. Each digit is called a <strong>bit</strong> (binary digit).</p>
+<ul>
+<li><strong>Base (Radix):</strong> 2</li>
+<li><strong>Digits Used:</strong> 0, 1</li>
+<li><strong>Positional Values:</strong> Powers of 2 (<span class="arithmatex">\(2^0, 2^1, 2^2, \dots\)</span>).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: <span class="arithmatex">\( (1101.101)_2 \)</span></p>
+<p>The number <span class="arithmatex">\(1101.101\)</span> in binary can be converted to decimal as:</p>
+<div class="arithmatex">\[
+(1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) + (1 \times 2^{-1}) + (0 \times 2^{-2}) + (1 \times 2^{-3})
+\]</div>
+<div class="arithmatex">\[
+= (1 \times 8) + (1 \times 4) + (0 \times 2) + (1 \times 1) + (1 \times 0.5) + (0 \times 0.25) + (1 \times 0.125)
+\]</div>
+<div class="arithmatex">\[
+= 8 + 4 + 0 + 1 + 0.5 + 0 + 0.125 = (13.625)_{10}
+\]</div>
+</div>
+<h4 id="octal-number-system">Octal Number System<a class="headerlink" href="#octal-number-system" title="Permanent link">&para;</a></h4>
+<p>The octal number system is often used in computing as a more compact way to represent binary numbers.</p>
+<ul>
+<li><strong>Base (Radix):</strong> 8</li>
+<li><strong>Digits Used:</strong> 0, 1, 2, 3, 4, 5, 6, 7</li>
+<li><strong>Positional Values:</strong> Powers of 8 (<span class="arithmatex">\(8^0, 8^1, 8^2, \dots\)</span>).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: <span class="arithmatex">\( (273.5)_8 \)</span></p>
+<p>The number <span class="arithmatex">\(273.5\)</span> in octal can be converted to decimal as:</p>
+<div class="arithmatex">\[
+(2 \times 8^2) + (7 \times 8^1) + (3 \times 8^0) + (5 \times 8^{-1})
+\]</div>
+<div class="arithmatex">\[
+= (2 \times 64) + (7 \times 8) + (3 \times 1) + (5 \times 0.125)
+\]</div>
+<div class="arithmatex">\[
+= 128 + 56 + 3 + 0.625 = (187.625)_{10}
+\]</div>
+</div>
+<h4 id="hexadecimal-number-system">Hexadecimal Number System<a class="headerlink" href="#hexadecimal-number-system" title="Permanent link">&para;</a></h4>
+<p>The hexadecimal system is widely used in computer systems to represent data like memory addresses and colors. It's even more compact than octal.</p>
+<ul>
+<li><strong>Base (Radix):</strong> 16</li>
+<li><strong>Digits Used:</strong> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F<ul>
+<li>Where A=10, B=11, C=12, D=13, E=14, F=15.</li>
+</ul>
+</li>
+<li><strong>Positional Values:</strong> Powers of 16 (<span class="arithmatex">\(16^0, 16^1, 16^2, \dots\)</span>).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: <span class="arithmatex">\( (1A5.C)_{16} \)</span></p>
+<p>The number <span class="arithmatex">\(1A5.C\)</span> in hexadecimal can be converted to decimal as:</p>
+<div class="arithmatex">\[
+(1 \times 16^2) + (A \times 16^1) + (5 \times 16^0) + (C \times 16^{-1})
+\]</div>
+<div class="arithmatex">\[
+= (1 \times 256) + (10 \times 16) + (5 \times 1) + (12 \times 0.0625)
+\]</div>
+<div class="arithmatex">\[
+= 256 + 160 + 5 + 0.75 = (421.75)_{10}
+\]</div>
+</div>
+<figure>
+  <img alt="" src="https://miro.medium.com/v2/resize:fit:772/1*z3FENZfyAEoC_133kTra3w.jpeg" />
+</figure>
+<hr />
+<h3 id="number-system-conversions">Number System Conversions<a class="headerlink" href="#number-system-conversions" title="Permanent link">&para;</a></h3>
+<h4 id="decimal-to-other-bases">Decimal to Other Bases<a class="headerlink" href="#decimal-to-other-bases" title="Permanent link">&para;</a></h4>
+<p>To convert a decimal number to another base, we handle the integer and fractional parts separately.</p>
+<h5 id="integer-part-conversion">Integer Part Conversion<a class="headerlink" href="#integer-part-conversion" title="Permanent link">&para;</a></h5>
+<p>Use the <strong>repeated division</strong> method.</p>
+<ol>
+<li>Divide the decimal number by the target base.</li>
+<li>Record the remainder.</li>
+<li>Replace the number with the quotient from the division.</li>
+<li>Repeat steps 1-3 until the quotient is 0.</li>
+<li>The new number is the sequence of remainders read from bottom to top.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (43)_{10} \)</span> to Binary</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Division</th>
+<th style="text-align: left;">Quotient</th>
+<th style="text-align: left;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(43 \div 2\)</span></td>
+<td style="text-align: left;">21</td>
+<td style="text-align: left;">1 (LSB)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(21 \div 2\)</span></td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(10 \div 2\)</span></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(5 \div 2\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(2 \div 2\)</span></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(1 \div 2\)</span></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1 (MSB)</td>
+</tr>
+</tbody>
+</table>
+<p>Reading the remainders from bottom to top, we get <span class="arithmatex">\(101011\)</span>.
+So, <span class="arithmatex">\( (43)_{10} = (101011)_2 \)</span>.</p>
+</div>
+<h5 id="fractional-part-conversion">Fractional Part Conversion<a class="headerlink" href="#fractional-part-conversion" title="Permanent link">&para;</a></h5>
+<p>Use the <strong>repeated multiplication</strong> method.</p>
+<ol>
+<li>Multiply the fractional part of the decimal number by the target base.</li>
+<li>Record the integer part of the result.</li>
+<li>Replace the fractional part with the fractional part of the result.</li>
+<li>Repeat steps 1-3 until the fractional part becomes 0 or you reach the desired precision.</li>
+<li>The new fractional number is the sequence of integers read from top to bottom.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (0.625)_{10} \)</span> to Binary</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Multiplication</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Integer Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(0.625 \times 2\)</span></td>
+<td style="text-align: left;">1.25</td>
+<td style="text-align: left;">1 (MSB)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(0.25 \times 2\)</span></td>
+<td style="text-align: left;">0.50</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(0.50 \times 2\)</span></td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">1 (LSB)</td>
+</tr>
+</tbody>
+</table>
+<p>Reading the integer parts from top to bottom, we get <span class="arithmatex">\(.101\)</span>.
+So, <span class="arithmatex">\( (0.625)_{10} = (0.101)_2 \)</span>.</p>
+</div>
+<h4 id="other-bases-to-decimal">Other Bases to Decimal<a class="headerlink" href="#other-bases-to-decimal" title="Permanent link">&para;</a></h4>
+<p>To convert a number from any base to decimal, use the <strong>positional notation</strong> method (also called polynomial expansion).</p>
+<ol>
+<li>Multiply each digit by the base raised to the power of its position.</li>
+<li>Sum up all the products.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (1101)_2 \)</span> to Decimal</p>
+<div class="arithmatex">\[
+(1101)_2 = (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)
+\]</div>
+<div class="arithmatex">\[
+= 8 + 4 + 0 + 1 = (13)_{10}
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (345)_8 \)</span> to Decimal</p>
+<div class="arithmatex">\[
+(345)_8 = (3 \times 8^2) + (4 \times 8^1) + (5 \times 8^0)
+\]</div>
+<div class="arithmatex">\[
+= (3 \times 64) + (4 \times 8) + (5 \times 1) = 192 + 32 + 5 = (229)_{10}
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (A2F)_{16} \)</span> to Decimal</p>
+<div class="arithmatex">\[
+(A2F)_{16} = (A \times 16^2) + (2 \times 16^1) + (F \times 16^0)
+\]</div>
+<div class="arithmatex">\[
+= (10 \times 256) + (2 \times 16) + (15 \times 1) = 2560 + 32 + 15 = (2607)_{10}
+\]</div>
+</div>
+<h4 id="conversions-between-binary-octal-and-hexadecimal">Conversions Between Binary, Octal, and Hexadecimal<a class="headerlink" href="#conversions-between-binary-octal-and-hexadecimal" title="Permanent link">&para;</a></h4>
+<p>These conversions are straightforward due to their base relationships (<span class="arithmatex">\(8 = 2^3\)</span> and <span class="arithmatex">\(16 = 2^4\)</span>).</p>
+<h5 id="binary-to-octal">Binary to Octal<a class="headerlink" href="#binary-to-octal" title="Permanent link">&para;</a></h5>
+<p>Group binary digits into sets of <strong>three</strong>, starting from the binary point. Add leading or trailing zeros if needed. Convert each group to its octal equivalent.</p>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (10110101)_2 \)</span> to Octal</p>
+<ol>
+<li>Group the bits into threes from right to left: <span class="arithmatex">\( \underline{10} \quad \underline{110} \quad \underline{101} \)</span></li>
+<li>Add a leading zero to the first group to make it three bits: <span class="arithmatex">\( \underline{010} \quad \underline{110} \quad \underline{101} \)</span></li>
+<li>Convert each group:<ul>
+<li><span class="arithmatex">\( (010)_2 = (2)_8 \)</span></li>
+<li><span class="arithmatex">\( (110)_2 = (6)_8 \)</span></li>
+<li><span class="arithmatex">\( (101)_2 = (5)_8 \)</span></li>
+</ul>
+</li>
+<li>Combine the results: <span class="arithmatex">\( (265)_8 \)</span>.
+So, <span class="arithmatex">\( (10110101)_2 = (265)_8 \)</span>.</li>
+</ol>
+</div>
+<h5 id="octal-to-binary">Octal to Binary<a class="headerlink" href="#octal-to-binary" title="Permanent link">&para;</a></h5>
+<p>Convert each octal digit to its <strong>3-bit</strong> binary equivalent.</p>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (724)_8 \)</span> to Binary</p>
+<ol>
+<li>Convert each octal digit:<ul>
+<li><span class="arithmatex">\( (7)_8 = (111)_2 \)</span></li>
+<li><span class="arithmatex">\( (2)_8 = (010)_2 \)</span></li>
+<li><span class="arithmatex">\( (4)_8 = (100)_2 \)</span></li>
+</ul>
+</li>
+<li>Combine the results: <span class="arithmatex">\( (111010100)_2 \)</span>.
+So, <span class="arithmatex">\( (724)_8 = (111010100)_2 \)</span>.</li>
+</ol>
+</div>
+<h5 id="binary-to-hexadecimal">Binary to Hexadecimal<a class="headerlink" href="#binary-to-hexadecimal" title="Permanent link">&para;</a></h5>
+<p>Group binary digits into sets of <strong>four</strong>, starting from the binary point. Add leading or trailing zeros if needed. Convert each group to its hexadecimal equivalent.</p>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (110101101011)_2 \)</span> to Hexadecimal</p>
+<ol>
+<li>Group the bits into fours from right to left: <span class="arithmatex">\( \underline{1101} \quad \underline{0110} \quad \underline{1011} \)</span></li>
+<li>Convert each group:<ul>
+<li><span class="arithmatex">\( (1101)_2 = (13)_{10} = (D)_{16} \)</span></li>
+<li><span class="arithmatex">\( (0110)_2 = (6)_{10} = (6)_{16} \)</span></li>
+<li><span class="arithmatex">\( (1011)_2 = (11)_{10} = (B)_{16} \)</span></li>
+</ul>
+</li>
+<li>Combine the results: <span class="arithmatex">\( (D6B)_{16} \)</span>.
+So, <span class="arithmatex">\( (110101101011)_2 = (D6B)_{16} \)</span>.</li>
+</ol>
+</div>
+<h5 id="hexadecimal-to-binary">Hexadecimal to Binary<a class="headerlink" href="#hexadecimal-to-binary" title="Permanent link">&para;</a></h5>
+<p>Convert each hexadecimal digit to its <strong>4-bit</strong> binary equivalent.</p>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (9AF)_16 \)</span> to Binary</p>
+<ol>
+<li>Convert each hex digit:<ul>
+<li><span class="arithmatex">\( (9)_{16} = (1001)_2 \)</span></li>
+<li><span class="arithmatex">\( (A)_{16} = (1010)_2 \)</span></li>
+<li><span class="arithmatex">\( (F)_{16} = (1111)_2 \)</span></li>
+</ul>
+</li>
+<li>Combine the results: <span class="arithmatex">\( (100110101111)_2 \)</span>.
+So, <span class="arithmatex">\( (9AF)_{16} = (100110101111)_2 \)</span>.</li>
+</ol>
+</div>
+<h5 id="octal-to-hexadecimal-and-vice-versa">Octal to Hexadecimal (and Vice Versa)<a class="headerlink" href="#octal-to-hexadecimal-and-vice-versa" title="Permanent link">&para;</a></h5>
+<p>The easiest way is to use binary as an intermediate step.</p>
+<ul>
+<li><strong>Octal to Hexadecimal:</strong> Convert the octal number to binary, then regroup the binary bits into sets of four and convert to hexadecimal.</li>
+<li><strong>Hexadecimal to Octal:</strong> Convert the hexadecimal number to binary, then regroup the binary bits into sets of three and convert to octal.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Convert <span class="arithmatex">\( (275)_8 \)</span> to Hexadecimal</p>
+<ol>
+<li><strong>Octal to Binary:</strong><ul>
+<li><span class="arithmatex">\( (2)_8 = 010 \)</span></li>
+<li><span class="arithmatex">\( (7)_8 = 111 \)</span></li>
+<li><span class="arithmatex">\( (5)_8 = 101 \)</span></li>
+<li>Combined Binary: <span class="arithmatex">\( (010111101)_2 \)</span></li>
+</ul>
+</li>
+<li><strong>Binary to Hexadecimal:</strong><ul>
+<li>Regroup into fours from the right: <span class="arithmatex">\( \underline{0000} \quad \underline{1011} \quad \underline{1101} \)</span></li>
+<li>Correct grouping: <span class="arithmatex">\( \underline{1011} \quad \underline{1101} \)</span>. We have <span class="arithmatex">\( (010111101)_2 \)</span>. So, <span class="arithmatex">\( \underline{0}10111101 \rightarrow \underline{0001} \quad \underline{0111} \quad \underline{1101} \)</span></li>
+<li>Wait, let's re-do the binary grouping carefully. Binary is <span class="arithmatex">\(010111101\)</span>.</li>
+<li>Group from right: <span class="arithmatex">\( \underline{01011} \quad \underline{1101} \)</span>. No. It's <span class="arithmatex">\( \underline{010} \quad \underline{111} \quad \underline{101} \)</span>. Binary: <code>010111101</code>.</li>
+<li>Regroup from right in fours: <code>01011 1101</code>. No, that's not right. <code>010 111 101</code>. The full binary string is <code>010111101</code>.</li>
+<li>Grouping from the right: <code>1101</code> and <code>01011</code>. That's not right either.</li>
+<li>Let's regroup <code>010111101</code> from the right in groups of 4:</li>
+<li><code>1101</code> (rightmost group)</li>
+<li><code>0111</code> (middle group)</li>
+<li><code>0</code> (leftmost group, needs padding) -&gt; <code>0000</code> -&gt; <code>0</code>. Let's use <code>1</code>.</li>
+<li>Binary: <span class="arithmatex">\( \underline{0001} \quad \underline{0111} \quad \underline{1101} \)</span></li>
+<li>The binary is <code>010111101</code>. So from the right: <code>1101</code> is one group. <code>0101</code> is the second. <code>1</code> is left over.</li>
+<li><span class="arithmatex">\( \underline{1} \quad \underline{0111} \quad \underline{1101} \)</span>. Let's re-check the octal-&gt;binary. <span class="arithmatex">\(2 \rightarrow 010, 7 \rightarrow 111, 5 \rightarrow 101\)</span>. Binary: <span class="arithmatex">\(010111101\)</span>. OK.</li>
+<li>Regroup <span class="arithmatex">\(010111101\)</span> in fours from the right: <span class="arithmatex">\( \underline{1101} \)</span> (is D), <span class="arithmatex">\( \underline{0101} \)</span> (is 5), left with <span class="arithmatex">\( \underline{1} \)</span>. Pad to <span class="arithmatex">\( \underline{0001} \)</span> (is 1).</li>
+<li>So, <span class="arithmatex">\( \underline{0001} \quad \underline{0101} \quad \underline{1101} \)</span></li>
+<li><span class="arithmatex">\( (0001)_2 = (1)_{16} \)</span></li>
+<li><span class="arithmatex">\( (0101)_2 = (5)_{16} \)</span></li>
+<li><span class="arithmatex">\( (1101)_2 = (D)_{16} \)</span></li>
+</ul>
+</li>
+<li><strong>Result:</strong> <span class="arithmatex">\( (15D)_{16} \)</span>
+So, <span class="arithmatex">\( (275)_8 = (15D)_{16} \)</span>.</li>
+</ol>
+</div>
+<h2 id="computer-fundamentals">Computer Fundamentals<a class="headerlink" href="#computer-fundamentals" title="Permanent link">&para;</a></h2>
+<h3 id="definition-and-basic-components-of-a-computer">Definition and Basic Components of a Computer<a class="headerlink" href="#definition-and-basic-components-of-a-computer" title="Permanent link">&para;</a></h3>
+<p>A <strong>computer</strong> is an electronic device that processes data and performs a vast range of tasks by executing a set of instructions. At a fundamental level, all computers consist of two primary elements: <strong>hardware</strong> and <strong>software</strong>.</p>
+<ul>
+<li><strong>Hardware</strong> refers to the physical components of a computer system that you can touch and see.</li>
+<li><strong>Software</strong> is a set of instructions, data, or programs used to operate computers and execute specific tasks.</li>
+</ul>
+<figure>
+  <img alt="" src="https://lh6.googleusercontent.com/proxy/e182Q9mNYHcKF5Lfi0JPxDewbNtLKF0ud__dt-0u0sz8KVESQ76QtEypUt5QH3zwj7D_hFYPbJtaWCmCRftW59Ow23nQHG8SeLhA4T_tAMMhbKE7CR5GSCGlWaJ8N8Vcpi_4VkwiQgltN7NQpLA" />
+<br />
+<hr>
+
+
+  <img alt="" src="https://www.tutorialspoint.com/computer_fundamentals/images/central_unit.jpg" />
+</figure>
+<p>The basic hardware components of a computer include:</p>
+<h4 id="central-processing-unit-cpu">Central Processing Unit (CPU)<a class="headerlink" href="#central-processing-unit-cpu" title="Permanent link">&para;</a></h4>
+<p>Often called the "brain" of the computer, the CPU is responsible for executing instructions and performing calculations. It consists of two main parts:</p>
+<ul>
+<li><strong>Arithmetic Logic Unit (ALT):</strong> Performs arithmetic operations (addition, subtraction, etc.) and logical operations (AND, OR, NOT).</li>
+<li><strong>Control Unit (CT):</strong> Directs and coordinates most of the operations in the computer. It interprets instructions and sends signals to other components.</li>
+</ul>
+<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
+<p>Memory is where the computer stores data and instructions. There are two main types of memory:</p>
+<ul>
+<li><strong>Primary Memory (Main Memory):</strong> This is the memory that the CPU can access directly. It is volatile, meaning its contents are lost when the computer is turned off.<ul>
+<li><strong>Random Access Memory (RAM):</strong> Used to store data and instructions that are currently in use.</li>
+<li><strong>Read-Only Memory (ROM):</strong> Contains pre-written instructions that are essential for booting up the computer.</li>
+</ul>
+</li>
+<li><strong>Secondary Memory (Storage):</strong> This is non-volatile memory used for long-term storage of data and programs.<ul>
+<li><strong>Hard Disk Drive (HDD):</strong> A magnetic storage device.</li>
+<li><strong>Solid-State Drive (SSD):</strong> Uses flash memory for storage, which is much faster than an HDD.</li>
+<li><strong>Optical Drives:</strong> Such as CD/DVD/Blu-ray drives.</li>
+<li><strong>Flash Memory:</strong> Used in USB drives and memory cards.</li>
+</ul>
+</li>
+</ul>
+<h4 id="input-devices">Input Devices<a class="headerlink" href="#input-devices" title="Permanent link">&para;</a></h4>
+<p>These devices are used to provide data and control signals to a computer.</p>
+<ul>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Scanner</li>
+<li>Microphone</li>
+<li>Webcam</li>
+</ul>
+<h4 id="output-devices">Output Devices<a class="headerlink" href="#output-devices" title="Permanent link">&para;</a></h4>
+<p>These devices are used to display the results of the processed data.</p>
+<ul>
+<li>Monitor</li>
+<li>Printer</li>
+<li>Speakers</li>
+<li>Projector</li>
+</ul>
+<h4 id="motherboard">Motherboard<a class="headerlink" href="#motherboard" title="Permanent link">&para;</a></h4>
+<p>The motherboard is the main printed circuit board (PCB) in a computer. It holds and allows communication between many of the crucial electronic components of a system, such as the CPU and memory.</p>
+<h3 id="bus-architecture">Bus Architecture<a class="headerlink" href="#bus-architecture" title="Permanent link">&para;</a></h3>
+<p>In computer architecture, a <strong>bus</strong> is a communication system that transfers data between components inside a computer, or between computers. It is a set of parallel electrical conductors that can be a path for data, addresses, or control signals.</p>
+<p>There are three main types of buses in a computer system:</p>
+<h4 id="address-bus">Address Bus<a class="headerlink" href="#address-bus" title="Permanent link">&para;</a></h4>
+<p>The address bus is a unidirectional pathway that carries the memory address from the CPU to the main memory or other I/O devices. The width of the address bus determines the maximum amount of memory the system can address. For example, a system with a 32-bit address bus can address <span class="arithmatex">\(2^{32}\)</span> memory locations.</p>
+<h4 id="data-bus">Data Bus<a class="headerlink" href="#data-bus" title="Permanent link">&para;</a></h4>
+<p>The data bus is a bidirectional pathway that carries the actual data between the CPU, memory, and I/O devices. The width of the data bus determines the amount of data that can be transferred at one time.</p>
+<h4 id="control-bus">Control Bus<a class="headerlink" href="#control-bus" title="Permanent link">&para;</a></h4>
+<p>The control bus is a bidirectional pathway that carries control signals and timing signals to coordinate the activities of all the components. These signals include read/write commands, interrupt requests, and clock signals.</p>
+<figure>
+  <img alt="" src="https://www.gatevidyalay.com/wp-content/uploads/2022/02/Data-Bus-Address-Bus-Control-Bus.png" />
+</figure>
+<h3 id="evolution-and-generations-of-computers">Evolution and Generations of Computers<a class="headerlink" href="#evolution-and-generations-of-computers" title="Permanent link">&para;</a></h3>
+<p>The evolution of computers is often categorized into generations, with each generation being characterized by a major technological development.</p>
+<h4 id="first-generation-1940-1956-vacuum-tubes">First Generation (1940-1956): Vacuum Tubes<a class="headerlink" href="#first-generation-1940-1956-vacuum-tubes" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Technology:</strong> Used vacuum tubes for circuitry and magnetic drums for memory.</li>
+<li><strong>Characteristics:</strong><ul>
+<li>Very large in size, often taking up entire rooms.</li>
+<li>Consumed a great deal of electricity and generated a lot of heat.</li>
+<li>Relied on machine language for programming.</li>
+<li>Examples: ENIAC, UNIVAC.</li>
+</ul>
+</li>
+</ul>
+<h4 id="second-generation-1956-1963-transistors">Second Generation (1956-1963): Transistors<a class="headerlink" href="#second-generation-1956-1963-transistors" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Technology:</strong> Transistors replaced vacuum tubes.</li>
+<li><strong>Characteristics:</strong><ul>
+<li>Smaller, faster, cheaper, and more energy-efficient than first-generation computers.</li>
+<li>Used assembly language and early high-level programming languages like FORTRAN and COBOL.</li>
+<li>Still generated a considerable amount of heat.</li>
+</ul>
+</li>
+</ul>
+<h4 id="third-generation-1964-1971-integrated-circuits">Third Generation (1964-1971): Integrated Circuits<a class="headerlink" href="#third-generation-1964-1971-integrated-circuits" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Technology:</strong> Integrated circuits (ICs), which are small chips containing hundreds of transistors.</li>
+<li><strong>Characteristics:</strong><ul>
+<li>Significantly smaller and faster than previous generations.</li>
+<li>Keyboards and monitors were introduced for user interaction.</li>
+<li>Used operating systems for the first time, allowing them to run multiple applications at once.</li>
+</ul>
+</li>
+</ul>
+<h4 id="fourth-generation-1971-present-microprocessors">Fourth Generation (1971-Present): Microprocessors<a class="headerlink" href="#fourth-generation-1971-present-microprocessors" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Technology:</strong> The microprocessor, which integrates all the components of a CPU onto a single chip.</li>
+<li><strong>Characteristics:</strong><ul>
+<li>Led to the development of personal computers (PCs).</li>
+<li>More powerful, compact, reliable, and affordable.</li>
+<li>Development of Graphical User Interfaces (GUIs), the mouse, and handheld devices.</li>
+</ul>
+</li>
+</ul>
+<h4 id="fifth-generation-present-and-beyond-artificial-intelligence">Fifth Generation (Present and Beyond): Artificial Intelligence<a class="headerlink" href="#fifth-generation-present-and-beyond-artificial-intelligence" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Technology:</strong> Based on Artificial Intelligence (AI), with a focus on parallel processing and superconductors.</li>
+<li><strong>Characteristics:</strong><ul>
+<li>Aims to develop devices that respond to natural language input and are capable of learning and self-organization.</li>
+<li>Includes technologies like voice recognition, quantum computing, and nano-technology.</li>
+</ul>
+</li>
+</ul>
+<h3 id="classification-of-computers">Classification of Computers<a class="headerlink" href="#classification-of-computers" title="Permanent link">&para;</a></h3>
+<p>Computers can be classified based on their size, purpose, and data handling capabilities.</p>
+<h4 id="classification-by-size">Classification by Size<a class="headerlink" href="#classification-by-size" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Supercomputers:</strong> The largest and most powerful computers, used for complex scientific and engineering problems.</li>
+<li><strong>Mainframe Computers:</strong> Large, powerful, and expensive computers used by large organizations for critical applications, such as bulk data processing.</li>
+<li><strong>Minicomputers (Midrange Computers):</strong> Smaller than mainframes but larger than microcomputers, often used as servers in a network.</li>
+<li><strong>Microcomputers (Personal Computers):</strong> The most common type of computer, designed for individual use. They include desktops, laptops, and tablets.</li>
+<li><strong>Workstations:</strong> High-end microcomputers with more powerful processors and better graphics capabilities, used for tasks like graphic design and engineering.</li>
+</ul>
+<h4 id="classification-by-purpose">Classification by Purpose<a class="headerlink" href="#classification-by-purpose" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>General-Purpose Computers:</strong> Designed to perform a wide variety of tasks. Most computers today are general-purpose.</li>
+<li><strong>Special-Purpose Computers:</strong> Designed to perform a specific task or a limited range of tasks. Examples include computers in cars, washing machines, and ATMs.</li>
+</ul>
+<h4 id="classification-by-data-handling">Classification by Data Handling<a class="headerlink" href="#classification-by-data-handling" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Analog Computers:</strong> Process analog data, which is continuous in nature. They are used for measuring physical quantities like temperature and pressure.</li>
+<li><strong>Digital Computers:</strong> Process digital data, which is in the form of discrete values (0s and 1s). Most modern computers are digital.</li>
+<li><strong>Hybrid Computers:</strong> Combine the features of both analog and digital computers. They are used in specialized applications where both types of data need to be processed.</li>
+</ul>
+<h2 id="data-representation-in-computers">Data Representation in Computers<a class="headerlink" href="#data-representation-in-computers" title="Permanent link">&para;</a></h2>
+<p>In the digital world, all data—be it text, numbers, images, or sound—is ultimately stored as a series of binary digits, or <strong>bits</strong>. A bit can only have one of two values: 0 or 1. To represent complex information like human language, computers need standardized systems to map characters to these binary numbers. These systems are called character encodings.</p>
+<hr />
+<h4 id="ascii-american-standard-code-for-information-interchange">ASCII (American Standard Code for Information Interchange)<a class="headerlink" href="#ascii-american-standard-code-for-information-interchange" title="Permanent link">&para;</a></h4>
+<p>ASCII was one of the earliest and most influential character encoding standards, developed in the 1960s. Its primary goal was to provide a standard for representing English characters on teleprinters and computers.</p>
+<h5 id="standard-ascii-7-bit">Standard ASCII (7-bit)<a class="headerlink" href="#standard-ascii-7-bit" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Structure:</strong> Standard ASCII uses 7 bits to represent each character. With 7 bits, it's possible to represent <span class="arithmatex">\(2^7 = 128\)</span> unique characters.</li>
+<li><strong>Character Set:</strong> These 128 code points are divided into two main groups:<ol>
+<li><strong>Control Characters (Codes 0-31 and 127):</strong> These are non-printable characters used to control devices. Examples include:<ul>
+<li><code>NULL</code> (0): Null character</li>
+<li><code>BEL</code> (7): Bell (makes a sound)</li>
+<li><code>BS</code> (8): Backspace</li>
+<li><code>LF</code> (10): Line Feed</li>
+<li><code>CR</code> (13): Carriage Return</li>
+<li><code>ESC</code> (27): Escape</li>
+</ul>
+</li>
+<li><strong>Printable Characters (Codes 32-126):</strong> These are the characters that can be displayed or printed. This set includes:<ul>
+<li>Punctuation marks and symbols (e.g., <code>!</code>, <code>@</code>, <code>#</code>, <code>$</code>)</li>
+<li>Digits (<code>0</code> through <code>9</code>)</li>
+<li>Uppercase English alphabet (<code>A</code> through <code>Z</code>)</li>
+<li>Lowercase English alphabet (<code>a</code> through <code>z</code>)</li>
+<li>Space character (Code 32)</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<figure>
+  <img alt="" src="https://www.alpharithms.com/s3/assets/img/ascii-chart/ascii-table-alpharithms-scaled.jpg" />
+</figure>
+<p><strong>Example:</strong>
+* The uppercase letter 'A' is represented by the decimal number 65, which in 7-bit binary is <code>1000001</code>.
+* The digit '5' is represented by the decimal number 53, which in 7-bit binary is <code>0110101</code>.</p>
+<h5 id="extended-ascii-8-bit">Extended ASCII (8-bit)<a class="headerlink" href="#extended-ascii-8-bit" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Structure:</strong> Since most computers store data in 8-bit chunks (bytes), the 8<sup>th</sup> bit, which was unused in standard ASCII, was utilized to create <strong>Extended ASCII</strong>. This allowed for an additional 128 characters, bringing the total to <span class="arithmatex">\(2^8 = 256\)</span>.</li>
+<li><strong>Problem of Standardization:</strong> The first 128 characters remained the same as standard ASCII. However, there was no single, universally accepted standard for the additional 128 characters (codes 128-255). Different manufacturers and organizations used them for different purposes, such as:<ul>
+<li>Graphical symbols</li>
+<li>Mathematical symbols</li>
+<li>Characters from other languages (e.g., accented letters like <code>é</code>, <code>ü</code>).</li>
+</ul>
+</li>
+<li>This led to the creation of different <strong>code pages</strong> (e.g., ISO-8859-1 for Western European languages), which caused compatibility issues. A file created with one code page would not display correctly on a system using a different one.</li>
+</ul>
+<hr />
+<h4 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">&para;</a></h4>
+<p>Unicode was created to solve the problems of limited character sets and conflicting code pages. It is a universal character encoding standard designed to support all writing systems in the world, both modern and historical.</p>
+<h5 id="core-concept-code-points">Core Concept: Code Points<a class="headerlink" href="#core-concept-code-points" title="Permanent link">&para;</a></h5>
+<p>The fundamental idea behind Unicode is to assign a unique number, called a <strong>code point</strong>, to every single character. This includes not just letters and numbers but also symbols, punctuation, and even emojis.</p>
+<ul>
+<li><strong>Notation:</strong> Unicode code points are typically written in hexadecimal with a "U+" prefix. For example, <code>U+0041</code> is the code point for the character 'A'.</li>
+<li><strong>Planes:</strong> The entire range of Unicode code points is divided into 17 "planes," each containing 65,536 ( <span class="arithmatex">\(2^{16}\)</span> ) code points.<ul>
+<li>The first plane (Plane 0) is the <strong>Basic Multilingual Plane (BMP)</strong>. It contains code points from <code>U+0000</code> to <code>U+FFFF</code> and includes most of the commonly used characters from modern languages.</li>
+<li>The other 16 planes are called <strong>supplementary planes</strong> and are used for less common characters, historic scripts, and emojis.</li>
+</ul>
+</li>
+</ul>
+<h5 id="unicode-encoding-schemes">Unicode Encoding Schemes<a class="headerlink" href="#unicode-encoding-schemes" title="Permanent link">&para;</a></h5>
+<p>A code point is just an abstract number. An <strong>encoding scheme</strong> defines how these code points are translated into a sequence of bytes for storage and transmission. The most common Unicode encodings are UTF-8, UTF-16, and UTF-32.</p>
+<h6 id="utf-8-unicode-transformation-format-8-bit">UTF-8 (Unicode Transformation Format - 8-bit)<a class="headerlink" href="#utf-8-unicode-transformation-format-8-bit" title="Permanent link">&para;</a></h6>
+<p>UTF-8 is the most popular encoding on the web and for many operating systems.
+* <strong>Variable-Width Encoding:</strong> It uses a variable number of bytes to represent each character.
+    * <strong>1 byte:</strong> For all standard ASCII characters (<code>U+0000</code> to <code>U+007F</code>).
+    * <strong>2 bytes:</strong> For Latin letters with diacritics, Greek, Cyrillic, Hebrew, Arabic, etc.
+    * <strong>3 bytes:</strong> For characters in the rest of the BMP (e.g., Chinese, Japanese, Korean).
+    * <strong>4 bytes:</strong> For characters in the supplementary planes (e.g., rare characters, most emojis 👍).
+* <strong>Key Advantage: Backward Compatibility:</strong> A major reason for its success is that it is <strong>100% backward compatible with 7-bit ASCII</strong>. Any text file containing only ASCII characters is also a valid UTF-8 file. This made the transition from ASCII to Unicode much smoother.</p>
+<h6 id="utf-16-unicode-transformation-format-16-bit">UTF-16 (Unicode Transformation Format - 16-bit)<a class="headerlink" href="#utf-16-unicode-transformation-format-16-bit" title="Permanent link">&para;</a></h6>
+<ul>
+<li><strong>Variable-Width Encoding:</strong> UTF-16 uses either 2 bytes (16 bits) or 4 bytes (32 bits) per character.<ul>
+<li>It uses 2 bytes for all characters in the BMP.</li>
+<li>For characters in the supplementary planes, it uses a pair of 2-byte sequences called a <strong>surrogate pair</strong>.</li>
+</ul>
+</li>
+<li><strong>Usage:</strong> It is used internally by systems like Microsoft Windows and Java.</li>
+</ul>
+<h6 id="utf-32-unicode-transformation-format-32-bit">UTF-32 (Unicode Transformation Format - 32-bit)<a class="headerlink" href="#utf-32-unicode-transformation-format-32-bit" title="Permanent link">&para;</a></h6>
+<ul>
+<li><strong>Fixed-Width Encoding:</strong> UTF-32 is the simplest of the three. It uses a fixed 4 bytes (32 bits) for every single Unicode character.</li>
+<li><strong>Advantage:</strong> Every character has the same length, which can simplify programming tasks like finding the nth character in a string.</li>
+<li><strong>Disadvantage:</strong> It is very space-inefficient. A text file containing only English characters would be four times larger in UTF-32 than in ASCII or UTF-8.</li>
+</ul>
+<hr />
+<h4 id="comparison-ascii-vs-unicode">Comparison: ASCII vs. Unicode<a class="headerlink" href="#comparison-ascii-vs-unicode" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">ASCII</th>
+<th style="text-align: left;">Unicode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Size</strong></td>
+<td style="text-align: left;">7-bit (Standard) or 8-bit (Extended)</td>
+<td style="text-align: left;">A standard, not an encoding. Code points up to 21 bits.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encoding</strong></td>
+<td style="text-align: left;">Itself is the encoding.</td>
+<td style="text-align: left;">Uses encoding schemes like UTF-8, UTF-16, UTF-32.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacity</strong></td>
+<td style="text-align: left;">128 characters (Standard) or 256 (Extended).</td>
+<td style="text-align: left;">Over 1.1 million possible code points (currently over 149,000 assigned).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scope</strong></td>
+<td style="text-align: left;">Primarily for the English language.</td>
+<td style="text-align: left;">Aims to include every character from every language.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compatibility</strong></td>
+<td style="text-align: left;">Extended ASCII has many conflicting versions (code pages).</td>
+<td style="text-align: left;">Provides a single, universal standard. UTF-8 is backward compatible with 7-bit ASCII.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memory Usage</strong></td>
+<td style="text-align: left;">Fixed 1 byte per character.</td>
+<td style="text-align: left;">Variable, depending on the encoding and character. UTF-8 is very efficient for English/Latin text.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="problem-set">Problem Set<a class="headerlink" href="#problem-set" title="Permanent link">&para;</a></h1>
+<h2 id="number-systems-40-problems">Number Systems (40 Problems)<a class="headerlink" href="#number-systems-40-problems" title="Permanent link">&para;</a></h2>
+<h3 id="introduction-and-core-concepts">Introduction and Core Concepts<a class="headerlink" href="#introduction-and-core-concepts" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define 'radix' or 'base' of a number system. State the radix for binary, octal, decimal, and hexadecimal systems.</li>
+<li>What is the significance of the positional value in a number system? Illustrate with the decimal number <span class="arithmatex">\(345\)</span>.</li>
+<li>Why is the binary system ideal for electronic computers?</li>
+<li>List all the valid digits for the base-7 number system.</li>
+<li>What is the largest value that can be represented by a single hexadecimal digit? What is its decimal equivalent?</li>
+<li>Explain why <span class="arithmatex">\(387_8\)</span> is an invalid octal number.</li>
+<li>Convert the number <span class="arithmatex">\(20_{10}\)</span> into its equivalent in base-2, base-8, and base-16.</li>
+<li>Which has a greater value: <span class="arithmatex">\(101010_2\)</span> or <span class="arithmatex">\(50_{10}\)</span>? Justify your answer.</li>
+<li>What is the weight of the digit 'A' in the hexadecimal number <span class="arithmatex">\(1AF5_{16}\)</span>?</li>
+<li>How many unique numbers can be represented using 8 bits?</li>
+</ol>
+<h3 id="conversions-decimal-to-other-bases">Conversions: Decimal to Other Bases<a class="headerlink" href="#conversions-decimal-to-other-bases" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Convert <span class="arithmatex">\(428_{10}\)</span> to its binary equivalent.</li>
+<li>Convert <span class="arithmatex">\(999_{10}\)</span> to its octal equivalent.</li>
+<li>Convert <span class="arithmatex">\(4096_{10}\)</span> to its hexadecimal equivalent.</li>
+<li>Convert the fractional decimal <span class="arithmatex">\(0.8125_{10}\)</span> to binary.</li>
+<li>Convert <span class="arithmatex">\(157.25_{10}\)</span> to its octal equivalent.</li>
+<li>Find the hexadecimal equivalent of <span class="arithmatex">\(260.5_{10}\)</span>.</li>
+<li>Convert <span class="arithmatex">\(3456_{10}\)</span> to binary.</li>
+<li>Convert <span class="arithmatex">\(100.1_{10}\)</span> to its binary equivalent (up to 5 fractional places).</li>
+<li>Convert <span class="arithmatex">\(511_{10}\)</span> to octal.</li>
+<li>Convert <span class="arithmatex">\(65535_{10}\)</span> to hexadecimal.</li>
+</ol>
+<h3 id="conversions-other-bases-to-decimal">Conversions: Other Bases to Decimal<a class="headerlink" href="#conversions-other-bases-to-decimal" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Convert <span class="arithmatex">\(11011101_2\)</span> to its decimal equivalent.</li>
+<li>Convert <span class="arithmatex">\(707_8\)</span> to its decimal equivalent.</li>
+<li>Find the decimal value of the hexadecimal number <span class="arithmatex">\(F0A1_{16}\)</span>.</li>
+<li>Convert the binary number <span class="arithmatex">\(10110.1101_2\)</span> to decimal.</li>
+<li>Convert <span class="arithmatex">\(234.5_8\)</span> to its decimal equivalent.</li>
+<li>Find the decimal value of <span class="arithmatex">\(C4E.B_{16}\)</span>.</li>
+<li>Convert <span class="arithmatex">\(10000001_2\)</span> to decimal.</li>
+<li>What is the decimal value of <span class="arithmatex">\(BAD_{16}\)</span>?</li>
+<li>Convert <span class="arithmatex">\(4000_8\)</span> to decimal.</li>
+<li>Convert <span class="arithmatex">\(1.1_2\)</span> to decimal.</li>
+</ol>
+<h3 id="conversions-between-binary-octal-hexadecimal">Conversions: Between Binary, Octal, &amp; Hexadecimal<a class="headerlink" href="#conversions-between-binary-octal-hexadecimal" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Convert <span class="arithmatex">\(101101110111_2\)</span> directly to its octal equivalent.</li>
+<li>Convert the octal number <span class="arithmatex">\(743_8\)</span> to its binary representation.</li>
+<li>Convert <span class="arithmatex">\(1111001010100111.101101_2\)</span> directly to its hexadecimal equivalent.</li>
+<li>Convert the hexadecimal number <span class="arithmatex">\(1ABC.D_{16}\)</span> to its binary representation.</li>
+<li>Convert <span class="arithmatex">\(652_8\)</span> to hexadecimal. (Hint: First convert to binary).</li>
+<li>Convert <span class="arithmatex">\(9E7_{16}\)</span> to octal.</li>
+<li>Group the bits of <span class="arithmatex">\(10111101_2\)</span> to find its octal equivalent.</li>
+<li>Convert <span class="arithmatex">\(BEEF_{16}\)</span> to binary.</li>
+<li>Convert the octal number <span class="arithmatex">\(1234_8\)</span> to hexadecimal.</li>
+<li>Convert <span class="arithmatex">\(A03F_{16}\)</span> to octal.</li>
+</ol>
+<hr />
+<h2 id="computer-fundamentals-40-problems">Computer Fundamentals (40 Problems)<a class="headerlink" href="#computer-fundamentals-40-problems" title="Permanent link">&para;</a></h2>
+<h3 id="definition-and-basic-components">Definition and Basic Components<a class="headerlink" href="#definition-and-basic-components" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Draw a neat, labeled block diagram of a computer system. Explain the flow of data between the core components.</li>
+<li>Define the CPU. What are the functions of its two main components, the ALU and the CU?</li>
+<li>Differentiate between RAM and ROM. Which one is volatile and why?</li>
+<li>What is cache memory? Explain its purpose and its position in the memory hierarchy.</li>
+<li>List four input devices and four output devices, and state the primary function of each.</li>
+<li>What is the role of the motherboard in a computer system?</li>
+<li>Explain the fetch-decode-execute cycle performed by the CPU.</li>
+<li>What is secondary storage? Provide three examples of secondary storage devices.</li>
+<li>Why is a computer referred to as a "system"?</li>
+<li>Differentiate between a general-purpose register and a special-purpose register (e.g., Program Counter, Instruction Register).</li>
+</ol>
+<h3 id="bus-architecture_1">Bus Architecture<a class="headerlink" href="#bus-architecture_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define 'bus' in computer architecture. What are the three main types of buses in a computer system?</li>
+<li>What is the function of the Address Bus? Is it unidirectional or bidirectional? Justify your answer.</li>
+<li>If a microprocessor has a 16-bit address bus, what is the maximum memory capacity it can directly address in kilobytes (KB)?</li>
+<li>Describe the function of the Data Bus. Why must it be bidirectional?</li>
+<li>If a system has a 64-bit data bus, how many bytes of data can be transferred simultaneously?</li>
+<li>What is the purpose of the Control Bus? List at least four different control signals it carries.</li>
+<li>Explain how the Address, Data, and Control buses work together to perform a write operation to a memory location.</li>
+<li>What is bus width? How does the width of the data bus affect the performance of a computer?</li>
+<li>Differentiate between a system bus and an expansion bus (like PCI).</li>
+<li>What is bus contention and how is it managed?</li>
+</ol>
+<h3 id="evolution-and-generations-of-computers_1">Evolution and Generations of Computers<a class="headerlink" href="#evolution-and-generations-of-computers_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>What was the defining electronic component for each of the first four generations of computers?</li>
+<li>Name two examples of First Generation computers. What were their primary limitations?</li>
+<li>How did the shift from vacuum tubes to transistors in the Second Generation improve computers?</li>
+<li>What is an Integrated Circuit (IC)? How did its introduction in the Third Generation lead to minicomputers?</li>
+<li>The Fourth Generation is defined by the microprocessor. What is a microprocessor and how did it revolutionize the computer industry?</li>
+<li>Differentiate between SSI, MSI, LSI, and VLSI in the context of integrated circuits.</li>
+<li>What are the primary characteristics and goals of Fifth Generation computers?</li>
+<li>What programming languages were characteristic of the First and Second Generations?</li>
+<li>How did the user interface evolve from the First Generation (plugs and switches) to the Fourth Generation (GUIs)?</li>
+<li>Which generation first saw the widespread use of high-level languages like FORTRAN and COBOL?</li>
+</ol>
+<h3 id="classification-of-computers_1">Classification of Computers<a class="headerlink" href="#classification-of-computers_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Classify computers based on size. Briefly describe Supercomputers, Mainframe computers, Minicomputers, and Microcomputers.</li>
+<li>What is the primary application area for a supercomputer?</li>
+<li>How does a mainframe computer differ from a supercomputer in terms of its processing goals?</li>
+<li>Differentiate between a desktop computer, a laptop, and a tablet, which are all types of microcomputers.</li>
+<li>Classify computers based on the type of data they process. Explain Analog, Digital, and Hybrid computers.</li>
+<li>Provide a real-world example for an analog computer and a hybrid computer.</li>
+<li>Classify computers based on their purpose. Differentiate between general-purpose and special-purpose computers with examples.</li>
+<li>What is an embedded computer? Give two examples of everyday devices that contain them.</li>
+<li>Where does a "server" fit in the classification of computers by size?</li>
+<li>What is a workstation, and how does it differ from a standard desktop PC?</li>
+</ol>
+<hr />
+<h2 id="data-representation-20-problems">Data Representation (20 Problems)<a class="headerlink" href="#data-representation-20-problems" title="Permanent link">&para;</a></h2>
+<h3 id="ascii">ASCII<a class="headerlink" href="#ascii" title="Permanent link">&para;</a></h3>
+<ol>
+<li>What does ASCII stand for? What was its original purpose?</li>
+<li>The standard ASCII code is a 7-bit code. What is the total number of characters it can represent?</li>
+<li>What is the primary difference between ASCII and Extended ASCII?</li>
+<li>The decimal ASCII value for 'a' is 97. What would be the decimal ASCII value for 'e'?</li>
+<li>Given that the ASCII code for the character '0' is <span class="arithmatex">\(48_{10}\)</span>, find the 7-bit binary ASCII code for the character '3'.</li>
+<li>What is a major limitation of the ASCII character set in a global context?</li>
+<li>Decode the following sequence of 7-bit ASCII codes (in binary): <code>1001000 1000101 1001100 1001100 1001111</code>.</li>
+<li>Are control characters (like newline, tab) part of the ASCII standard?</li>
+<li>Explain why ASCII is considered a subset of Unicode's UTF-8.</li>
+<li>What happens when a system using Extended ASCII tries to read a file created with a different extended character set (a different code page)?</li>
+</ol>
+<h3 id="unicode_1">Unicode<a class="headerlink" href="#unicode_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Why was Unicode created? What fundamental problem does it solve?</li>
+<li>Explain the difference between a "code point" and an "encoding scheme" in Unicode.</li>
+<li>What does UTF in UTF-8, UTF-16, and UTF-32 stand for?</li>
+<li>Describe the key feature of UTF-8. Why is this variable-width encoding so advantageous for web content?</li>
+<li>How does UTF-32 work? What is its main advantage and its main disadvantage?</li>
+<li>The Unicode code point for the Euro sign (€) is U+20AC. Would this character require 1, 2, 3, or 4 bytes in a UTF-8 encoding? (You don't need to calculate the exact bits, just the byte count based on its range).</li>
+<li>How many bytes does the character 'A' (U+0041) occupy in UTF-8, UTF-16, and UTF-32 respectively?</li>
+<li>What is the relationship between the first 128 characters of Unicode and the standard ASCII set?</li>
+<li>Compare UTF-8 and UTF-16 in terms of space efficiency for documents containing mostly English text versus documents containing mostly East Asian characters (e.g., Chinese, Japanese).</li>
+<li>Briefly explain what "endianness" (Big-Endian vs. Little-Endian) is and why it is a concern for UTF-16 and UTF-32 but not for UTF-8.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+      
+    
+  </body>
+</html>

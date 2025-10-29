@@ -1,0 +1,2131 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes for my college course.">
+      
+      
+        <meta name="author" content="myxi">
+      
+      
+      
+        <link rel="prev" href="../../u2/four/">
+      
+      
+        <link rel="next" href="../../../fundamentals/syllabus/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>2024 - BCA Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mathematics-i-cit0100304" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="BCA Notes" class="md-header__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BCA Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2024
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="BCA Notes" class="md-nav__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BCA Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1st Semester
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/so-many-oaks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/the-palanquin-bearers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/no-second-troy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/photograph-of-me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/audition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/the-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u1/sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u1/relations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u1/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definition and Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/second/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/three/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/four/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications and Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-answer-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) Answer the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-answer-any-six-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) Answer any six from the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-answer-any-four-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (3) Answer any four from the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-answer-any-two-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (4) Answer any two from the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-answer-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 1: Answer the following
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-answer-any-six-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: Answer any six from the following
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-answer-any-four-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Answer any four from the following
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/unit-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction to C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-ii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-iii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-answer-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) Answer the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-answer-any-six-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) Answer any six from the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-answer-any-four-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (3) Answer any four from the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-answer-any-two-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      (4) Answer any two from the following
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-answer-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 1: Answer the following
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-answer-any-six-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: Answer any six from the following
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-answer-any-four-from-the-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Answer any four from the following
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="mathematics-i-cit0100304">MATHEMATICS-I (CIT0100304)<a class="headerlink" href="#mathematics-i-cit0100304" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Paper Details</p>
+<ul>
+<li><strong>Course:</strong> BCA (SEM-I)</li>
+<li><strong>Full Marks:</strong> 60</li>
+<li><strong>Time:</strong> 2½ hours</li>
+<li><strong>Instructions:</strong> The figures in the margin indicate full marks for the questions.</li>
+</ul>
+</div>
+<h2 id="1-answer-the-following">(1) Answer the following<a class="headerlink" href="#1-answer-the-following" title="Permanent link">&para;</a></h2>
+<p><em>Marks: <span class="arithmatex">\(1 \times 8 = 8\)</span></em></p>
+<ul>
+<li>a. Define Set.</li>
+<li>b. When is a matrix said to be singular?</li>
+<li>c. Give an example of a bijective function.</li>
+<li>d. What is the Cardinality of the Set <span class="arithmatex">\(A=\{0, 1, -1, 8\}\)</span>?</li>
+<li>e. What is Sample Space?</li>
+<li>f. If the probability of an event A is <span class="arithmatex">\(P(A)=\frac{2}{3}\)</span>, then find <span class="arithmatex">\(P(\overline{A})\)</span>.</li>
+<li>g. State De Morgan's Law for two sets A and B.</li>
+<li>
+<p>h. Find the values of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> if:</p>
+<div class="arithmatex">\[
+\begin{bmatrix}x &amp; 5 \\ 3 &amp; -2 \end{bmatrix} = \begin{bmatrix} -8 &amp; 5 \\ y &amp; -2 \end{bmatrix}
+\]</div>
+</li>
+</ul>
+<h2 id="2-answer-any-six-from-the-following">(2) Answer any six from the following<a class="headerlink" href="#2-answer-any-six-from-the-following" title="Permanent link">&para;</a></h2>
+<p><em>Marks: <span class="arithmatex">\(2 \times 6 = 12\)</span></em></p>
+<ul>
+<li>a. Define injective and surjective functions with one example for each.</li>
+<li>b. If <span class="arithmatex">\(f:R \rightarrow R\)</span> and <span class="arithmatex">\(g:R \rightarrow R\)</span> are defined as <span class="arithmatex">\(f(x)=x^{2}\)</span> and <span class="arithmatex">\(g(x)=x-3\)</span>, find <span class="arithmatex">\(f \circ g\)</span> and <span class="arithmatex">\(g \circ f\)</span>.</li>
+<li>
+<p>c. Given the matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, find the product <span class="arithmatex">\(A \cdot B\)</span>.</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 2 &amp; -3 \\ 5 &amp; 4 \end{bmatrix}, \quad B = \begin{bmatrix} 6 &amp; -7 \\ 2 &amp; -8 \end{bmatrix}
+\]</div>
+</li>
+<li>
+<p>d. Find the minor and co-factors of the elements 2 and 7 in the following matrix:</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 2 &amp; -4 &amp; 5 \\ 3 &amp; 1 &amp; 7 \\ 0 &amp; -1 &amp; -2 \end{bmatrix}
+\]</div>
+</li>
+<li>
+<p>e. For any three non-empty sets A, B, and C, prove that <span class="arithmatex">\(A-(B \cup C)=(A-B) \cap (A-C)\)</span>.</p>
+</li>
+<li>
+<p>f. Find the Trace of the matrix A:</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} -1 &amp; 0 &amp; 3 \\ 2 &amp; 4 &amp; 5 \\ 7 &amp; 3 &amp; 6 \end{bmatrix}
+\]</div>
+</li>
+<li>
+<p>g. If <span class="arithmatex">\(P(A)=\frac{2}{3}\)</span>, <span class="arithmatex">\(P(B)=\frac{3}{4}\)</span>, and <span class="arithmatex">\(P(A \cup B)=\frac{1}{2}\)</span>, find the value of <span class="arithmatex">\(P(A/B)\)</span>.</p>
+</li>
+<li>h. Define a Partially Ordered Set (POSET).</li>
+<li>i. Calculate the median from the following data:
+        - <span class="arithmatex">\(x: 1, 2, 3, 4, 5\)</span>
+        - <span class="arithmatex">\(y: 8, 5, 6, 2, 1\)</span></li>
+<li>j. What is the empirical relation between mean, median, and mode?</li>
+</ul>
+<h2 id="3-answer-any-four-from-the-following">(3) Answer any four from the following<a class="headerlink" href="#3-answer-any-four-from-the-following" title="Permanent link">&para;</a></h2>
+<p><em>Marks: <span class="arithmatex">\(5 \times 4 = 20\)</span></em></p>
+<ul>
+<li>a. For any four non-empty sets A, B, S, and T, prove that <span class="arithmatex">\((A \times B) \cap (S \times T) = (A \cap S) \times (B \cap T)\)</span>.</li>
+<li>b. Using the principle of mathematical induction, prove that <span class="arithmatex">\(P(n) = 10^{n} + 3 \cdot 4^{n+2} + 5\)</span> is divisible by 9 for all natural numbers <span class="arithmatex">\(n\)</span>.</li>
+<li>
+<p>c. If <span class="arithmatex">\(f:A \rightarrow B\)</span> and <span class="arithmatex">\(g:B \rightarrow C\)</span> are both one-one and onto functions, then prove that:</p>
+<ol>
+<li>The composite function <span class="arithmatex">\(g \circ f\)</span> is also one-one and onto.</li>
+<li><span class="arithmatex">\((g \circ f)^{-1} = f^{-1} \circ g^{-1}\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>d. Let R be a relation '<span class="arithmatex">\(\le\)</span>' (less than or equal to) defined on the set of positive integers. Prove that R is a partial order relation.</p>
+</li>
+<li>e. Find the mean deviation about the median for the given data:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="arithmatex">\(x_i\)</span></th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">9</th>
+<th style="text-align: center;">10</th>
+<th style="text-align: center;">12</th>
+<th style="text-align: center;">15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(f_i\)</span></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>f. Solve the following system of linear equations using Cramer's rule:</p>
+<div class="arithmatex">\[
+\begin{cases}
+2x - y + 3z = 9 \\
+x + y + z = 6 \\
+x - y + z = 2
+\end{cases}
+\]</div>
+</li>
+<li>
+<p>g. Find the inverse of the matrix A:</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 0 &amp; 1 &amp; 2 \\ 1 &amp; 2 &amp; 3 \\ 3 &amp; 1 &amp; 1 \end{bmatrix}
+\]</div>
+</li>
+<li>
+<p>h. If A and B are square matrices of the same order, then prove that <span class="arithmatex">\(adj(AB) = (adj B) \cdot (adj A)\)</span>.</p>
+</li>
+</ul>
+<h2 id="4-answer-any-two-from-the-following">(4) Answer any two from the following<a class="headerlink" href="#4-answer-any-two-from-the-following" title="Permanent link">&para;</a></h2>
+<p><em>Marks: <span class="arithmatex">\(10 \times 2 = 20\)</span></em></p>
+<ul>
+<li>
+<p>a. Let R be a relation on the set of integers I, defined as <span class="arithmatex">\(R = \{(x,y) | (x-y) \text{ is divisible by } 5\}\)</span>. Prove that R is an equivalence relation. Also, find the equivalence classes.</p>
+</li>
+<li>
+<p>b. </p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(f:X \rightarrow Y\)</span> is a function and A, B are subsets of Y, then prove that:</p>
+<ol>
+<li>
+<ul>
+<li><span class="arithmatex">\(f^{-1}(A \cup B) = f^{-1}(A) \cup f^{-1}(B)\)</span></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><span class="arithmatex">\(f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)\)</span></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>If R and S are equivalence relations on a set, prove that <span class="arithmatex">\(R \cap S\)</span> is also an equivalence relation.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>c. </p>
+<ol>
+<li>State and prove the Principle of Inclusion and Exclusion for two sets.</li>
+<li>Prove that for any two finite sets A and B, <span class="arithmatex">\(n(A \oplus B) = n(A) + n(B) - 2n(A \cap B)\)</span>, where <span class="arithmatex">\(A \oplus B\)</span> is the symmetric difference of A and B.</li>
+</ol>
+</li>
+<li>
+<p>d. </p>
+<ol>
+<li>
+<p>Solve the following system of equations using the matrix method (inverse matrix method):</p>
+<div class="arithmatex">\[
+\begin{cases}
+x - y + 2z = 4 \\
+3x + y + 4z = 6 \\
+x + y + z = 1
+\end{cases}
+\]</div>
+</li>
+<li>
+<p>For the matrix <span class="arithmatex">\(A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; -5 \end{bmatrix}\)</span>, verify that <span class="arithmatex">\(A \cdot (adj A) = (adj A) \cdot A = |A|I\)</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>e.</p>
+<ol>
+<li>Write a short note on the limitations of statistics.</li>
+<li>Find the Arithmetic Mean and Mode from the following frequency distribution:</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Class Interval</th>
+<th style="text-align: center;">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0-10</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">10-20</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">20-30</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">30-40</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr>
+<td style="text-align: center;">40-50</td>
+<td style="text-align: center;">10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solutions">Solutions<a class="headerlink" href="#solutions" title="Permanent link">&para;</a></h2>
+<h3 id="section-1-answer-the-following"><strong>Section 1: Answer the following</strong><a class="headerlink" href="#section-1-answer-the-following" title="Permanent link">&para;</a></h3>
+<p><strong>a. Define Set.</strong></p>
+<p><strong>Ans.</strong> A set is a well-defined collection of distinct objects, considered as an object in its own right. The objects that make up the set are called its elements or members.</p>
+<hr />
+<p><strong>b. When is a matrix said to be singular?</strong></p>
+<p><strong>Ans.</strong> A square matrix is said to be <strong>singular</strong> if the value of its determinant is equal to zero. If the determinant is not zero, the matrix is called non-singular.</p>
+<hr />
+<p><strong>c. Give an example of a bijective function.</strong></p>
+<p><strong>Ans.</strong> An example of a bijective function is <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = x + 1\)</span>. This function is both one-to-one (injective) and onto (surjective).</p>
+<hr />
+<p><strong>d. What is the Cardinality of the Set <span class="arithmatex">\(A=\{0, 1, -1, 8\}\)</span>?</strong></p>
+<p><strong>Ans.</strong> The cardinality of a set is the number of elements in the set.
+The set <span class="arithmatex">\(A = \{0, 1, -1, 8\}\)</span> has 4 distinct elements.
+Therefore, the cardinality of set A, denoted as <span class="arithmatex">\(|A|\)</span>, is 4.</p>
+<hr />
+<p><strong>e. What is Sample Space?</strong></p>
+<p><strong>Ans.</strong> In probability theory, the <strong>sample space</strong> of an experiment is the set of all possible outcomes of that experiment. It is usually denoted by the symbol <span class="arithmatex">\(S\)</span>. For example, when tossing a coin, the sample space is <span class="arithmatex">\(S = \{\text{Heads, Tails}\}\)</span>.</p>
+<hr />
+<p><strong>f. If the probability of an event A is <span class="arithmatex">\(P(A)=\frac{2}{3}\)</span>, then find <span class="arithmatex">\(P(\overline{A})\)</span>.</strong></p>
+<p><strong>Ans.</strong> We know that for any event A, the probability of its complement, <span class="arithmatex">\(\overline{A}\)</span>, is given by the formula:</p>
+<div class="arithmatex">\[ P(\overline{A}) = 1 - P(A) \]</div>
+<p>Given, <span class="arithmatex">\(P(A) = \frac{2}{3}\)</span>.
+Therefore,</p>
+<div class="arithmatex">\[ P(\overline{A}) = 1 - \frac{2}{3} \]</div>
+<div class="arithmatex">\[ P(\overline{A}) = \frac{3 - 2}{3} \]</div>
+<div class="arithmatex">\[ P(\overline{A}) = \frac{1}{3} \]</div>
+<hr />
+<p><strong>g. State De Morgan's Law for two sets A and B.</strong></p>
+<p><strong>Ans.</strong> For any two sets A and B, De Morgan's Laws state:
+1.  The complement of the union of the two sets is equal to the intersection of their complements:
+    <span class="arithmatex">\( (A \cup B)' = A' \cap B' \)</span>
+2.  The complement of the intersection of the two sets is equal to the union of their complements:
+    <span class="arithmatex">\( (A \cap B)' = A' \cup B' \)</span></p>
+<hr />
+<p><strong>h. Find the values of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> if:</strong></p>
+<div class="arithmatex">\[
+\begin{bmatrix}x &amp; 5 \\ 3 &amp; -2 \end{bmatrix} = \begin{bmatrix} -8 &amp; 5 \\ y &amp; -2 \end{bmatrix}
+\]</div>
+<p><strong>Ans.</strong> Two matrices are equal if and only if their corresponding elements are equal. By equating the corresponding elements of the given matrices, we get:</p>
+<p>Comparing the element in the first row, first column:</p>
+<div class="arithmatex">\[ x = -8 \]</div>
+<p>Comparing the element in the second row, first column:</p>
+<div class="arithmatex">\[ 3 = y \]</div>
+<p>Thus, the values are <span class="arithmatex">\(x = -8\)</span> and <span class="arithmatex">\(y = 3\)</span>.</p>
+<h3 id="section-2-answer-any-six-from-the-following"><strong>Section 2: Answer any six from the following</strong><a class="headerlink" href="#section-2-answer-any-six-from-the-following" title="Permanent link">&para;</a></h3>
+<p><strong>a. Define injective and surjective functions with one example for each.</strong></p>
+<p><strong>Ans.</strong></p>
+<ul>
+<li>
+<p><strong>Injective Function (One-to-one):</strong> A function <span class="arithmatex">\(f: A \rightarrow B\)</span> is called injective if distinct elements in the domain <span class="arithmatex">\(A\)</span> have distinct images in the codomain <span class="arithmatex">\(B\)</span>.
+    Mathematically, for all <span class="arithmatex">\(a_1, a_2 \in A\)</span>, if <span class="arithmatex">\(f(a_1) = f(a_2)\)</span>, then <span class="arithmatex">\(a_1 = a_2\)</span>.</p>
+<ul>
+<li><strong>Example:</strong> The function <span class="arithmatex">\(f: \mathbb{Z} \rightarrow \mathbb{Z}\)</span> defined by <span class="arithmatex">\(f(x) = x + 5\)</span> is injective because if <span class="arithmatex">\(x_1 + 5 = x_2 + 5\)</span>, then <span class="arithmatex">\(x_1 = x_2\)</span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Surjective Function (Onto):</strong> A function <span class="arithmatex">\(f: A \rightarrow B\)</span> is called surjective if every element in the codomain <span class="arithmatex">\(B\)</span> has at least one pre-image in the domain <span class="arithmatex">\(A\)</span>.
+    Mathematically, for every <span class="arithmatex">\(y \in B\)</span>, there exists an <span class="arithmatex">\(x \in A\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>.</p>
+<ul>
+<li><strong>Example:</strong> The function <span class="arithmatex">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = x - 3\)</span> is surjective because for any real number <span class="arithmatex">\(y\)</span>, we can find <span class="arithmatex">\(x = y + 3\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>b. If <span class="arithmatex">\(f:R \rightarrow R\)</span> and <span class="arithmatex">\(g:R \rightarrow R\)</span> are defined as <span class="arithmatex">\(f(x)=x^{2}\)</span> and <span class="arithmatex">\(g(x)=x-3\)</span>, find <span class="arithmatex">\(f \circ g\)</span> and <span class="arithmatex">\(g \circ f\)</span>.</strong></p>
+<p><strong>Ans.</strong>
+Given functions are <span class="arithmatex">\(f(x)=x^{2}\)</span> and <span class="arithmatex">\(g(x)=x-3\)</span>.</p>
+<ol>
+<li>
+<p><strong>To find <span class="arithmatex">\(f \circ g\)</span>:</strong>
+    The composition <span class="arithmatex">\(f \circ g\)</span> is defined as <span class="arithmatex">\(f(g(x))\)</span>.</p>
+<div class="arithmatex">\[ (f \circ g)(x) = f(g(x)) \]</div>
+<p>Substitute the expression for <span class="arithmatex">\(g(x)\)</span>:
+[ = f(x-3) ]</p>
+<p>Now apply the function <span class="arithmatex">\(f\)</span> to <span class="arithmatex">\((x-3)\)</span>:</p>
+<div class="arithmatex">\[ = (x-3)^2 \]</div>
+<div class="arithmatex">\[ = x^2 - 6x + 9 \]</div>
+<p>Therefore, <span class="arithmatex">\((f \circ g)(x) = x^2 - 6x + 9\)</span>.</p>
+</li>
+<li>
+<p><strong>To find <span class="arithmatex">\(g \circ f\)</span>:</strong>
+    The composition <span class="arithmatex">\(g \circ f\)</span> is defined as <span class="arithmatex">\(g(f(x))\)</span>.</p>
+<div class="arithmatex">\[ (g \circ f)(x) = g(f(x)) \]</div>
+<p>Substitute the expression for <span class="arithmatex">\(f(x)\)</span>:</p>
+<div class="arithmatex">\[ = g(x^2) \]</div>
+<p>Now apply the function <span class="arithmatex">\(g\)</span> to <span class="arithmatex">\(x^2\)</span>:</p>
+<div class="arithmatex">\[ = x^2 - 3 \]</div>
+<p>Therefore, <span class="arithmatex">\((g \circ f)(x) = x^2 - 3\)</span>.</p>
+</li>
+</ol>
+<hr />
+<p><strong>c. Given the matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, find the product <span class="arithmatex">\(A \cdot B\)</span>.</strong></p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 2 &amp; -3 \\ 5 &amp; 4 \end{bmatrix}, \quad B = \begin{bmatrix} 6 &amp; -7 \\ 2 &amp; -8 \end{bmatrix}
+\]</div>
+<p><strong>Ans.</strong>
+To find the product <span class="arithmatex">\(A \cdot B\)</span>, we multiply the rows of matrix <span class="arithmatex">\(A\)</span> by the columns of matrix <span class="arithmatex">\(B\)</span>.</p>
+<div class="arithmatex">\[
+A \cdot B = \begin{bmatrix} 2 &amp; -3 \\ 5 &amp; 4 \end{bmatrix} \begin{bmatrix} 6 &amp; -7 \\ 2 &amp; -8 \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+= \begin{bmatrix} (2)(6)+(-3)(2) &amp; (2)(-7)+(-3)(-8) \\ (5)(6)+(4)(2) &amp; (5)(-7)+(4)(-8) \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+= \begin{bmatrix} 12-6 &amp; -14+24 \\ 30+8 &amp; -35-32 \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+= \begin{bmatrix} 6 &amp; 10 \\ 38 &amp; -67 \end{bmatrix}
+\]</div>
+<p>Thus, the product <span class="arithmatex">\(A \cdot B\)</span> is <span class="arithmatex">\(\begin{bmatrix} 6 &amp; 10 \\ 38 &amp; -67 \end{bmatrix}\)</span>.</p>
+<hr />
+<p><strong>d. Find the minor and co-factors of the elements 2 and 7 in the following matrix:</strong></p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 2 &amp; -4 &amp; 5 \\ 3 &amp; 1 &amp; 7 \\ 0 &amp; -1 &amp; -2 \end{bmatrix}
+\]</div>
+<p><strong>Ans.</strong></p>
+<p><strong>For the element 2 (position <span class="arithmatex">\(a_{11}\)</span>):</strong></p>
+<ul>
+<li>
+<p><strong>Minor (<span class="arithmatex">\(M_{11}\)</span>):</strong> The minor is the determinant of the sub-matrix obtained by deleting the 1<sup>st</sup> row and 1<sup>st</sup> column.</p>
+<div class="arithmatex">\[ M_{11} = \det \begin{bmatrix} 1 &amp; 7 \\ -1 &amp; -2 \end{bmatrix} = (1)(-2) - (7)(-1) = -2 + 7 = 5 \]</div>
+</li>
+<li>
+<p><strong>Co-factor (<span class="arithmatex">\(C_{11}\)</span>):</strong> The co-factor is given by <span class="arithmatex">\(C_{ij} = (-1)^{i+j} M_{ij}\)</span>.</p>
+<div class="arithmatex">\[ C_{11} = (-1)^{1+1} M_{11} = (1)(5) = 5 \]</div>
+</li>
+</ul>
+<p><strong>For the element 7 (position <span class="arithmatex">\(a_{23}\)</span>):</strong></p>
+<ul>
+<li>
+<p><strong>Minor (<span class="arithmatex">\(M_{23}\)</span>):</strong> The minor is the determinant of the sub-matrix obtained by deleting the 2<sup>nd</sup> row and 3<sup>rd</sup> column.</p>
+<div class="arithmatex">\[ M_{23} = \det \begin{bmatrix} 2 &amp; -4 \\ 0 &amp; -1 \end{bmatrix} = (2)(-1) - (-4)(0) = -2 - 0 = -2 \]</div>
+</li>
+<li>
+<p><strong>Co-factor (<span class="arithmatex">\(C_{23}\)</span>):</strong> The co-factor is given by <span class="arithmatex">\(C_{ij} = (-1)^{i+j} M_{ij}\)</span>.</p>
+<div class="arithmatex">\[ C_{23} = (-1)^{2+3} M_{23} = (-1)^5(-2) = (-1)(-2) = 2 \]</div>
+</li>
+</ul>
+<hr />
+<p><strong>e. For any three non-empty sets A, B, and C, prove that <span class="arithmatex">\(A-(B \cup C)=(A-B) \cap (A-C)\)</span>.</strong></p>
+<p><strong>Ans.</strong>
+To prove the equality, we will show that any element belonging to the left-hand side (LHS) also belongs to the right-hand side (RHS), and vice-versa.</p>
+<p>Let <span class="arithmatex">\(x\)</span> be an arbitrary element such that <span class="arithmatex">\(x \in A - (B \cup C)\)</span>.</p>
+<div class="arithmatex">\[ x \in A - (B \cup C) \iff x \in A \text{ and } x \notin (B \cup C) \quad \text{(by definition of set difference)} \]</div>
+<div class="arithmatex">\[ \iff x \in A \text{ and } (x \notin B \text{ and } x \notin C) \quad \text{(by definition of union)} \]</div>
+<div class="arithmatex">\[ \iff (x \in A \text{ and } x \notin B) \text{ and } (x \in A \text{ and } x \notin C) \quad \text{(Distributive law of logic)} \]</div>
+<div class="arithmatex">\[ \iff (x \in A-B) \text{ and } (x \in A-C) \quad \text{(by definition of set difference)} \]</div>
+<div class="arithmatex">\[ \iff x \in (A-B) \cap (A-C) \quad \text{(by definition of intersection)} \]</div>
+<p>Since <span class="arithmatex">\(x \in A - (B \cup C) \iff x \in (A-B) \cap (A-C)\)</span>, the two sets are equal.
+Hence, <span class="arithmatex">\(A-(B \cup C)=(A-B) \cap (A-C)\)</span> is proved.</p>
+<hr />
+<p><strong>f. Find the Trace of the matrix A:</strong></p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} -1 &amp; 0 &amp; 3 \\ 2 &amp; 4 &amp; 5 \\ 7 &amp; 3 &amp; 6 \end{bmatrix}
+\]</div>
+<p><strong>Ans.</strong>
+The <strong>trace</strong> of a square matrix is the sum of the elements on its main diagonal (from the upper left to the lower right).
+The elements on the main diagonal of matrix A are -1, 4, and 6.</p>
+<div class="arithmatex">\[ \text{Trace}(A) = -1 + 4 + 6 \]</div>
+<div class="arithmatex">\[ \text{Trace}(A) = 9 \]</div>
+<p>The trace of the matrix A is 9.</p>
+<hr />
+<p><strong>g. If <span class="arithmatex">\(P(A)=\frac{2}{3}\)</span>, <span class="arithmatex">\(P(B)=\frac{3}{4}\)</span>, and <span class="arithmatex">\(P(A \cup B)=\frac{1}{2}\)</span>, find the value of <span class="arithmatex">\(P(A/B)\)</span>.</strong></p>
+<p><strong>Ans.</strong>
+The formula for conditional probability is <span class="arithmatex">\(P(A/B) = \frac{P(A \cap B)}{P(B)}\)</span>.
+First, we need to find <span class="arithmatex">\(P(A \cap B)\)</span> using the addition rule of probability:</p>
+<div class="arithmatex">\[ P(A \cup B) = P(A) + P(B) - P(A \cap B) \]</div>
+<p>Substituting the given values:
+[ \frac{1}{2} = \frac{2}{3} + \frac{3}{4} - P(A \cap B) ]</p>
+<div class="arithmatex">\[ P(A \cap B) = \frac{2}{3} + \frac{3}{4} - \frac{1}{2} \]</div>
+<p>To add/subtract the fractions, we find a common denominator, which is 12.</p>
+<div class="arithmatex">\[ P(A \cap B) = \frac{2 \times 4}{12} + \frac{3 \times 3}{12} - \frac{1 \times 6}{12} \]</div>
+<div class="arithmatex">\[ P(A \cap B) = \frac{8 + 9 - 6}{12} = \frac{11}{12} \]</div>
+<p>Now we can find <span class="arithmatex">\(P(A/B)\)</span>:</p>
+<div class="arithmatex">\[ P(A/B) = \frac{P(A \cap B)}{P(B)} = \frac{11/12}{3/4} = \frac{11}{12} \times \frac{4}{3} = \frac{11 \times 1}{3 \times 3} = \frac{11}{9} \]</div>
+<p><strong>Note:</strong> The result <span class="arithmatex">\(P(A/B) = 11/9\)</span> is greater than 1. This indicates that the initial probability values given in the question are inconsistent, as a probability value can never exceed 1. For example, <span class="arithmatex">\(P(A \cap B)\)</span> cannot be greater than <span class="arithmatex">\(P(A)\)</span> or <span class="arithmatex">\(P(B)\)</span>, but here <span class="arithmatex">\(\frac{11}{12} &gt; \frac{2}{3}\)</span> and <span class="arithmatex">\(\frac{11}{12} &gt; \frac{3}{4}\)</span>. However, the calculation based on the given numbers is as shown.</p>
+<hr />
+<p><strong>h. Define a Partially Ordered Set (POSET).</strong></p>
+<p><strong>Ans.</strong></p>
+<p>A <strong>Partially Ordered Set</strong> (or <strong>POSET</strong>) consists of a non-empty set <span class="arithmatex">\(P\)</span> together with a binary relation <span class="arithmatex">\(\preceq\)</span> defined on <span class="arithmatex">\(P\)</span>, such that the relation satisfies the following three properties for all <span class="arithmatex">\(a, b, c \in P\)</span>:</p>
+<ol>
+<li><strong>Reflexivity:</strong> <span class="arithmatex">\(a \preceq a\)</span> (Every element is related to itself).</li>
+<li><strong>Antisymmetry:</strong> If <span class="arithmatex">\(a \preceq b\)</span> and <span class="arithmatex">\(b \preceq a\)</span>, then <span class="arithmatex">\(a = b\)</span> (If two elements are related to each other, they must be the same element).</li>
+<li><strong>Transitivity:</strong> If <span class="arithmatex">\(a \preceq b\)</span> and <span class="arithmatex">\(b \preceq c\)</span>, then <span class="arithmatex">\(a \preceq c\)</span> (If a is related to b, and b is related to c, then a is related to c).</li>
+</ol>
+<p>The pair <span class="arithmatex">\((P, \preceq)\)</span> is called a poset.</p>
+<hr />
+<p><strong>i. Calculate the median from the following data:</strong>
+* <span class="arithmatex">\(x: 1, 2, 3, 4, 5\)</span>
+* <span class="arithmatex">\(y: 8, 5, 6, 2, 1\)</span></p>
+<p><strong>Ans.</strong>
+Here, <span class="arithmatex">\(x\)</span> represents the observations and <span class="arithmatex">\(y\)</span> represents their corresponding frequencies (<span class="arithmatex">\(f\)</span>). To find the median, we first calculate the cumulative frequency (<span class="arithmatex">\(cf\)</span>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;">Frequency (<span class="arithmatex">\(f\)</span>)</th>
+<th style="text-align: center;">Cumulative Frequency (<span class="arithmatex">\(cf\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">8 + 5 = 13</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">13 + 6 = 19</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">19 + 2 = 21</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">21 + 1 = 22</td>
+</tr>
+</tbody>
+</table>
+<p>The total number of observations is <span class="arithmatex">\(N = \sum f = 22\)</span>.
+Since <span class="arithmatex">\(N\)</span> is an even number, the median is the average of the <span class="arithmatex">\(\left(\frac{N}{2}\right)^{th}\)</span> and <span class="arithmatex">\(\left(\frac{N}{2} + 1\right)^{th}\)</span> observations.</p>
+<div class="arithmatex">\[ \text{Median} = \frac{\left(\frac{22}{2}\right)^{th} \text{ obs} + \left(\frac{22}{2} + 1\right)^{th} \text{ obs}}{2} = \frac{11^{th} \text{ obs} + 12^{th} \text{ obs}}{2} \]</div>
+<p>From the cumulative frequency table:
+* Observations 1 to 8 have the value 1.
+* Observations 9 to 13 have the value 2.
+This means both the <span class="arithmatex">\(11^{th}\)</span> and <span class="arithmatex">\(12^{th}\)</span> observations fall in the group where <span class="arithmatex">\(x=2\)</span>.</p>
+<div class="arithmatex">\[ \text{Median} = \frac{2 + 2}{2} = \frac{4}{2} = 2 \]</div>
+<p>The median of the data is <strong>2</strong>.</p>
+<hr />
+<p><strong>j. What is the empirical relation between mean, median, and mode?</strong></p>
+<p><strong>Ans.</strong>
+The empirical relationship between mean, median, and mode describes an approximate relationship between the three measures of central tendency for a unimodal distribution that is moderately skewed. The relation is given by the formula:</p>
+<div class="arithmatex">\[ \text{Mean} - \text{Mode} \approx 3 (\text{Mean} - \text{Median}) \]</div>
+<p>This can be rearranged to express the mode in terms of the mean and median:</p>
+<div class="arithmatex">\[ \text{Mode} \approx 3 \times \text{Median} - 2 \times \text{Mean} \]</div>
+<h3 id="section-3-answer-any-four-from-the-following"><strong>Section 3: Answer any four from the following</strong><a class="headerlink" href="#section-3-answer-any-four-from-the-following" title="Permanent link">&para;</a></h3>
+<p><strong>a. For any four non-empty sets A, B, S, and T, prove that <span class="arithmatex">\((A \times B) \cap (S \times T) = (A \cap S) \times (B \cap T)\)</span>.</strong></p>
+<p><strong>Ans.</strong>
+To prove the set equality, we will show that an element <span class="arithmatex">\((x, y)\)</span> belongs to the left-hand side (LHS) if and only if it belongs to the right-hand side (RHS).</p>
+<p>Let <span class="arithmatex">\((x, y)\)</span> be an arbitrary element of <span class="arithmatex">\((A \times B) \cap (S \times T)\)</span>.</p>
+<div class="arithmatex">\[ (x, y) \in (A \times B) \cap (S \times T) \]</div>
+<p>By the definition of intersection of sets:</p>
+<div class="arithmatex">\[ \iff (x, y) \in (A \times B) \quad \text{and} \quad (x, y) \in (S \times T) \]</div>
+<p>By the definition of the Cartesian product:</p>
+<div class="arithmatex">\[ \iff (x \in A \text{ and } y \in B) \quad \text{and} \quad (x \in S \text{ and } y \in T) \]</div>
+<p>Rearranging the terms using the commutative and associative properties of logical 'and':</p>
+<div class="arithmatex">\[ \iff (x \in A \text{ and } x \in S) \quad \text{and} \quad (y \in B \text{ and } y \in T) \]</div>
+<p>By the definition of intersection of sets:</p>
+<div class="arithmatex">\[ \iff x \in (A \cap S) \quad \text{and} \quad y \in (B \cap T) \]</div>
+<p>By the definition of the Cartesian product:</p>
+<div class="arithmatex">\[ \iff (x, y) \in (A \cap S) \times (B \cap T) \]</div>
+<p>Since an arbitrary element <span class="arithmatex">\((x, y)\)</span> is in the LHS if and only if it is in the RHS, the two sets are equal.
+<strong>Hence, proved.</strong></p>
+<hr />
+<p><strong>b. Using the principle of mathematical induction, prove that <span class="arithmatex">\(P(n) = 10^{n} + 3 \cdot 4^{n+2} + 5\)</span> is divisible by 9 for all natural numbers <span class="arithmatex">\(n\)</span>.</strong></p>
+<p><strong>Ans.</strong>
+Let the given statement be <span class="arithmatex">\(P(n)\)</span>: <span class="arithmatex">\(10^n + 3 \cdot 4^{n+2} + 5\)</span> is divisible by 9.</p>
+<p><strong>Step 1: Base Case</strong>
+For <span class="arithmatex">\(n=1\)</span>, we have:</p>
+<div class="arithmatex">\[ P(1) = 10^1 + 3 \cdot 4^{1+2} + 5 \]</div>
+<div class="arithmatex">\[ = 10 + 3 \cdot 4^3 + 5 \]</div>
+<div class="arithmatex">\[ = 10 + 3 \cdot 64 + 5 \]</div>
+<div class="arithmatex">\[ = 10 + 192 + 5 = 207 \]</div>
+<p>Since <span class="arithmatex">\(207 = 9 \times 23\)</span>, <span class="arithmatex">\(P(1)\)</span> is divisible by 9. Thus, the base case is true.</p>
+<p><strong>Step 2: Inductive Hypothesis</strong>
+Let us assume that <span class="arithmatex">\(P(k)\)</span> is true for some natural number <span class="arithmatex">\(k\)</span>.
+That is, <span class="arithmatex">\(10^k + 3 \cdot 4^{k+2} + 5\)</span> is divisible by 9.
+We can write this as <span class="arithmatex">\(10^k + 3 \cdot 4^{k+2} + 5 = 9m\)</span> for some integer <span class="arithmatex">\(m\)</span>.</p>
+<div class="arithmatex">\[ \implies 10^k = 9m - 3 \cdot 4^{k+2} - 5 \quad \dots(i) \]</div>
+<p><strong>Step 3: Inductive Step</strong>
+We need to prove that <span class="arithmatex">\(P(k+1)\)</span> is also true.</p>
+<div class="arithmatex">\[ P(k+1) = 10^{k+1} + 3 \cdot 4^{(k+1)+2} + 5 \]</div>
+<div class="arithmatex">\[ = 10^{k+1} + 3 \cdot 4^{k+3} + 5 \]</div>
+<div class="arithmatex">\[ = 10 \cdot 10^k + 3 \cdot 4 \cdot 4^{k+2} + 5 \]</div>
+<div class="arithmatex">\[ = 10 \cdot 10^k + 12 \cdot 4^{k+2} + 5 \]</div>
+<p>Substituting the value of <span class="arithmatex">\(10^k\)</span> from equation (i):</p>
+<div class="arithmatex">\[ = 10 (9m - 3 \cdot 4^{k+2} - 5) + 12 \cdot 4^{k+2} + 5 \]</div>
+<div class="arithmatex">\[ = 90m - 30 \cdot 4^{k+2} - 50 + 12 \cdot 4^{k+2} + 5 \]</div>
+<div class="arithmatex">\[ = 90m - (30 - 12) \cdot 4^{k+2} - 45 \]</div>
+<div class="arithmatex">\[ = 90m - 18 \cdot 4^{k+2} - 45 \]</div>
+<p>Factoring out 9 from each term:</p>
+<div class="arithmatex">\[ = 9 (10m - 2 \cdot 4^{k+2} - 5) \]</div>
+<p>Since <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(k\)</span> are integers, <span class="arithmatex">\((10m - 2 \cdot 4^{k+2} - 5)\)</span> is also an integer.
+Thus, <span class="arithmatex">\(P(k+1)\)</span> is a multiple of 9.</p>
+<p>By the principle of mathematical induction, <span class="arithmatex">\(P(n)\)</span> is true for all natural numbers <span class="arithmatex">\(n\)</span>.
+<strong>Hence, proved.</strong></p>
+<hr />
+<p><strong>e. Find the mean deviation about the median for the given data:</strong>
+| <span class="arithmatex">\(x_i\)</span> | 5 | 7 | 9 | 10 | 12 | 15 |
+| :--- | :-: | :-: | :-: | :--: | :--: | :--: |
+| <span class="arithmatex">\(f_i\)</span> | 8 | 6 | 2 | 2 | 6 | 6 |</p>
+<p><strong>Ans.</strong>
+<strong>Step 1: Calculate the Median</strong>
+First, we find the cumulative frequency (<span class="arithmatex">\(cf\)</span>) to locate the median.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
+<th style="text-align: center;">Frequency (<span class="arithmatex">\(f_i\)</span>)</th>
+<th style="text-align: center;">Cumulative Frequency (<span class="arithmatex">\(cf\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">18</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">24</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">30</td>
+</tr>
+</tbody>
+</table>
+<p>The total frequency is <span class="arithmatex">\(N = \sum f_i = 30\)</span>.
+Since <span class="arithmatex">\(N\)</span> is even, the median is the average of the <span class="arithmatex">\(\left(\frac{N}{2}\right)^{th}\)</span> and <span class="arithmatex">\(\left(\frac{N}{2} + 1\right)^{th}\)</span> observations.
+This corresponds to the average of the <span class="arithmatex">\(15^{th}\)</span> and <span class="arithmatex">\(16^{th}\)</span> observations.
+From the <span class="arithmatex">\(cf\)</span> column, the <span class="arithmatex">\(15^{th}\)</span> and <span class="arithmatex">\(16^{th}\)</span> observations both fall in the group where <span class="arithmatex">\(x_i = 9\)</span>.
+So, Median <span class="arithmatex">\(M = 9\)</span>.</p>
+<p><strong>Step 2: Calculate Mean Deviation about the Median</strong>
+The formula is <span class="arithmatex">\(MD_M = \frac{\sum f_i |x_i - M|}{N}\)</span>. We create a calculation table:</p>
+<p>| <span class="arithmatex">\(x_i\)</span> | <span class="arithmatex">\(f_i\)</span> | <span class="arithmatex">\(|x_i - M| = |x_i - 9|\)</span> | <span class="arithmatex">\(f_i |x_i - M|\)</span> |
+| :---: | :---: | :---: | :---: |
+|   5   |   8   |   4   |  32   |
+|   7   |   6   |   2   |  12   |
+|   9   |   2   |   0   |   0   |
+|   10  |   2   |   1   |   2   |
+|   12  |   6   |   3   |  18   |
+|   15  |   6   |   6   |  36   |
+| <strong>Total</strong> | <strong><span class="arithmatex">\(N=30\)</span></strong> | | <strong><span class="arithmatex">\(\sum f_i |x_i - M| = 100\)</span></strong> |</p>
+<p>Now, we compute the mean deviation:</p>
+<div class="arithmatex">\[ MD_M = \frac{100}{30} = \frac{10}{3} \approx 3.33 \]</div>
+<p>The mean deviation about the median is approximately <strong>3.33</strong>.</p>
+<hr />
+<p><strong>f. Solve the following system of linear equations using Cramer's rule:</strong></p>
+<div class="arithmatex">\[
+\begin{cases}
+2x - y + 3z = 9 \\
+x + y + z = 6 \\
+x - y + z = 2
+\end{cases}
+\]</div>
+<p><strong>Ans.</strong>
+The given system of equations can be written in matrix form <span class="arithmatex">\(AX=B\)</span>, where:</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} 2 &amp; -1 &amp; 3 \\ 1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; 1 \end{bmatrix}, \quad X = \begin{bmatrix} x \\ y \\ z \end{bmatrix}, \quad B = \begin{bmatrix} 9 \\ 6 \\ 2 \end{bmatrix} \]</div>
+<p><strong>Step 1: Calculate the determinant D of the coefficient matrix A.</strong></p>
+<div class="arithmatex">\[ D = \det(A) = \begin{vmatrix} 2 &amp; -1 &amp; 3 \\ 1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; 1 \end{vmatrix} \]</div>
+<div class="arithmatex">\[ = 2(1\cdot1 - 1\cdot(-1)) - (-1)(1\cdot1 - 1\cdot1) + 3(1\cdot(-1) - 1\cdot1) \]</div>
+<div class="arithmatex">\[ = 2(2) + 1(0) + 3(-2) = 4 - 6 = -2 \]</div>
+<p>Since <span class="arithmatex">\(D \neq 0\)</span>, a unique solution exists.</p>
+<p><strong>Step 2: Calculate <span class="arithmatex">\(D_x\)</span>, <span class="arithmatex">\(D_y\)</span>, and <span class="arithmatex">\(D_z\)</span>.</strong></p>
+<div class="arithmatex">\[ D_x = \begin{vmatrix} 9 &amp; -1 &amp; 3 \\ 6 &amp; 1 &amp; 1 \\ 2 &amp; -1 &amp; 1 \end{vmatrix} = 9(1 - (-1)) - (-1)(6-2) + 3(-6-2) = 18+4-24 = -2 \]</div>
+<div class="arithmatex">\[ D_y = \begin{vmatrix} 2 &amp; 9 &amp; 3 \\ 1 &amp; 6 &amp; 1 \\ 1 &amp; 2 &amp; 1 \end{vmatrix} = 2(6 - 2) - 9(1-1) + 3(2-6) = 8-0-12 = -4 \]</div>
+<div class="arithmatex">\[ D_z = \begin{vmatrix} 2 &amp; -1 &amp; 9 \\ 1 &amp; 1 &amp; 6 \\ 1 &amp; -1 &amp; 2 \end{vmatrix} = 2(2 - (-6)) - (-1)(2-6) + 9(-1-1) = 16-4-18 = -6 \]</div>
+<p><strong>Step 3: Find x, y, and z.</strong>
+According to Cramer's rule:</p>
+<div class="arithmatex">\[ x = \frac{D_x}{D} = \frac{-2}{-2} = 1 \]</div>
+<div class="arithmatex">\[ y = \frac{D_y}{D} = \frac{-4}{-2} = 2 \]</div>
+<div class="arithmatex">\[ z = \frac{D_z}{D} = \frac{-6}{-2} = 3 \]</div>
+<p>The solution is <span class="arithmatex">\(x=1, y=2, z=3\)</span>.</p>
+<hr />
+<p><strong>g. Find the inverse of the matrix A:</strong></p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 0 &amp; 1 &amp; 2 \\ 1 &amp; 2 &amp; 3 \\ 3 &amp; 1 &amp; 1 \end{bmatrix}
+\]</div>
+<p><strong>Ans.</strong>
+We will use the formula <span class="arithmatex">\(A^{-1} = \frac{1}{\det(A)}\text{adj}(A)\)</span>.</p>
+<p><strong>Step 1: Find the determinant of A.</strong></p>
+<div class="arithmatex">\[ \det(A) = 0(2\cdot1 - 3\cdot1) - 1(1\cdot1 - 3\cdot3) + 2(1\cdot1 - 2\cdot3) \]</div>
+<div class="arithmatex">\[ = 0 - 1(1-9) + 2(1-6) = -1(-8) + 2(-5) = 8 - 10 = -2 \]</div>
+<p>Since <span class="arithmatex">\(\det(A) \neq 0\)</span>, the inverse exists.</p>
+<p><strong>Step 2: Find the Adjoint of A.</strong>
+The adjoint is the transpose of the cofactor matrix. Let's find the cofactors:</p>
+<div class="arithmatex">\[ C_{11} = (2\cdot1 - 3\cdot1) = -1 \]</div>
+<div class="arithmatex">\[ C_{12} = -(1\cdot1 - 3\cdot3) = 8 \]</div>
+<div class="arithmatex">\[ C_{13} = (1\cdot1 - 2\cdot3) = -5 \]</div>
+<div class="arithmatex">\[ C_{21} = -(1\cdot1 - 2\cdot1) = 1 \]</div>
+<div class="arithmatex">\[ C_{22} = (0\cdot1 - 2\cdot3) = -6 \]</div>
+<div class="arithmatex">\[ C_{23} = -(0\cdot1 - 1\cdot3) = 3 \]</div>
+<div class="arithmatex">\[ C_{31} = (1\cdot3 - 2\cdot2) = -1 \]</div>
+<div class="arithmatex">\[ C_{32} = -(0\cdot3 - 2\cdot1) = 2 \]</div>
+<div class="arithmatex">\[ C_{33} = (0\cdot2 - 1\cdot1) = -1 \]</div>
+<p>The cofactor matrix is <span class="arithmatex">\(C = \begin{bmatrix} -1 &amp; 8 &amp; -5 \\ 1 &amp; -6 &amp; 3 \\ -1 &amp; 2 &amp; -1 \end{bmatrix}\)</span>.
+The adjoint of A is the transpose of C:</p>
+<div class="arithmatex">\[ \text{adj}(A) = C^T = \begin{bmatrix} -1 &amp; 1 &amp; -1 \\ 8 &amp; -6 &amp; 2 \\ -5 &amp; 3 &amp; -1 \end{bmatrix} \]</div>
+<p><strong>Step 3: Calculate the inverse.</strong></p>
+<div class="arithmatex">\[ A^{-1} = \frac{1}{-2} \begin{bmatrix} -1 &amp; 1 &amp; -1 \\ 8 &amp; -6 &amp; 2 \\ -5 &amp; 3 &amp; -1 \end{bmatrix} \]</div>
+<div class="arithmatex">\[ A^{-1} = \begin{bmatrix} 1/2 &amp; -1/2 &amp; 1/2 \\ -4 &amp; 3 &amp; -1 \\ 5/2 &amp; -3/2 &amp; 1/2 \end{bmatrix} \]</div>
+<p>This is the required inverse matrix.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1473 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Notes for my college course." name="description"/>
+<meta content="myxi" name="author"/>
+<link href="../u1-i/" rel="prev"/>
+<link href="../u1-iii/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.17" name="generator"/>
+<title>Data, Variables, and Constants in C - BCA Notes</title>
+<link href="../../../assets/stylesheets/main.bcfcd587.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="deep-purple" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#data-variables-and-constants-in-c">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="BCA Notes" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="BCA Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            BCA Notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Data, Variables, and Constants in C
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eeriemyxi/bca-notes" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="BCA Notes" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="BCA Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    BCA Notes
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eeriemyxi/bca-notes" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    1st Semester
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/so-many-oaks/">
+<span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/the-palanquin-bearers/">
+<span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/no-second-troy/">
+<span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/photograph-of-me/">
+<span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/audition/">
+<span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/the-ring/">
+<span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Mathematics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Unit 1
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u1/sets/">
+<span class="md-ellipsis">
+    Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u1/relations/">
+<span class="md-ellipsis">
+    Relations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u1/functions/">
+<span class="md-ellipsis">
+    Functions
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Unit 2
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/first/">
+<span class="md-ellipsis">
+    Definition and Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/second/">
+<span class="md-ellipsis">
+    Operations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/three/">
+<span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/four/">
+<span class="md-ellipsis">
+    Applications and Properties
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/pyq/2024/">
+<span class="md-ellipsis">
+    2024
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../fundamentals/syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../fundamentals/unit-1/">
+<span class="md-ellipsis">
+    Unit 1
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Introduction to C
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Unit 1
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../u1-i/">
+<span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-variables-and-constants-in-c">
+<span class="md-ellipsis">
+      Data, Variables, and Constants in C
+    </span>
+</a>
+<nav aria-label="Data, Variables, and Constants in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c-tokens">
+<span class="md-ellipsis">
+      C Tokens
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keywords">
+<span class="md-ellipsis">
+      Keywords
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifiers">
+<span class="md-ellipsis">
+      Identifiers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constants">
+<span class="md-ellipsis">
+      Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operators">
+<span class="md-ellipsis">
+      Operators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-data-types-in-c">
+<span class="md-ellipsis">
+      Basic Data Types in C
+    </span>
+</a>
+<nav aria-label="Basic Data Types in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integers">
+<span class="md-ellipsis">
+      Integers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#floats-and-doubles">
+<span class="md-ellipsis">
+      Floats and Doubles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#characters">
+<span class="md-ellipsis">
+      Characters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#void">
+<span class="md-ellipsis">
+      Void
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#size-and-range-of-values-of-data-types">
+<span class="md-ellipsis">
+      Size and Range of Values of Data Types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+<span class="md-ellipsis">
+      Variables
+    </span>
+</a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#characteristics-of-variables">
+<span class="md-ellipsis">
+      Characteristics of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#declaration-of-variables">
+<span class="md-ellipsis">
+      Declaration of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-of-variables">
+<span class="md-ellipsis">
+      Initialization of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assigning-values-to-variables">
+<span class="md-ellipsis">
+      Assigning Values to Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-constants">
+<span class="md-ellipsis">
+      Types of Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integer-constants">
+<span class="md-ellipsis">
+      Integer Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-constants">
+<span class="md-ellipsis">
+      Real Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#character-constants">
+<span class="md-ellipsis">
+      Character Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#string-constants">
+<span class="md-ellipsis">
+      String Constants
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#declaration-and-initialization-of-variables-and-constants">
+<span class="md-ellipsis">
+      Declaration and Initialization of Variables and Constants
+    </span>
+</a>
+<nav aria-label="Declaration and Initialization of Variables and Constants" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#declaration-of-variables_1">
+<span class="md-ellipsis">
+      Declaration of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-of-variables_1">
+<span class="md-ellipsis">
+      Initialization of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constants-declaration">
+<span class="md-ellipsis">
+      Constants Declaration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assigning-values-to-variables_1">
+<span class="md-ellipsis">
+      Assigning Values to Variables
+    </span>
+</a>
+<nav aria-label="Assigning Values to Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-assignment">
+<span class="md-ellipsis">
+      Simple Assignment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-assignment">
+<span class="md-ellipsis">
+      Multiple Assignment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-during-declaration">
+<span class="md-ellipsis">
+      Initialization During Declaration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-with-expressions">
+<span class="md-ellipsis">
+      Initialization with Expressions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-conversion-in-assignment">
+<span class="md-ellipsis">
+      Type Conversion in Assignment
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../u1-iii/">
+<span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../u2/">
+<span class="md-ellipsis">
+    Unit 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../u3/">
+<span class="md-ellipsis">
+    Unit 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../u4/">
+<span class="md-ellipsis">
+    Unit 4
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-variables-and-constants-in-c">
+<span class="md-ellipsis">
+      Data, Variables, and Constants in C
+    </span>
+</a>
+<nav aria-label="Data, Variables, and Constants in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c-tokens">
+<span class="md-ellipsis">
+      C Tokens
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keywords">
+<span class="md-ellipsis">
+      Keywords
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifiers">
+<span class="md-ellipsis">
+      Identifiers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constants">
+<span class="md-ellipsis">
+      Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operators">
+<span class="md-ellipsis">
+      Operators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-data-types-in-c">
+<span class="md-ellipsis">
+      Basic Data Types in C
+    </span>
+</a>
+<nav aria-label="Basic Data Types in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integers">
+<span class="md-ellipsis">
+      Integers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#floats-and-doubles">
+<span class="md-ellipsis">
+      Floats and Doubles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#characters">
+<span class="md-ellipsis">
+      Characters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#void">
+<span class="md-ellipsis">
+      Void
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#size-and-range-of-values-of-data-types">
+<span class="md-ellipsis">
+      Size and Range of Values of Data Types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+<span class="md-ellipsis">
+      Variables
+    </span>
+</a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#characteristics-of-variables">
+<span class="md-ellipsis">
+      Characteristics of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#declaration-of-variables">
+<span class="md-ellipsis">
+      Declaration of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-of-variables">
+<span class="md-ellipsis">
+      Initialization of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assigning-values-to-variables">
+<span class="md-ellipsis">
+      Assigning Values to Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-constants">
+<span class="md-ellipsis">
+      Types of Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integer-constants">
+<span class="md-ellipsis">
+      Integer Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-constants">
+<span class="md-ellipsis">
+      Real Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#character-constants">
+<span class="md-ellipsis">
+      Character Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#string-constants">
+<span class="md-ellipsis">
+      String Constants
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#declaration-and-initialization-of-variables-and-constants">
+<span class="md-ellipsis">
+      Declaration and Initialization of Variables and Constants
+    </span>
+</a>
+<nav aria-label="Declaration and Initialization of Variables and Constants" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#declaration-of-variables_1">
+<span class="md-ellipsis">
+      Declaration of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-of-variables_1">
+<span class="md-ellipsis">
+      Initialization of Variables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constants-declaration">
+<span class="md-ellipsis">
+      Constants Declaration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assigning-values-to-variables_1">
+<span class="md-ellipsis">
+      Assigning Values to Variables
+    </span>
+</a>
+<nav aria-label="Assigning Values to Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-assignment">
+<span class="md-ellipsis">
+      Simple Assignment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-assignment">
+<span class="md-ellipsis">
+      Multiple Assignment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-during-declaration">
+<span class="md-ellipsis">
+      Initialization During Declaration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-with-expressions">
+<span class="md-ellipsis">
+      Initialization with Expressions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-conversion-in-assignment">
+<span class="md-ellipsis">
+      Type Conversion in Assignment
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Data, Variables, and Constants in C</h1>
+<h2 id="data-variables-and-constants-in-c">Data, Variables, and Constants in C<a class="headerlink" href="#data-variables-and-constants-in-c" title="Permanent link">¶</a></h2>
+<h3 id="c-tokens">C Tokens<a class="headerlink" href="#c-tokens" title="Permanent link">¶</a></h3>
+<p>In C programming, a token is the smallest individual unit in a program. C tokens can be classified into several categories:</p>
+<ul>
+<li>Keywords</li>
+<li>Identifiers</li>
+<li>Constants</li>
+<li>Operators</li>
+<li>Special symbols</li>
+<li>Comments</li>
+</ul>
+<p>All these tokens combined together form a C program. The compiler processes these tokens sequentially to understand the program's structure and functionality.</p>
+<h3 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link">¶</a></h3>
+<p>Keywords are predefined reserved words in C that have special meanings to the compiler. They cannot be used as identifiers or variable names. Some of the keywords in C include:</p>
+<ul>
+<li><code>auto</code></li>
+<li><code>break</code></li>
+<li><code>case</code></li>
+<li><code>char</code></li>
+<li><code>const</code></li>
+<li><code>continue</code></li>
+<li><code>default</code></li>
+<li><code>do</code></li>
+<li><code>double</code></li>
+<li><code>else</code></li>
+<li><code>enum</code></li>
+<li><code>extern</code></li>
+<li><code>float</code></li>
+<li><code>for</code></li>
+<li><code>goto</code></li>
+<li><code>if</code></li>
+<li><code>int</code></li>
+<li><code>long</code></li>
+<li><code>register</code></li>
+<li><code>return</code></li>
+<li><code>short</code></li>
+<li><code>signed</code></li>
+<li><code>sizeof</code></li>
+<li><code>static</code></li>
+<li><code>struct</code></li>
+<li><code>switch</code></li>
+<li><code>typedef</code></li>
+<li><code>union</code></li>
+<li><code>unsigned</code></li>
+<li><code>void</code></li>
+<li><code>volatile</code></li>
+<li><code>while</code></li>
+</ul>
+<p>Total number of keywords in C is 32. The exact set of keywords may vary slightly between different C standards like C89, C99, C11, etc.</p>
+<h3 id="identifiers">Identifiers<a class="headerlink" href="#identifiers" title="Permanent link">¶</a></h3>
+<p>Identifiers are names given to variables, functions, arrays, or other user-defined items. They are used to identify different elements in a program. Rules for forming identifiers in C include:</p>
+<ol>
+<li>Allowed characters: letters (A-Z, a-z), digits (0-9), and underscore (_)</li>
+<li>First character must be a letter or underscore (not a digit)</li>
+<li>Cannot contain spaces or special characters (except underscore)</li>
+<li>Cannot be a keyword</li>
+<li>Case-sensitive (variables 'sum' and 'Sum' are different)</li>
+</ol>
+<p>Examples of valid identifiers:</p>
+<ul>
+<li><code>variable_name</code></li>
+<li><code>sum</code></li>
+<li><code>total_marks</code></li>
+<li><code>average</code></li>
+<li><code>_temp</code></li>
+</ul>
+<p>Examples of invalid identifiers:</p>
+<ul>
+<li><code>2number</code> (starts with digit)</li>
+<li><code>my variable</code> (contains space)</li>
+<li><code>int</code> (keyword)</li>
+<li><code>sum@total</code> (contains special character)</li>
+</ul>
+<h3 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">¶</a></h3>
+<p>Constants are fixed values that cannot be changed during program execution. They are also called literals. Constants in C can be of several types:</p>
+<ol>
+<li>Integer constants</li>
+<li>Real constants (floating-point constants)</li>
+<li>Character constants</li>
+<li>String constants</li>
+<li>Enumeration constants</li>
+</ol>
+<p>Constants provide several advantages:</p>
+<ul>
+<li>They make the program more readable and maintainable</li>
+<li>They prevent accidental modification of values that should remain unchanged</li>
+<li>They improve program efficiency as compilers can optimize constant values</li>
+</ul>
+<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">¶</a></h3>
+<p>Operators are symbols that perform operations on variables and values. They are essential for manipulating data and controlling program flow. C operators can be classified into:</p>
+<ol>
+<li>Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>++</code>, <code>--</code></li>
+<li>Relational operators: <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
+<li>Logical operators: <code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
+<li>Bitwise operators: <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></li>
+<li>Assignment operators: <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, etc.</li>
+<li>Conditional operator: <code>?:</code></li>
+<li>Special operators: <code>sizeof</code>, <code>&amp;</code> (address), <code>*</code> (pointer), <code>.</code> (member), <code>-&gt;</code> (pointer to member)</li>
+</ol>
+<p>The precedence of operators determines the order in which operations are performed. Higher precedence operators are evaluated before lower precedence operators.</p>
+<h3 id="basic-data-types-in-c">Basic Data Types in C<a class="headerlink" href="#basic-data-types-in-c" title="Permanent link">¶</a></h3>
+<p>Data types in C determine the type of data a variable can store, the amount of memory it occupies, and the operations that can be performed on it. The basic data types in C include:</p>
+<h4 id="integers">Integers<a class="headerlink" href="#integers" title="Permanent link">¶</a></h4>
+<p>Integers are whole numbers without fractional components. They can be positive, negative, or zero. In C, integer types include:</p>
+<ul>
+<li><code>char</code>: Typically 1 byte, stores characters or small integers</li>
+<li><code>short</code>: Usually 2 bytes</li>
+<li><code>int</code>: Typically 4 bytes</li>
+<li><code>long</code>: Usually 4 bytes</li>
+<li><code>long long</code>: Usually 8 bytes</li>
+</ul>
+<p>Each integer type can also be modified with the <code>signed</code> or <code>unsigned</code> keyword to determine if they can store negative values.</p>
+<h4 id="floats-and-doubles">Floats and Doubles<a class="headerlink" href="#floats-and-doubles" title="Permanent link">¶</a></h4>
+<p>Floating-point types represent real numbers with fractional parts:</p>
+<ul>
+<li><code>float</code>: Single-precision floating-point, typically 4 bytes</li>
+<li><code>double</code>: Double-precision floating-point, typically 8 bytes</li>
+<li><code>long double</code>: Extended precision floating-point, typically 10 or 16 bytes</li>
+</ul>
+<p>Floating-point types follow the IEEE 754 standard for representing real numbers in binary.</p>
+<h4 id="characters">Characters<a class="headerlink" href="#characters" title="Permanent link">¶</a></h4>
+<p>Character type (<code>char</code>) stores single characters such as letters, digits, or special symbols. Characters are stored as their corresponding ASCII values. For example, the character 'A' is stored as the value 65.</p>
+<p>The <code>char</code> type is typically 1 byte in size and can be modified with <code>signed</code> (values from -128 to 127) or <code>unsigned</code> (values from 0 to 255).</p>
+<h4 id="void">Void<a class="headerlink" href="#void" title="Permanent link">¶</a></h4>
+<p>The <code>void</code> type indicates an absence of value. It has several uses:</p>
+<ol>
+<li>Function return type: Functions that don't return a value use <code>void</code></li>
+<li>Function parameters: Functions that don't take parameters use <code>void</code></li>
+<li>Generic pointers: A <code>void*</code> pointer can point to any data type</li>
+</ol>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">print_message</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="size-and-range-of-values-of-data-types">Size and Range of Values of Data Types<a class="headerlink" href="#size-and-range-of-values-of-data-types" title="Permanent link">¶</a></h3>
+<p>The size of data types can vary between different systems. The C standard specifies minimum sizes but allows implementations to exceed them. Below are typical sizes and ranges for modern 32-bit and 64-bit systems:</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Size (bytes)</th>
+<th>Range (typical)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td>1</td>
+<td>-128 to 127 (signed) or 0 to 255 (unsigned)</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>2</td>
+<td>-32,768 to 32,767 (signed) or 0 to 65,535 (unsigned)</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4</td>
+<td>-2,147,483,648 to 2,147,483,647 (signed) or 0 to 4,294,967,295 (unsigned)</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>4 or 8</td>
+<td>On 32-bit: same as int; On 64-bit: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td><code>long long</code></td>
+<td>8</td>
+<td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4</td>
+<td>±3.4E±38 (about 7 decimal digits)</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8</td>
+<td>±1.7E±308 (about 15 decimal digits)</td>
+</tr>
+<tr>
+<td><code>long double</code></td>
+<td>10 or 16</td>
+<td>±1.2E±4932 (about 19 decimal digits)</td>
+</tr>
+</tbody>
+</table>
+<p>You can use the <code>sizeof</code> operator to determine the size of data types on your system:</p>
+<div class="highlight"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">"Size of int: %zu bytes</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Size of float: %zu bytes</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+</code></pre></div>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
+<p>Variables are named storage locations in memory that hold data values that can change during program execution. They are fundamental to programming as they allow us to store and manipulate data.</p>
+<h4 id="characteristics-of-variables">Characteristics of Variables<a class="headerlink" href="#characteristics-of-variables" title="Permanent link">¶</a></h4>
+<ol>
+<li>Name: A unique identifier for the variable</li>
+<li>Data type: Determines the kind of data the variable can hold</li>
+<li>Size: Amount of memory allocated to store the variable</li>
+<li>Value: The data stored in the variable</li>
+<li>Address: The memory location where the variable is stored</li>
+</ol>
+<h4 id="declaration-of-variables">Declaration of Variables<a class="headerlink" href="#declaration-of-variables" title="Permanent link">¶</a></h4>
+<p>Variable declaration specifies the name and data type of a variable. The syntax is:</p>
+<div class="highlight"><pre><span></span><code><span class="n">data_type</span><span class="w"> </span><span class="n">variable_name</span><span class="p">;</span>
+</code></pre></div>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">average</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// Multiple variables of same type</span>
+</code></pre></div></p>
+<h4 id="initialization-of-variables">Initialization of Variables<a class="headerlink" href="#initialization-of-variables" title="Permanent link">¶</a></h4>
+<p>Initialization is the process of assigning an initial value to a variable when it is declared. The syntax is:</p>
+<div class="highlight"><pre><span></span><code><span class="n">data_type</span><span class="w"> </span><span class="n">variable_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+</code></pre></div>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">85.5</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="c1">// Multiple initialization</span>
+</code></pre></div></p>
+<h4 id="assigning-values-to-variables">Assigning Values to Variables<a class="headerlink" href="#assigning-values-to-variables" title="Permanent link">¶</a></h4>
+<p>You can assign or change a variable's value using the assignment operator (<code>=</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="c1">// Assignment after declaration</span>
+
+<span class="c1">// You can also use compound assignment operators</span>
+<span class="n">age</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// Equivalent to age = age + 5</span>
+<span class="n">age</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Equivalent to age = age * 2</span>
+</code></pre></div>
+<p>Constants are fixed values that cannot be changed during program execution. They are useful for values that should remain constant throughout the program.</p>
+<h4 id="types-of-constants">Types of Constants<a class="headerlink" href="#types-of-constants" title="Permanent link">¶</a></h4>
+<ol>
+<li>Integer Constants</li>
+<li>Real Constants (Floating-point Constants)</li>
+<li>Character Constants</li>
+<li>String Constants</li>
+</ol>
+<h4 id="integer-constants">Integer Constants<a class="headerlink" href="#integer-constants" title="Permanent link">¶</a></h4>
+<p>Integer constants are whole numbers without fractional components. They can be:</p>
+<ol>
+<li>
+<p>Decimal: Base 10 (digits 0-9)
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">+</span><span class="mi">456</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-789</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Octal: Base 8 (digits 0-7), prefixed with 0
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mo">0123</span><span class="p">;</span><span class="w"> </span><span class="c1">// Decimal 83</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Hexadecimal: Base 16 (digits 0-9, letters A-F), prefixed with 0x or 0X
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x123</span><span class="p">;</span><span class="w"> </span><span class="c1">// Decimal 291</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p>Integer constants can also have the following suffixes to specify their type:</p>
+<ul>
+<li><code>U</code> or <code>u</code>: unsigned</li>
+<li><code>L</code> or <code>l</code>: long</li>
+<li><code>LL</code> or <code>ll</code>: long long</li>
+<li><code>UL</code> or <code>ul</code>: unsigned long</li>
+<li><code>ULL</code> or <code>ull</code>: unsigned long long</li>
+</ul>
+<p>Examples:
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123U</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123L</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123L</span><span class="n">L</span><span class="p">;</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123UL</span><span class="p">;</span>
+</code></pre></div></p>
+<h4 id="real-constants">Real Constants<a class="headerlink" href="#real-constants" title="Permanent link">¶</a></h4>
+<p>Real constants (floating-point constants) represent numbers with fractional parts. They can be:</p>
+<ol>
+<li>
+<p>Decimal form: With a decimal point and optional exponent
+   <div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.456</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-123.0</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">.456</span><span class="p">;</span><span class="w"> </span><span class="c1">// Equivalent to 0.456</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Exponential form: With an exponent (E or e)
+   <div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456e2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 123.456 × 10² = 12345.6</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456E-2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 123.456 × 10⁻² = 1.23456</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p>Floating-point constants can have the following type specifiers:</p>
+<ul>
+<li><code>F</code> or <code>f</code>: float</li>
+<li><code>L</code> or <code>l</code>: long double</li>
+</ul>
+<p>Examples:
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456F</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456L</span><span class="p">;</span>
+</code></pre></div></p>
+<h4 id="character-constants">Character Constants<a class="headerlink" href="#character-constants" title="Permanent link">¶</a></h4>
+<p>Character constants are single characters enclosed in single quotes:
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'7'</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'$'</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span><span class="w"> </span><span class="c1">// Newline escape sequence</span>
+</code></pre></div></p>
+<p>Special characters can be represented using escape sequences:</p>
+<ul>
+<li><code>\n</code>: Newline</li>
+<li><code>\t</code>: Tab</li>
+<li><code>\\</code>: Backslash</li>
+<li><code>\'</code>: Single quote</li>
+<li><code>\"</code>: Double quote</li>
+<li><code>\b</code>: Backspace</li>
+<li><code>\r</code>: Carriage return</li>
+<li><code>\0</code>: Null character</li>
+<li><code>\xHH</code>: Hexadecimal number (HH is hex digits)</li>
+<li><code>\0OO</code>: Octal number (OO is octal digits)</li>
+</ul>
+<p>Examples:
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">newline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">backslash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\\'</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">hex_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\x41'</span><span class="p">;</span><span class="w"> </span><span class="c1">// 'A' in ASCII</span>
+</code></pre></div></p>
+<h4 id="string-constants">String Constants<a class="headerlink" href="#string-constants" title="Permanent link">¶</a></h4>
+<p>String constants (string literals) are sequences of characters enclosed in double quotes. The compiler automatically adds a null character (<code>\0</code>) at the end:
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">greeting</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hello, World!"</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"John Doe"</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">empty</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"> </span><span class="c1">// Empty string</span>
+</code></pre></div></p>
+<p>Each string character occupies one byte, and the null terminator occupies one additional byte.</p>
+<h3 id="declaration-and-initialization-of-variables-and-constants">Declaration and Initialization of Variables and Constants<a class="headerlink" href="#declaration-and-initialization-of-variables-and-constants" title="Permanent link">¶</a></h3>
+<h4 id="declaration-of-variables_1">Declaration of Variables<a class="headerlink" href="#declaration-of-variables_1" title="Permanent link">¶</a></h4>
+<p>Variable declaration tells the compiler the name and data type of a variable. The variable is declared before it is used:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="c1">// Declaration</span>
+<span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="c1">// Assignment</span>
+</code></pre></div>
+<p>Multiple variables of the same type can be declared in one statement:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+</code></pre></div></p>
+<h4 id="initialization-of-variables_1">Initialization of Variables<a class="headerlink" href="#initialization-of-variables_1" title="Permanent link">¶</a></h4>
+<p>Initialization assigns an initial value to a variable when it is declared:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="c1">// Declaration and initialization</span>
+</code></pre></div>
+<p>For multiple variables:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Uninitialized variables contain garbage values (undefined values), which can lead to unpredictable behavior. It's always good practice to initialize variables when declaring them.</p>
+<h4 id="constants-declaration">Constants Declaration<a class="headerlink" href="#constants-declaration" title="Permanent link">¶</a></h4>
+<p>Constants can be declared in two ways in C:</p>
+<ol>
+<li>
+<p>Using <code>const</code> keyword
+   <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX_VALUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Using <code>#define</code> preprocessor directive
+   <code>c
+   #define MAX_VALUE 100
+   #define PI 3.14159</code></p>
+</li>
+</ol>
+<p>Constants declared with <code>const</code> are type-safe (the compiler knows their data type), while constants defined with <code>#define</code> are simple text substitutions during preprocessing.</p>
+<h3 id="assigning-values-to-variables_1">Assigning Values to Variables<a class="headerlink" href="#assigning-values-to-variables_1" title="Permanent link">¶</a></h3>
+<p>Values can be assigned to variables in several ways:</p>
+<h4 id="simple-assignment">Simple Assignment<a class="headerlink" href="#simple-assignment" title="Permanent link">¶</a></h4>
+<p>The basic assignment operator is <code>=</code>:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Simple assignment</span>
+
+<span class="c1">// Compound assignment</span>
+<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// a = a + 5</span>
+<span class="n">a</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// a = a - 3</span>
+<span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// a = a * 2</span>
+<span class="n">a</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// a = a / 4</span>
+<span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// a = a % 2</span>
+</code></pre></div></p>
+<h4 id="multiple-assignment">Multiple Assignment<a class="headerlink" href="#multiple-assignment" title="Permanent link">¶</a></h4>
+<p>Multiple variables can be assigned the same value:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// All assigned 10</span>
+</code></pre></div></p>
+<h4 id="initialization-during-declaration">Initialization During Declaration<a class="headerlink" href="#initialization-during-declaration" title="Permanent link">¶</a></h4>
+<p>Variables can be initialized at the time of declaration:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div></p>
+<h4 id="initialization-with-expressions">Initialization with Expressions<a class="headerlink" href="#initialization-with-expressions" title="Permanent link">¶</a></h4>
+<p>Variables can be initialized with expressions involving other variables or constants:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// b is 15</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// c is 30</span>
+</code></pre></div></p>
+<h4 id="type-conversion-in-assignment">Type Conversion in Assignment<a class="headerlink" href="#type-conversion-in-assignment" title="Permanent link">¶</a></h4>
+<p>When assigning values between different data types, type conversion may occur:</p>
+<ol>
+<li>
+<p>Implicit type conversion: Done automatically by the compiler
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// int to float (a becomes 10.0)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Explicit type conversion: Done using cast operator
+   <div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// float to int (b becomes 10)</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p>When converting from a larger type to a smaller type (like double to float), data may be lost due to truncation or rounding.</p>
+<p><pre class="mermaid"><code>graph TD
+    A[C Tokens] --&gt; B[Keywords]
+    A --&gt; C[Identifiers]
+    A --&gt; D[Constants]
+    A --&gt; E[Operators]
+    A --&gt; F[Special Symbols]
+    A --&gt; G[Comments]
+
+    D --&gt; H[Integer Constants]
+    D --&gt; I[Real Constants]
+    D --&gt; J[Character Constants]
+    D --&gt; K[String Constants]
+    D --&gt; L[Enumeration Constants]
+
+    E --&gt; M[Arithmetic]
+    E --&gt; N[Relational]
+    E --&gt; O[Logical]
+    E --&gt; P[Bitwise]
+    E --&gt; Q[Assignment]
+
+    F[Basic Data Types] --&gt; R[Integers]
+    F --&gt; S[Floats/Doubles]
+    F --&gt; T[Characters]
+    F --&gt; U[Void]
+</code></pre>
+(insert image on C data types memory representation here)</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+<script src="../../../js/katex.js"></script>
+<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+window.mermaidConfig = {default: {
+    startOnLoad: false
+}};</script></body>
+</html>

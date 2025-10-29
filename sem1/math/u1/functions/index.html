@@ -1,0 +1,2635 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes for my college course.">
+      
+      
+        <meta name="author" content="myxi">
+      
+      
+      
+        <link rel="prev" href="../relations/">
+      
+      
+        <link rel="next" href="../../u2/first/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Functions - BCA Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="BCA Notes" class="md-header__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BCA Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="BCA Notes" class="md-nav__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BCA Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1st Semester
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/so-many-oaks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/the-palanquin-bearers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/no-second-troy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/photograph-of-me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/audition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aec-eng/the-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of a Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of a Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components of a Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-properties-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Properties of a Function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-to-one-function-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-to-One Function (Injection)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="One-to-One Function (Injection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-and-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions and Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onto-function-surjection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Onto Function (Surjection)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Onto Function (Surjection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-and-properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions and Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bijective-function-one-to-one-correspondence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bijective Function (One-to-One Correspondence)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bijective Function (One-to-One Correspondence)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions-and-properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions and Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principles-of-mathematical-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Mathematical Induction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principles of Mathematical Induction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-first-principle-of-mathematical-induction-weak-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The First Principle of Mathematical Induction (Weak Induction)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The First Principle of Mathematical Induction (Weak Induction)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-sum-of-the-first-n-positive-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Sum of the First \(n\) Positive Integers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-second-principle-of-mathematical-induction-strong-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Second Principle of Mathematical Induction (Strong Induction)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Second Principle of Mathematical Induction (Strong Induction)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-prime-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Prime Factorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convex-and-concave-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convex and Concave Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convex and Concave Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convex-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convex Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concave-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concave Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-convexity-and-concavity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Convexity and Concavity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-of-inflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point of Inflection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#significance-in-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significance in Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-and-properties-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition and Properties of Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one-injective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-to-One (Injective) Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onto-surjective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Onto (Surjective) Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bijective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bijective Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principles-of-mathematical-induction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Mathematical Induction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principles of Mathematical Induction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-first-principle-weak-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The First Principle (Weak Induction)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-second-principle-strong-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Second Principle (Strong Induction)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convex-and-concave-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convex and Concave Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convex and Concave Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions-and-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions and Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-of-inflection-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point of Inflection and Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definition and Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/second/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/three/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u2/four/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications and Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pyq/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/unit-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction to C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-ii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u1-iii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c/u4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of a Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of a Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components of a Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-properties-of-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Properties of a Function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-to-one-function-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-to-One Function (Injection)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="One-to-One Function (Injection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-and-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions and Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onto-function-surjection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Onto Function (Surjection)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Onto Function (Surjection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-and-properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions and Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bijective-function-one-to-one-correspondence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bijective Function (One-to-One Correspondence)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bijective Function (One-to-One Correspondence)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions-and-properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions and Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principles-of-mathematical-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Mathematical Induction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principles of Mathematical Induction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-first-principle-of-mathematical-induction-weak-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The First Principle of Mathematical Induction (Weak Induction)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The First Principle of Mathematical Induction (Weak Induction)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-sum-of-the-first-n-positive-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Sum of the First \(n\) Positive Integers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-second-principle-of-mathematical-induction-strong-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Second Principle of Mathematical Induction (Strong Induction)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Second Principle of Mathematical Induction (Strong Induction)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-prime-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Prime Factorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convex-and-concave-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convex and Concave Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convex and Concave Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convex-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convex Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concave-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concave Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-convexity-and-concavity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Convexity and Concavity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-of-inflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point of Inflection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#significance-in-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significance in Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-and-properties-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition and Properties of Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one-injective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-to-One (Injective) Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onto-surjective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Onto (Surjective) Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bijective-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bijective Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principles-of-mathematical-induction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Mathematical Induction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principles of Mathematical Induction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-first-principle-weak-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The First Principle (Weak Induction)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-second-principle-strong-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Second Principle (Strong Induction)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convex-and-concave-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convex and Concave Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convex and Concave Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions-and-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions and Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-of-inflection-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point of Inflection and Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h1>
+<iframe width="710" height="399" src="https://www.youtube.com/embed/MWZOy-Igdo8" title="Introduction to Functions|Relations and Functions|BCA Maths|BBA|BCOM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="definition-of-a-function">Definition of a Function<a class="headerlink" href="#definition-of-a-function" title="Permanent link">&para;</a></h3>
+<p>In mathematics, a <strong>function</strong> is a rule that establishes a relationship between two non-empty sets. It maps each element from the first set, called the <strong>domain</strong>, to exactly one element in the second set, called the <strong>codomain</strong>.</p>
+<p>Think of a function as a machine: you put an input in (from the domain), and it gives you a specific, single output (from the codomain).</p>
+<figure>
+  <img alt="" src="https://perfectmaths.files.wordpress.com/2011/06/function_composite_fx.png" />
+</figure>
+<hr />
+<h4 id="formal-definition">Formal Definition<a class="headerlink" href="#formal-definition" title="Permanent link">&para;</a></h4>
+<p>Let <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> be two non-empty sets. A function <span class="arithmatex">\(f\)</span> from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B\)</span>, denoted as <span class="arithmatex">\(f: A \to B\)</span>, is a rule or a correspondence that assigns to <strong>each</strong> element <span class="arithmatex">\(x\)</span> in set <span class="arithmatex">\(A\)</span> a <strong>unique</strong> element <span class="arithmatex">\(y\)</span> in set <span class="arithmatex">\(B\)</span>.</p>
+<ul>
+<li>The element <span class="arithmatex">\(y\)</span> is called the <strong>image</strong> of <span class="arithmatex">\(x\)</span> under <span class="arithmatex">\(f\)</span>. We write this as <span class="arithmatex">\(y = f(x)\)</span>.</li>
+<li>The element <span class="arithmatex">\(x\)</span> is called the <strong>pre-image</strong> of <span class="arithmatex">\(y\)</span>.</li>
+</ul>
+<h4 id="key-components-of-a-function">Key Components of a Function<a class="headerlink" href="#key-components-of-a-function" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Domain</strong>: The set of all possible input values. For a function <span class="arithmatex">\(f: A \to B\)</span>, the domain is the set <span class="arithmatex">\(A\)</span>.</li>
+<li><strong>Codomain</strong>: The set of all possible output values. For a function <span class="arithmatex">\(f: A \to B\)</span>, the codomain is the set <span class="arithmatex">\(B\)</span>.</li>
+<li>
+<p><strong>Range</strong>: The set of all <em>actual</em> output values produced by the function. The range is always a subset of the codomain.</p>
+<div class="arithmatex">\[
+\text{Range}(f) = \{y \in B \mid y = f(x) \text{ for some } x \in A\}
+\]</div>
+</li>
+</ul>
+<h4 id="essential-properties-of-a-function">Essential Properties of a Function<a class="headerlink" href="#essential-properties-of-a-function" title="Permanent link">&para;</a></h4>
+<p>For a relation to be a function, it must satisfy two crucial conditions:</p>
+<ol>
+<li><strong>Totality</strong>: Every element in the domain <span class="arithmatex">\(A\)</span> must have an image in the codomain <span class="arithmatex">\(B\)</span>. No element in the domain can be left unmapped.</li>
+<li><strong>Uniqueness</strong>: Each element in the domain <span class="arithmatex">\(A\)</span> must be mapped to exactly one element in the codomain <span class="arithmatex">\(B\)</span>. An input cannot have multiple outputs.</li>
+</ol>
+<figure>
+  <img alt="" src="https://i.pinimg.com/474x/79/03/87/7903872126ea506b8df19b58449e802a.jpg" />
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> and <span class="arithmatex">\(B = \{a, b, c, d\}\)</span>.</p>
+<ul>
+<li>Let <span class="arithmatex">\(f = \{(1, a), (2, b), (3, c)\}\)</span>. This is a <strong>valid function</strong>. Every element of <span class="arithmatex">\(A\)</span> is mapped to a unique element in <span class="arithmatex">\(B\)</span>.<ul>
+<li>Domain: <span class="arithmatex">\(\{1, 2, 3\}\)</span></li>
+<li>Codomain: <span class="arithmatex">\(\{a, b, c, d\}\)</span></li>
+<li>Range: <span class="arithmatex">\(\{a, b, c\}\)</span></li>
+</ul>
+</li>
+<li>Let <span class="arithmatex">\(g = \{(1, a), (2, b)\}\)</span>. This is <strong>not a function</strong> because the element <span class="arithmatex">\(3 \in A\)</span> is not mapped to any element in <span class="arithmatex">\(B\)</span> (violates totality).</li>
+<li>Let <span class="arithmatex">\(h = \{(1, a), (1, b), (2, c), (3, d)\}\)</span>. This is <strong>not a function</strong> because the element <span class="arithmatex">\(1 \in A\)</span> is mapped to two different elements, <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, in <span class="arithmatex">\(B\)</span> (violates uniqueness).</li>
+</ul>
+</div>
+<hr />
+<h3 id="one-to-one-function-injection">One-to-One Function (Injection)<a class="headerlink" href="#one-to-one-function-injection" title="Permanent link">&para;</a></h3>
+<p>A function is <strong>one-to-one</strong> if every distinct element in the domain is mapped to a distinct element in the codomain. In other words, no two different inputs produce the same output. Such a function is also called an <strong>injective function</strong> or an <strong>injection</strong>.</p>
+<figure>
+  <img alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/20231003072114/One-to-one-function-1.png" />
+</figure>
+<h4 id="formal-definition_1">Formal Definition<a class="headerlink" href="#formal-definition_1" title="Permanent link">&para;</a></h4>
+<p>A function <span class="arithmatex">\(f: A \to B\)</span> is one-to-one (injective) if for any two elements <span class="arithmatex">\(x_1, x_2 \in A\)</span>:</p>
+<div class="arithmatex">\[
+\text{If } f(x_1) = f(x_2), \text{ then } x_1 = x_2.
+\]</div>
+<p>An equivalent way to state this (the contrapositive) is:</p>
+<div class="arithmatex">\[
+\text{If } x_1 \neq x_2, \text{ then } f(x_1) \neq f(x_2).
+\]</div>
+<h4 id="conditions-and-properties">Conditions and Properties<a class="headerlink" href="#conditions-and-properties" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For finite sets, if a function <span class="arithmatex">\(f: A \to B\)</span> is injective, then the cardinality of the domain must be less than or equal to the cardinality of the codomain: <span class="arithmatex">\(|A| \le |B|\)</span>.</li>
+<li><strong>Graphical Test (Horizontal Line Test)</strong>: A function is one-to-one if and only if no horizontal line intersects its graph at more than one point.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example of a One-to-One Function</p>
+<p>Let <span class="arithmatex">\(f: \mathbb{Z} \to \mathbb{Z}\)</span> be defined by <span class="arithmatex">\(f(x) = x + 5\)</span>.
+To prove it's one-to-one, we assume <span class="arithmatex">\(f(x_1) = f(x_2)\)</span> for some <span class="arithmatex">\(x_1, x_2 \in \mathbb{Z}\)</span>.</p>
+<div class="arithmatex">\[
+x_1 + 5 = x_2 + 5
+\]</div>
+<p>Subtracting 5 from both sides gives:</p>
+<div class="arithmatex">\[
+x_1 = x_2
+\]</div>
+<p>Since <span class="arithmatex">\(f(x_1) = f(x_2)\)</span> implies <span class="arithmatex">\(x_1 = x_2\)</span>, the function <span class="arithmatex">\(f\)</span> is <strong>one-to-one</strong>.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Example of a Function that is NOT One-to-One</p>
+<p>Let <span class="arithmatex">\(g: \mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="arithmatex">\(g(x) = x^2\)</span>.
+This function is <strong>not one-to-one</strong>. To show this, we can find a counterexample.</p>
+<p>Let <span class="arithmatex">\(x_1 = 2\)</span> and <span class="arithmatex">\(x_2 = -2\)</span>.
+Here, <span class="arithmatex">\(x_1 \neq x_2\)</span>. But their images are:</p>
+<div class="arithmatex">\[
+g(2) = 2^2 = 4
+\]</div>
+<div class="arithmatex">\[
+g(-2) = (-2)^2 = 4
+\]</div>
+<p>Since <span class="arithmatex">\(g(2) = g(-2)\)</span> but <span class="arithmatex">\(2 \neq -2\)</span>, the function is not one-to-one.</p>
+</div>
+<hr />
+<h3 id="onto-function-surjection">Onto Function (Surjection)<a class="headerlink" href="#onto-function-surjection" title="Permanent link">&para;</a></h3>
+<p>A function is <strong>onto</strong> if every element in the codomain is the image of at least one element from the domain. This means the function "hits" or "covers" every possible output value in the codomain. Such a function is also called a <strong>surjective function</strong> or a <strong>surjection</strong>.</p>
+<p>For an onto function, the <strong>range is equal to the codomain</strong>.</p>
+<figure>
+  <img alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/20231017191730/Onto-Function-1.png" />
+</figure>
+<h4 id="formal-definition_2">Formal Definition<a class="headerlink" href="#formal-definition_2" title="Permanent link">&para;</a></h4>
+<p>A function <span class="arithmatex">\(f: A \to B\)</span> is onto (surjective) if for <strong>every</strong> element <span class="arithmatex">\(y \in B\)</span>, there exists <strong>at least one</strong> element <span class="arithmatex">\(x \in A\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>.</p>
+<div class="arithmatex">\[
+\forall y \in B, \exists x \in A \text{ such that } f(x) = y.
+\]</div>
+<h4 id="conditions-and-properties_1">Conditions and Properties<a class="headerlink" href="#conditions-and-properties_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For finite sets, if a function <span class="arithmatex">\(f: A \to B\)</span> is surjective, then the cardinality of the domain must be greater than or equal to the cardinality of the codomain: <span class="arithmatex">\(|A| \ge |B|\)</span>.</li>
+<li>To prove a function is onto, you must show that for any arbitrary element <span class="arithmatex">\(y\)</span> in the codomain, you can find an <span class="arithmatex">\(x\)</span> in the domain that maps to it.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example of an Onto Function</p>
+<p>Let <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="arithmatex">\(f(x) = x + 5\)</span>.
+To prove it's onto, we take an arbitrary element <span class="arithmatex">\(y\)</span> from the codomain <span class="arithmatex">\(\mathbb{R}\)</span>. We need to find an <span class="arithmatex">\(x\)</span> from the domain <span class="arithmatex">\(\mathbb{R}\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>.</p>
+<div class="arithmatex">\[
+x + 5 = y
+\]</div>
+<p>Solving for <span class="arithmatex">\(x\)</span>, we get:</p>
+<div class="arithmatex">\[
+x = y - 5
+\]</div>
+<p>Since <span class="arithmatex">\(y\)</span> is a real number, <span class="arithmatex">\(y-5\)</span> is also a real number. This means that for any <span class="arithmatex">\(y \in \mathbb{R}\)</span> we choose, we can find a corresponding <span class="arithmatex">\(x \in \mathbb{R}\)</span> (which is <span class="arithmatex">\(y-5\)</span>) that maps to it. Therefore, the function <span class="arithmatex">\(f\)</span> is <strong>onto</strong>.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Example of a Function that is NOT Onto</p>
+<p>Let <span class="arithmatex">\(g: \mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="arithmatex">\(g(x) = x^2\)</span>.
+The codomain is the set of all real numbers, <span class="arithmatex">\(\mathbb{R}\)</span>.
+The range of <span class="arithmatex">\(g(x) = x^2\)</span> is the set of all non-negative real numbers, <span class="arithmatex">\([0, \infty)\)</span>, because the square of any real number cannot be negative.
+Since the Range <span class="arithmatex">\([0, \infty)\)</span> is not equal to the Codomain <span class="arithmatex">\(\mathbb{R}\)</span>, the function is <strong>not onto</strong>. For example, there is no real number <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(x^2 = -4\)</span>.</p>
+</div>
+<hr />
+<h3 id="bijective-function-one-to-one-correspondence">Bijective Function (One-to-One Correspondence)<a class="headerlink" href="#bijective-function-one-to-one-correspondence" title="Permanent link">&para;</a></h3>
+<p>A function is <strong>bijective</strong> if it is both <strong>one-to-one (injective)</strong> and <strong>onto (surjective)</strong>. A bijective function creates a perfect pairing between the elements of the domain and the codomain.</p>
+<figure>
+  <img alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/20231019170642/Bijective-Function-2.png" />
+</figure>
+<h4 id="conditions-and-properties_2">Conditions and Properties<a class="headerlink" href="#conditions-and-properties_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For a function to be bijective, every element in the domain must map to a unique element in the codomain, and every element in the codomain must be mapped to by some element in the domain.</li>
+<li>For finite sets, if a function <span class="arithmatex">\(f: A \to B\)</span> is bijective, the cardinality of the domain must be equal to the cardinality of the codomain: <span class="arithmatex">\(|A| = |B|\)</span>.</li>
+<li>Bijective functions have an inverse function, denoted <span class="arithmatex">\(f^{-1}\)</span>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example of a Bijective Function</p>
+<p>Let <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="arithmatex">\(f(x) = 2x - 3\)</span>.</p>
+<ol>
+<li>
+<p><strong>Is it One-to-One?</strong>
+    Assume <span class="arithmatex">\(f(x_1) = f(x_2)\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\( 2x_1 - 3 = 2x_2 - 3 \)</span></li>
+<li><span class="arithmatex">\( 2x_1 = 2x_2 \)</span></li>
+<li><span class="arithmatex">\( x_1 = x_2 \)</span></li>
+</ul>
+<p>Yes, it is one-to-one.</p>
+</li>
+<li>
+<p><strong>Is it Onto?</strong>
+    Let <span class="arithmatex">\(y\)</span> be an arbitrary element in the codomain <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p><span class="arithmatex">\( y = 2x - 3 \)</span></p>
+<p>Solve for <span class="arithmatex">\(x\)</span>:</p>
+<ul>
+<li><span class="arithmatex">\( y + 3 = 2x \)</span></li>
+<li><span class="arithmatex">\( x = \frac{y+3}{2} \)</span></li>
+</ul>
+<p>For any real number <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(x = (y+3)/2\)</span> is also a real number. Thus, for any <span class="arithmatex">\(y\)</span>, we can find an <span class="arithmatex">\(x\)</span>.
+Yes, it is onto.</p>
+</li>
+</ol>
+<p>Since the function is both one-to-one and onto, it is <strong>bijective</strong>.</p>
+</div>
+<h2 id="principles-of-mathematical-induction">Principles of Mathematical Induction<a class="headerlink" href="#principles-of-mathematical-induction" title="Permanent link">&para;</a></h2>
+<iframe width="710" height="399" src="https://www.youtube.com/embed/A3bBWmS7Brg" title="Introduction to principle of Mathematical Induction|PMI|BCA Maths|BBA Maths|BCOM Maths" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Mathematical Induction is a powerful and fundamental proof technique in mathematics used to establish the truth of a statement for all natural numbers (or any well-ordered set starting from a specific integer). It's a formal method for proving that a property <span class="arithmatex">\(P(n)\)</span> holds for every natural number <span class="arithmatex">\(n \ge n_0\)</span>, where <span class="arithmatex">\(n_0\)</span> is some starting integer (usually 0 or 1).</p>
+<p>The core idea is analogous to the <strong>domino effect</strong>. If you have a line of dominos:
+1.  You can knock over the <strong>first domino</strong>. (Base Case)
+2.  Each domino is placed so that if it falls, it will knock over the <strong>next one</strong>. (Inductive Step)</p>
+<p>If both conditions are met, you can conclude that <em>all</em> the dominos will eventually fall.</p>
+<figure>
+  <img alt="" src="https://files.catbox.moe/asuk7j.png" />
+</figure>
+<hr />
+<h3 id="the-first-principle-of-mathematical-induction-weak-induction">The First Principle of Mathematical Induction (Weak Induction)<a class="headerlink" href="#the-first-principle-of-mathematical-induction-weak-induction" title="Permanent link">&para;</a></h3>
+<p>This is the most common form of induction. To prove a statement <span class="arithmatex">\(P(n)\)</span> for all integers <span class="arithmatex">\(n \ge n_0\)</span>, you must complete two steps:</p>
+<div class="admonition note">
+<p class="admonition-title">The Two Steps of Induction</p>
+<ol>
+<li>
+<p><strong>Base Case (or Basis Step):</strong>
+    Prove that the statement is true for the initial value, <span class="arithmatex">\(n = n_0\)</span>. This is the starting point of the proof, analogous to tipping the first domino.</p>
+</li>
+<li>
+<p><strong>Inductive Step:</strong>
+    Prove that <strong>if</strong> the statement is true for an arbitrary integer <span class="arithmatex">\(k \ge n_0\)</span>, <strong>then</strong> it must also be true for the next integer, <span class="arithmatex">\(k+1\)</span>. This step consists of two parts:</p>
+<ul>
+<li><strong>Inductive Hypothesis:</strong> Assume that <span class="arithmatex">\(P(k)\)</span> is true for some arbitrary integer <span class="arithmatex">\(k \ge n_0\)</span>.</li>
+<li><strong>Inductive Proof:</strong> Use the inductive hypothesis to show that <span class="arithmatex">\(P(k+1)\)</span> is true.</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>If both the Base Case and the Inductive Step are proven to be true, then by the Principle of Mathematical Induction, the statement <span class="arithmatex">\(P(n)\)</span> is true for all integers <span class="arithmatex">\(n \ge n_0\)</span>.</p>
+<h4 id="example-sum-of-the-first-n-positive-integers">Example: Sum of the First <span class="arithmatex">\(n\)</span> Positive Integers<a class="headerlink" href="#example-sum-of-the-first-n-positive-integers" title="Permanent link">&para;</a></h4>
+<p><strong>Proposition <span class="arithmatex">\(P(n)\)</span>:</strong> For all integers <span class="arithmatex">\(n \ge 1\)</span>, the sum of the first <span class="arithmatex">\(n\)</span> positive integers is given by the formula:</p>
+<div class="arithmatex">\[ 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2} \]</div>
+<p><strong>Proof:</strong></p>
+<ol>
+<li>
+<p><strong>Base Case (<span class="arithmatex">\(n=1\)</span>):</strong>
+    We need to show that <span class="arithmatex">\(P(1)\)</span> is true.</p>
+<ul>
+<li><strong>LHS (Left-Hand Side):</strong> The sum of the first 1 integer is just <span class="arithmatex">\(1\)</span>.</li>
+<li><strong>RHS (Right-Hand Side):</strong> <span class="arithmatex">\(\frac{1(1+1)}{2} = \frac{1(2)}{2} = 1\)</span>.
+Since LHS = RHS (<span class="arithmatex">\(1=1\)</span>), the base case holds. The first domino has fallen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inductive Step:</strong></p>
+<ul>
+<li>
+<p><strong>Inductive Hypothesis:</strong> Assume that <span class="arithmatex">\(P(k)\)</span> is true for some arbitrary integer <span class="arithmatex">\(k \ge 1\)</span>.
+    This means we assume:</p>
+<div class="arithmatex">\[ 1 + 2 + 3 + \dots + k = \frac{k(k+1)}{2} \]</div>
+</li>
+<li>
+<p><strong>Inductive Proof:</strong> We need to prove that <span class="arithmatex">\(P(k+1)\)</span> is true. That is, we need to show:</p>
+<div class="arithmatex">\[ 1 + 2 + 3 + \dots + k + (k+1) = \frac{(k+1)((k+1)+1)}{2} = \frac{(k+1)(k+2)}{2} \]</div>
+<p>Let's start with the LHS of <span class="arithmatex">\(P(k+1)\)</span> and use our Inductive Hypothesis.</p>
+<div class="arithmatex">\[ \underbrace{1 + 2 + 3 + \dots + k}_{\text{This is the LHS of } P(k)} + (k+1) \]</div>
+<p>By the Inductive Hypothesis, we can substitute the sum with our formula:</p>
+<div class="arithmatex">\[ = \left( \frac{k(k+1)}{2} \right) + (k+1) \]</div>
+<p>Now, we use algebra to simplify the expression and show it equals the RHS of <span class="arithmatex">\(P(k+1)\)</span>.</p>
+<div class="arithmatex">\[ = \frac{k(k+1)}{2} + \frac{2(k+1)}{2} \]</div>
+<div class="arithmatex">\[ = \frac{k(k+1) + 2(k+1)}{2} \]</div>
+<p>Factor out the common term <span class="arithmatex">\((k+1)\)</span>:</p>
+<div class="arithmatex">\[ = \frac{(k+1)(k+2)}{2} \]</div>
+<p>This is exactly the RHS of the statement for <span class="arithmatex">\(P(k+1)\)</span>. Thus, we have shown that if <span class="arithmatex">\(P(k)\)</span> is true, then <span class="arithmatex">\(P(k+1)\)</span> must also be true.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion:</strong>
+Since both the base case and the inductive step have been proven, by the principle of mathematical induction, the formula is true for all integers <span class="arithmatex">\(n \ge 1\)</span>.</p>
+<hr />
+<h3 id="the-second-principle-of-mathematical-induction-strong-induction">The Second Principle of Mathematical Induction (Strong Induction)<a class="headerlink" href="#the-second-principle-of-mathematical-induction-strong-induction" title="Permanent link">&para;</a></h3>
+<p>Strong induction is a variant of mathematical induction where the inductive step uses a stronger assumption. Instead of just assuming <span class="arithmatex">\(P(k)\)</span> is true, we assume that <span class="arithmatex">\(P(j)\)</span> is true for <em>all</em> values from the base case up to <span class="arithmatex">\(k\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">The Two Steps of Strong Induction</p>
+<ol>
+<li>
+<p><strong>Base Case (or Basis Step):</strong>
+    Prove that the statement is true for the initial value, <span class="arithmatex">\(P(n_0)\)</span>. Sometimes, it is necessary to prove the statement for several initial values.</p>
+</li>
+<li>
+<p><strong>Inductive Step:</strong>
+    Prove that <strong>if</strong> the statement is true for <strong>all</strong> integers <span class="arithmatex">\(j\)</span> from <span class="arithmatex">\(n_0\)</span> up to <span class="arithmatex">\(k\)</span> (i.e., <span class="arithmatex">\(P(n_0), P(n_0+1), \dots, P(k)\)</span> are all true), <strong>then</strong> it must also be true for <span class="arithmatex">\(k+1\)</span>.</p>
+<ul>
+<li><strong>Inductive Hypothesis:</strong> Assume that <span class="arithmatex">\(P(j)\)</span> is true for all integers <span class="arithmatex">\(j\)</span> such that <span class="arithmatex">\(n_0 \le j \le k\)</span>.</li>
+<li><strong>Inductive Proof:</strong> Use this (stronger) hypothesis to show that <span class="arithmatex">\(P(k+1)\)</span> is true.</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>Strong induction is particularly useful in proofs where the truth of the <span class="arithmatex">\((k+1)\)</span>-th case depends not just on the immediately preceding case (<span class="arithmatex">\(k\)</span>) but on one or more earlier cases.</p>
+<h4 id="example-prime-factorization">Example: Prime Factorization<a class="headerlink" href="#example-prime-factorization" title="Permanent link">&para;</a></h4>
+<p><strong>Proposition <span class="arithmatex">\(P(n)\)</span>:</strong> Every integer <span class="arithmatex">\(n \ge 2\)</span> can be written as a product of prime numbers.</p>
+<p><strong>Proof:</strong></p>
+<ol>
+<li>
+<p><strong>Base Case (<span class="arithmatex">\(n=2\)</span>):</strong>
+    The integer 2 is a prime number. It can be written as a product of one prime: itself. So, <span class="arithmatex">\(P(2)\)</span> is true.</p>
+</li>
+<li>
+<p><strong>Inductive Step:</strong></p>
+<ul>
+<li><strong>Inductive Hypothesis (Strong):</strong> Assume that for some arbitrary integer <span class="arithmatex">\(k \ge 2\)</span>, the statement <span class="arithmatex">\(P(j)\)</span> is true for <strong>all</strong> integers <span class="arithmatex">\(j\)</span> where <span class="arithmatex">\(2 \le j \le k\)</span>. This means we assume every integer from 2 to <span class="arithmatex">\(k\)</span> can be written as a product of primes.</li>
+<li>
+<p><strong>Inductive Proof:</strong> We need to prove that <span class="arithmatex">\(P(k+1)\)</span> is true. That is, we need to show that the integer <span class="arithmatex">\(k+1\)</span> can be written as a product of primes. We consider two cases for <span class="arithmatex">\(k+1\)</span>:</p>
+<ul>
+<li>
+<p><strong>Case 1: <span class="arithmatex">\(k+1\)</span> is a prime number.</strong>
+    If <span class="arithmatex">\(k+1\)</span> is prime, then it is a product of one prime (itself). Thus, <span class="arithmatex">\(P(k+1)\)</span> is true.</p>
+</li>
+<li>
+<p><strong>Case 2: <span class="arithmatex">\(k+1\)</span> is a composite number.</strong>
+    If <span class="arithmatex">\(k+1\)</span> is composite, then by definition, it can be written as a product of two smaller integers, <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>.</p>
+<div class="arithmatex">\[ k+1 = a \cdot b \]</div>
+<p>where <span class="arithmatex">\(2 \le a \le k\)</span> and <span class="arithmatex">\(2 \le b \le k\)</span>.</p>
+<p>Since both <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are in the range <span class="arithmatex">\([2, k]\)</span>, our strong inductive hypothesis applies to both of them.
+-   By the hypothesis, <span class="arithmatex">\(a\)</span> can be written as a product of primes (e.g., <span class="arithmatex">\(p_1 \cdot p_2 \cdot \dots \)</span>).
+-   By the hypothesis, <span class="arithmatex">\(b\)</span> can be written as a product of primes (e.g., <span class="arithmatex">\(q_1 \cdot q_2 \cdot \dots \)</span>).</p>
+<p>Therefore, <span class="arithmatex">\(k+1\)</span> can be written as the product of these two sets of primes:</p>
+<div class="arithmatex">\[ k+1 = a \cdot b = (p_1 \cdot p_2 \cdot \dots) \cdot (q_1 \cdot q_2 \cdot \dots) \]</div>
+<p>This shows that <span class="arithmatex">\(k+1\)</span> is a product of primes.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>In both possible cases, <span class="arithmatex">\(P(k+1)\)</span> is true.</p>
+</li>
+</ol>
+<p><strong>Conclusion:</strong>
+Since the base case and the inductive step hold, by the principle of strong mathematical induction, every integer <span class="arithmatex">\(n \ge 2\)</span> can be written as a product of prime numbers.</p>
+<h2 id="convex-and-concave-functions">Convex and Concave Functions<a class="headerlink" href="#convex-and-concave-functions" title="Permanent link">&para;</a></h2>
+<iframe width="710" height="533" src="https://www.youtube.com/embed/nOFXLCCvtm0" title="Understanding Concave and Convex Functions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Functions can be classified based on their curvature. This classification is crucial in fields like optimization, calculus, and economics. The primary types of curvature are convex and concave.</p>
+<hr />
+<h4 id="convex-functions">Convex Functions<a class="headerlink" href="#convex-functions" title="Permanent link">&para;</a></h4>
+<p>A function is <strong>convex</strong> if the line segment connecting any two points on its graph lies <em>on or above</em> the graph itself. Intuitively, a convex function looks like a "bowl" or a "valley" opening upwards.</p>
+<figure>
+  <img alt="" src="https://www.researchgate.net/publication/45667524/figure/fig34/AS:669552849465353@1536645247360/Figure-A2-Graph-of-a-convex-function.png" />
+</figure>
+<h5 id="formal-definition_3">Formal Definition<a class="headerlink" href="#formal-definition_3" title="Permanent link">&para;</a></h5>
+<p>A function <span class="arithmatex">\(f(x)\)</span> is defined to be convex over an interval <span class="arithmatex">\(I\)</span> if for any two points <span class="arithmatex">\(x_1, x_2 \in I\)</span> and for any scalar <span class="arithmatex">\(\lambda \in [0, 1]\)</span>, the following inequality holds:</p>
+<div class="arithmatex">\[ f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) + (1-\lambda)f(x_2) \]</div>
+<ul>
+<li><strong>Explanation</strong>: The term <span class="arithmatex">\(\lambda x_1 + (1-\lambda)x_2\)</span> represents any point on the line segment between <span class="arithmatex">\(x_1\)</span> and <span class="arithmatex">\(x_2\)</span>. The left side of the inequality, <span class="arithmatex">\(f(\lambda x_1 + (1-\lambda)x_2)\)</span>, is the value of the function at this intermediate point. The right side, <span class="arithmatex">\(\lambda f(x_1) + (1-\lambda)f(x_2)\)</span>, is the value on the straight line (the chord) connecting the points <span class="arithmatex">\((x_1, f(x_1))\)</span> and <span class="arithmatex">\((x_2, f(x_2))\)</span>. The definition essentially states that the function's curve is always below or touching this chord.</li>
+</ul>
+<h5 id="strictly-convex">Strictly Convex<a class="headerlink" href="#strictly-convex" title="Permanent link">&para;</a></h5>
+<p>If the inequality is strict (<code>&lt;</code>) for all <span class="arithmatex">\(\lambda \in (0, 1)\)</span> and <span class="arithmatex">\(x_1 \neq x_2\)</span>, the function is called <strong>strictly convex</strong>. This means the graph is always strictly below the chord, never touching it except at the endpoints.</p>
+<hr />
+<h4 id="concave-functions">Concave Functions<a class="headerlink" href="#concave-functions" title="Permanent link">&para;</a></h4>
+<p>A function is <strong>concave</strong> if the line segment connecting any two points on its graph lies <em>on or below</em> the graph. Intuitively, a concave function looks like a "hill" or a "dome" opening downwards.</p>
+<figure>
+  <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/73/ConcaveDef.png" />
+</figure>
+<h5 id="formal-definition_4">Formal Definition<a class="headerlink" href="#formal-definition_4" title="Permanent link">&para;</a></h5>
+<p>A function <span class="arithmatex">\(f(x)\)</span> is defined to be concave over an interval <span class="arithmatex">\(I\)</span> if for any two points <span class="arithmatex">\(x_1, x_2 \in I\)</span> and for any scalar <span class="arithmatex">\(\lambda \in [0, 1]\)</span>, the following inequality holds:</p>
+<div class="arithmatex">\[ f(\lambda x_1 + (1-\lambda)x_2) \geq \lambda f(x_1) + (1-\lambda)f(x_2) \]</div>
+<h5 id="relationship-between-convex-and-concave">Relationship between Convex and Concave<a class="headerlink" href="#relationship-between-convex-and-concave" title="Permanent link">&para;</a></h5>
+<p>There is a simple relationship between concave and convex functions:</p>
+<blockquote>
+<p>A function <span class="arithmatex">\(f(x)\)</span> is concave if and only if the function <span class="arithmatex">\(-f(x)\)</span> is convex.</p>
+</blockquote>
+<hr />
+<h4 id="tests-for-convexity-and-concavity">Tests for Convexity and Concavity<a class="headerlink" href="#tests-for-convexity-and-concavity" title="Permanent link">&para;</a></h4>
+<p>For functions that are twice differentiable, we can use simple tests involving their derivatives to determine their concavity.</p>
+<h5 id="first-derivative-test">First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permanent link">&para;</a></h5>
+<ul>
+<li>If the first derivative <span class="arithmatex">\(f'(x)\)</span> is a <strong>non-decreasing</strong> (i.e., increasing or constant) function over an interval, then <span class="arithmatex">\(f(x)\)</span> is <strong>convex</strong> on that interval.</li>
+<li>If the first derivative <span class="arithmatex">\(f'(x)\)</span> is a <strong>non-increasing</strong> (i.e., decreasing or constant) function over an interval, then <span class="arithmatex">\(f(x)\)</span> is <strong>concave</strong> on that interval.</li>
+</ul>
+<h5 id="second-derivative-test">Second Derivative Test<a class="headerlink" href="#second-derivative-test" title="Permanent link">&para;</a></h5>
+<p>This is the most commonly used and straightforward test. Let <span class="arithmatex">\(f(x)\)</span> be a twice-differentiable function on an interval <span class="arithmatex">\(I\)</span>.</p>
+<ul>
+<li>If <span class="arithmatex">\(f''(x) \geq 0\)</span> for all <span class="arithmatex">\(x \in I\)</span>, then <span class="arithmatex">\(f(x)\)</span> is <strong>convex</strong> on <span class="arithmatex">\(I\)</span>.</li>
+<li>If <span class="arithmatex">\(f''(x) \leq 0\)</span> for all <span class="arithmatex">\(x \in I\)</span>, then <span class="arithmatex">\(f(x)\)</span> is <strong>concave</strong> on <span class="arithmatex">\(I\)</span>.</li>
+<li>If <span class="arithmatex">\(f''(x) &gt; 0\)</span> for all <span class="arithmatex">\(x \in I\)</span>, then <span class="arithmatex">\(f(x)\)</span> is <strong>strictly convex</strong> on <span class="arithmatex">\(I\)</span>.</li>
+<li>If <span class="arithmatex">\(f''(x) &lt; 0\)</span> for all <span class="arithmatex">\(x \in I\)</span>, then <span class="arithmatex">\(f(x)\)</span> is <strong>strictly concave</strong> on <span class="arithmatex">\(I\)</span>.</li>
+</ul>
+<hr />
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<h5 id="example-1-fx-x2">Example 1: <span class="arithmatex">\(f(x) = x^2\)</span><a class="headerlink" href="#example-1-fx-x2" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>First derivative</strong>: <span class="arithmatex">\(f'(x) = 2x\)</span></li>
+<li><strong>Second derivative</strong>: <span class="arithmatex">\(f''(x) = 2\)</span></li>
+<li><strong>Conclusion</strong>: Since <span class="arithmatex">\(f''(x) = 2 &gt; 0\)</span> for all real numbers <span class="arithmatex">\(x\)</span>, the function <span class="arithmatex">\(f(x) = x^2\)</span> is <strong>strictly convex</strong> everywhere.</li>
+</ul>
+<figure>
+  <img alt="" src="https://homework.study.com/cimages/multimages/16/2f02bcfd-854d-486a-ab39-30961b3337c4_yx2.jpg" />
+</figure>
+<h5 id="example-2-fx-log_ex-or-lnx-for-x-0">Example 2: <span class="arithmatex">\(f(x) = \log_e(x)\)</span> or <span class="arithmatex">\(\ln(x)\)</span> for <span class="arithmatex">\(x &gt; 0\)</span><a class="headerlink" href="#example-2-fx-log_ex-or-lnx-for-x-0" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>First derivative</strong>: <span class="arithmatex">\(f'(x) = \frac{1}{x} = x^{-1}\)</span></li>
+<li><strong>Second derivative</strong>: <span class="arithmatex">\(f''(x) = -1 \cdot x^{-2} = -\frac{1}{x^2}\)</span></li>
+<li><strong>Conclusion</strong>: Since <span class="arithmatex">\(x^2\)</span> is always positive for <span class="arithmatex">\(x &gt; 0\)</span>, <span class="arithmatex">\(f''(x) = -\frac{1}{x^2}\)</span> is always negative. Therefore, the function <span class="arithmatex">\(f(x) = \ln(x)\)</span> is <strong>strictly concave</strong> on its domain <span class="arithmatex">\((0, \infty)\)</span>.</li>
+</ul>
+<figure>
+  <img alt="" src="https://study.com/cimages/multimages/16/lnx6.jpg" />
+</figure>
+<h5 id="example-3-fx-x3">Example 3: <span class="arithmatex">\(f(x) = x^3\)</span><a class="headerlink" href="#example-3-fx-x3" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>First derivative</strong>: <span class="arithmatex">\(f'(x) = 3x^2\)</span></li>
+<li><strong>Second derivative</strong>: <span class="arithmatex">\(f''(x) = 6x\)</span></li>
+<li><strong>Conclusion</strong>: The sign of <span class="arithmatex">\(f''(x)\)</span> depends on the value of <span class="arithmatex">\(x\)</span>.<ul>
+<li>For <span class="arithmatex">\(x &gt; 0\)</span>, <span class="arithmatex">\(f''(x) &gt; 0\)</span>, so the function is <strong>convex</strong>.</li>
+<li>For <span class="arithmatex">\(x &lt; 0\)</span>, <span class="arithmatex">\(f''(x) &lt; 0\)</span>, so the function is <strong>concave</strong>.</li>
+<li>Thus, <span class="arithmatex">\(f(x)=x^3\)</span> is neither convex nor concave over its entire domain.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="point-of-inflection">Point of Inflection<a class="headerlink" href="#point-of-inflection" title="Permanent link">&para;</a></h4>
+<p>A <strong>point of inflection</strong> (or inflection point) is a point on a curve where the concavity changes (from convex to concave, or vice-versa).</p>
+<ul>
+<li>This change occurs at points where the second derivative <span class="arithmatex">\(f''(x)\)</span> is either <strong>zero</strong> or <strong>does not exist</strong>.</li>
+<li>In the example of <span class="arithmatex">\(f(x) = x^3\)</span>, we saw that <span class="arithmatex">\(f''(x) = 6x\)</span>. Setting <span class="arithmatex">\(f''(x) = 0\)</span> gives <span class="arithmatex">\(x=0\)</span>. At <span class="arithmatex">\(x=0\)</span>, the function changes from concave to convex. Therefore, the point <span class="arithmatex">\((0, f(0)) = (0, 0)\)</span> is a point of inflection.</li>
+</ul>
+<p>[insert image on graph of y = x^3 showing inflection point]</p>
+<figure>
+  <img alt="" src="https://cmds-test.vedantu.com/prod/question-sets/f860e6d4-e449-442e-bef4-4ef66cf889df8969506468376199864.png" />
+</figure>
+<hr />
+<h4 id="significance-in-optimization">Significance in Optimization<a class="headerlink" href="#significance-in-optimization" title="Permanent link">&para;</a></h4>
+<p>Concavity is a cornerstone of mathematical optimization, a field with wide applications in computer science, machine learning, and economics.</p>
+<ul>
+<li><strong>Convex Functions</strong>: For a convex function, any <strong>local minimum</strong> is guaranteed to be a <strong>global minimum</strong>. This property is extremely useful because it means optimization algorithms won't get "stuck" in a suboptimal valley.</li>
+<li><strong>Concave Functions</strong>: Similarly, for a concave function, any <strong>local maximum</strong> is guaranteed to be a <strong>global maximum</strong>.</li>
+<li><strong>Convex Optimization</strong>: Problems that involve minimizing a convex function (or maximizing a concave function) over a convex set are known as convex optimization problems. These problems are considered efficiently solvable, and many complex real-world problems are modeled in this form to find a guaranteed optimal solution.</li>
+</ul>
+<h2 id="problem-set">Problem Set<a class="headerlink" href="#problem-set" title="Permanent link">&para;</a></h2>
+<p>This problem set contains 60 questions covering the core concepts of functions, mathematical induction, and convex/concave functions, designed for BCA-level understanding.</p>
+<hr />
+<h3 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">&para;</a></h3>
+<h4 id="definition-and-properties-of-functions">Definition and Properties of Functions<a class="headerlink" href="#definition-and-properties-of-functions" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Define a function. What are the three essential components of a function? Provide an example.</li>
+<li>Explain the "well-defined" property of a function. Which of the following relations <span class="arithmatex">\(R\)</span> from <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> to <span class="arithmatex">\(B = \{a, b, c\}\)</span> are functions? Justify your answer.<ul>
+<li><span class="arithmatex">\(R_1 = \{(1, a), (2, b), (3, c)\}\)</span></li>
+<li><span class="arithmatex">\(R_2 = \{(1, a), (2, b)\}\)</span></li>
+<li><span class="arithmatex">\(R_3 = \{(1, a), (2, b), (1, c)\}\)</span></li>
+<li><span class="arithmatex">\(R_4 = \{(1, a), (2, a), (3, a)\}\)</span></li>
+</ul>
+</li>
+<li>Let a function <span class="arithmatex">\(f: \mathbb{Z} \to \mathbb{Z}\)</span> be defined by <span class="arithmatex">\(f(x) = x^2 + 2\)</span>. Determine the domain, codomain, and range of <span class="arithmatex">\(f\)</span>.</li>
+<li>Consider the function <span class="arithmatex">\(f(x) = \frac{1}{\sqrt{4-x^2}}\)</span>. What is the largest possible subset of <span class="arithmatex">\(\mathbb{R}\)</span> that can be the domain of this function?</li>
+<li>If <span class="arithmatex">\(A = \{-2, -1, 0, 1, 2\}\)</span> and <span class="arithmatex">\(f: A \to \mathbb{R}\)</span> is defined by <span class="arithmatex">\(f(x) = x^3 - x + 1\)</span>, find the range of <span class="arithmatex">\(f\)</span>.</li>
+</ol>
+<h4 id="one-to-one-injective-functions">One-to-One (Injective) Functions<a class="headerlink" href="#one-to-one-injective-functions" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Formally define a one-to-one (injective) function.</li>
+<li>Prove that the function <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = 5x + 3\)</span> is injective.</li>
+<li>Show that the function <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = x^2 - 1\)</span> is not injective.</li>
+<li>Is the function <span class="arithmatex">\(f: \mathbb{N} \to \mathbb{N}\)</span> defined by <span class="arithmatex">\(f(n) = n^2 + 1\)</span> one-to-one? Justify your answer.</li>
+<li>Let <span class="arithmatex">\(A = \mathbb{R} - \{1\}\)</span>. Check if the function <span class="arithmatex">\(f: A \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = \frac{2x+3}{x-1}\)</span> is injective.</li>
+<li>Give an example of a function from <span class="arithmatex">\(\mathbb{Z}\)</span> to <span class="arithmatex">\(\mathbb{Z}\)</span> that is not one-to-one and explain why.</li>
+<li>If <span class="arithmatex">\(f: A \to B\)</span> and <span class="arithmatex">\(g: B \to C\)</span> are both injective functions, prove that their composition <span class="arithmatex">\(g \circ f: A \to C\)</span> is also injective.</li>
+</ol>
+<h4 id="onto-surjective-functions">Onto (Surjective) Functions<a class="headerlink" href="#onto-surjective-functions" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Formally define an onto (surjective) function.</li>
+<li>Prove that the function <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = x^3\)</span> is surjective.</li>
+<li>Show that the function <span class="arithmatex">\(f: \mathbb{Z} \to \mathbb{Z}\)</span> defined by <span class="arithmatex">\(f(x) = 2x + 1\)</span> is not surjective.</li>
+<li>Determine if the function <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = x^2 - 2x + 1\)</span> is onto. Provide a clear justification.</li>
+<li>Let the codomain be restricted such that <span class="arithmatex">\(f: \mathbb{R} \to [4, \infty)\)</span>. Is the function <span class="arithmatex">\(f(x) = x^2 + 4\)</span> surjective in this case? Explain.</li>
+<li>Give an example of a function from <span class="arithmatex">\(\mathbb{N}\)</span> to <span class="arithmatex">\(\mathbb{N}\)</span> that is not onto and explain why.</li>
+<li>If <span class="arithmatex">\(f: A \to B\)</span> and <span class="arithmatex">\(g: B \to C\)</span> are both surjective functions, prove that their composition <span class="arithmatex">\(g \circ f: A \to C\)</span> is also surjective.</li>
+</ol>
+<h4 id="bijective-functions">Bijective Functions<a class="headerlink" href="#bijective-functions" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Define a bijective function. What is another name for a bijective function?</li>
+<li>Prove that <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> defined by <span class="arithmatex">\(f(x) = 2 - 3x\)</span> is a bijection.</li>
+<li>Let <span class="arithmatex">\(f: \mathbb{R} - \{2\} \to \mathbb{R} - \{5\}\)</span> be defined by <span class="arithmatex">\(f(x) = \frac{5x+1}{x-2}\)</span>. Show that <span class="arithmatex">\(f\)</span> is bijective.</li>
+<li>Find the inverse, <span class="arithmatex">\(f^{-1}(x)\)</span>, of the bijective function from the previous problem.</li>
+<li>Show that the function <span class="arithmatex">\(f: \mathbb{N} \to \mathbb{Z}\)</span> defined by <span class="arithmatex">\(f(n) = (-1)^n \lfloor n/2 \rfloor\)</span> is a bijection.</li>
+<li>Determine if the function <span class="arithmatex">\(f(x) = x|x|\)</span> is a bijection from <span class="arithmatex">\(\mathbb{R}\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span>. Justify your conclusion.</li>
+</ol>
+<hr />
+<h3 id="principles-of-mathematical-induction_1">Principles of Mathematical Induction<a class="headerlink" href="#principles-of-mathematical-induction_1" title="Permanent link">&para;</a></h3>
+<h4 id="the-first-principle-weak-induction">The First Principle (Weak Induction)<a class="headerlink" href="#the-first-principle-weak-induction" title="Permanent link">&para;</a></h4>
+<ol>
+<li>State the First Principle of Mathematical Induction, outlining the base case and the inductive step.</li>
+<li>Using mathematical induction, prove that for all positive integers <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(1 + 3 + 5 + \dots + (2n-1) = n^2\)</span>.</li>
+<li>Prove by induction that <span class="arithmatex">\(1^3 + 2^3 + \dots + n^3 = \left(\frac{n(n+1)}{2}\right)^2\)</span> for all <span class="arithmatex">\(n \in \mathbb{N}\)</span>.</li>
+<li>Prove that <span class="arithmatex">\(n^2 + n\)</span> is an even number for all positive integers <span class="arithmatex">\(n\)</span>.</li>
+<li>Prove by induction that <span class="arithmatex">\(5^n - 1\)</span> is divisible by 4 for all integers <span class="arithmatex">\(n \geq 1\)</span>.</li>
+<li>Use mathematical induction to prove that <span class="arithmatex">\(x^n - y^n\)</span> is divisible by <span class="arithmatex">\(x-y\)</span> for all positive integers <span class="arithmatex">\(n\)</span>.</li>
+<li>Prove that <span class="arithmatex">\(1 \cdot 1! + 2 \cdot 2! + \dots + n \cdot n! = (n+1)! - 1\)</span> for all <span class="arithmatex">\(n \geq 1\)</span>.</li>
+<li>Prove by induction that <span class="arithmatex">\(n! &gt; 2^n\)</span> for all integers <span class="arithmatex">\(n \geq 4\)</span>.</li>
+<li>Prove that <span class="arithmatex">\(\frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \dots + \frac{1}{(2n-1)(2n+1)} = \frac{n}{2n+1}\)</span> for all <span class="arithmatex">\(n \geq 1\)</span>.</li>
+<li>Prove that a set with <span class="arithmatex">\(n\)</span> elements has exactly <span class="arithmatex">\(2^n\)</span> subsets for <span class="arithmatex">\(n \geq 0\)</span>.</li>
+<li>Prove that for any <span class="arithmatex">\(n \in \mathbb{N}\)</span>, <span class="arithmatex">\(11^{n+1} + 12^{2n-1}\)</span> is divisible by 133.</li>
+<li>Prove by induction that <span class="arithmatex">\( (1+x)^n \geq 1 + nx \)</span> for all <span class="arithmatex">\(x &gt; -1\)</span> and integers <span class="arithmatex">\(n \geq 0\)</span> (Bernoulli's Inequality).</li>
+</ol>
+<h4 id="the-second-principle-strong-induction">The Second Principle (Strong Induction)<a class="headerlink" href="#the-second-principle-strong-induction" title="Permanent link">&para;</a></h4>
+<ol>
+<li>State the Second Principle of Mathematical Induction (Strong Induction). How does its inductive hypothesis differ from that of weak induction?</li>
+<li>Use strong induction to prove that every integer <span class="arithmatex">\(n &gt; 1\)</span> has a prime factor.</li>
+<li>A sequence is defined recursively by <span class="arithmatex">\(a_1 = 1\)</span>, <span class="arithmatex">\(a_2 = 3\)</span>, and <span class="arithmatex">\(a_n = 2a_{n-1} - a_{n-2}\)</span> for <span class="arithmatex">\(n \geq 3\)</span>. Use strong induction to prove that <span class="arithmatex">\(a_n = 2n-1\)</span> for all <span class="arithmatex">\(n \geq 1\)</span>.</li>
+<li>Prove using strong induction that any postage amount of 12 cents or more can be formed using only 4-cent and 5-cent stamps.</li>
+<li>The Fibonacci numbers are defined by <span class="arithmatex">\(F_0 = 0, F_1 = 1\)</span>, and <span class="arithmatex">\(F_n = F_{n-1} + F_{n-2}\)</span> for <span class="arithmatex">\(n \geq 2\)</span>. Prove that <span class="arithmatex">\(F_n &lt; 2^n\)</span> for all <span class="arithmatex">\(n \geq 0\)</span>.</li>
+<li>A sequence is defined by <span class="arithmatex">\(c_0 = 1, c_1 = 2, c_2 = 3\)</span> and <span class="arithmatex">\(c_k = c_{k-1} + c_{k-2} + c_{k-3}\)</span> for <span class="arithmatex">\(k \geq 3\)</span>. Prove using strong induction that <span class="arithmatex">\(c_n \leq 3^n\)</span> for all <span class="arithmatex">\(n \geq 0\)</span>.</li>
+<li>Consider a game where two players start with a pile of <span class="arithmatex">\(n\)</span> stones and take turns removing 1, 2, or 3 stones. The player who removes the last stone wins. Prove that the first player has a winning strategy if and only if <span class="arithmatex">\(n\)</span> is not a multiple of 4.</li>
+<li>In what scenarios is strong induction necessary or more convenient than weak induction? Provide an example.</li>
+</ol>
+<hr />
+<h3 id="convex-and-concave-functions_1">Convex and Concave Functions<a class="headerlink" href="#convex-and-concave-functions_1" title="Permanent link">&para;</a></h3>
+<h4 id="definitions-and-tests">Definitions and Tests<a class="headerlink" href="#definitions-and-tests" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Define a convex function and a concave function using the formal definition involving a line segment.</li>
+<li>What is the relationship between a convex function <span class="arithmatex">\(f(x)\)</span> and the function <span class="arithmatex">\(g(x) = -f(x)\)</span>?</li>
+<li>State the Second Derivative Test for determining intervals of convexity and concavity.</li>
+<li>If the first derivative, <span class="arithmatex">\(f'(x)\)</span>, of a function is increasing over an interval <span class="arithmatex">\((a, b)\)</span>, what can you conclude about the convexity of <span class="arithmatex">\(f(x)\)</span> on that interval?</li>
+<li>Show that <span class="arithmatex">\(f(x) = x^2\)</span> is a strictly convex function on <span class="arithmatex">\(\mathbb{R}\)</span> using the second derivative test.</li>
+<li>For <span class="arithmatex">\(x &gt; 0\)</span>, determine if the function <span class="arithmatex">\(f(x) = \sqrt{x}\)</span> is convex or concave. Justify your answer.</li>
+<li>Determine the intervals on which the function <span class="arithmatex">\(f(x) = x^3 - 3x^2 + 1\)</span> is convex and concave.</li>
+<li>Find the intervals of convexity and concavity for the function <span class="arithmatex">\(f(x) = \frac{x}{x^2+1}\)</span>.</li>
+<li>Show that <span class="arithmatex">\(f(x) = \ln(x)\)</span> is a strictly concave function for <span class="arithmatex">\(x &gt; 0\)</span>.</li>
+<li>Analyze the convexity of the function <span class="arithmatex">\(f(x) = x e^{-x}\)</span> for <span class="arithmatex">\(x \in \mathbb{R}\)</span>.</li>
+</ol>
+<h4 id="point-of-inflection-and-applications">Point of Inflection and Applications<a class="headerlink" href="#point-of-inflection-and-applications" title="Permanent link">&para;</a></h4>
+<ol>
+<li>What is a point of inflection? What condition must the second derivative typically satisfy at a point of inflection?</li>
+<li>Find all points of inflection for the function <span class="arithmatex">\(f(x) = x^4 - 6x^2\)</span>.</li>
+<li>Find the point(s) of inflection for the function <span class="arithmatex">\(f(x) = (x-2)^3\)</span>.</li>
+<li>Does the function <span class="arithmatex">\(f(x) = x^4\)</span> have a point of inflection at <span class="arithmatex">\(x=0\)</span>? Explain why or why not, considering <span class="arithmatex">\(f''(0) = 0\)</span>.</li>
+<li>Briefly explain the significance of convexity in optimization problems. For example, what does strict convexity of a function guarantee about a point where <span class="arithmatex">\(f'(c) = 0\)</span>?</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+      
+    
+  </body>
+</html>
