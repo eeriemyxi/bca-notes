@@ -37,6 +37,10 @@ nav:
         - C Fundamentals and Program Structure: sem1/c/u1-i.md
         - Data, Variables, and Constants in C: sem1/c/u1-ii.md
         - Operators, Expressions, and I/O: sem1/c/u1-iii.md
+      - Unit 2: sem1/c/u2.md
+      - Unit 3: sem1/c/u3.md
+      - Unit 4: sem1/c/u4.md
+
 theme:
     name: material
     palette: gruvbox_dark
