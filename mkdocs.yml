@@ -28,9 +28,15 @@ nav:
         - Applications and Properties: sem1/math/u2/four.md
       - Previous Year Papers:
         - 2024: sem1/math/pyq/2024.md
-    - "Computer Fundamentals":
+    - Computer Fundamentals:
       - Syllabus: sem1/fundamentals/syllabus.md
       - Unit 1: sem1/fundamentals/unit-1.md
+    - Introduction to C:
+      - Syllabus: sem1/c/syllabus.md
+      - Unit 1:
+        - C Fundamentals and Program Structure: sem1/c/u1-i.md
+        - Data, Variables, and Constants in C: sem1/c/u1-ii.md
+        - Operators, Expressions, and I/O: sem1/c/u1-iii.md
 theme:
     name: material
     palette: gruvbox_dark
@@ -56,6 +62,10 @@ theme:
         - content.code.select
         - content.code.annotate
 
+plugins:
+  - search
+  - mermaid2
+  
 markdown_extensions:
     - abbr
     - admonition
@@ -88,6 +98,11 @@ markdown_extensions:
     - pymdownx.tilde
     - pymdownx.arithmatex:
         generic: true
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:mermaid2.fence_mermaid_custom
 
 extra_javascript:
   # - js/mathjax.js
