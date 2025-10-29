@@ -20,13 +20,13 @@ int result = (x > y) ? x : y;  // ternary expression
 Key differences:
 
 - Statements perform actions; expressions produce values
-- Some expressions can be statements (when they end with ;), but not all statements are expressions
+- Some expressions can be statements (when they end with `;`), but not all statements are expressions
 - Examples of expressions:
-  - Constants: 5, 3.14, 'a'
-  - Variables: x, y
-  - Function calls: printf("Hello")
-  - Operations: 5 + 3, x * y
-  - Composition: 5 + (x * y)
+  - Constants: `5`, `3.14`, `'a'`
+  - Variables: `x`, `y`
+  - Function calls: `printf("Hello")`
+  - Operations: `5 + 3`, `x * y`
+  - Composition: `5 + (x * y)`
 
 ## Operators in C
 
@@ -34,32 +34,32 @@ Key differences:
 
 **Binary operators** require two operands:
 
-- Arithmetic: +, -, *, /, %
-- Assignment: =, +=, -=, *=, /=, %=
-- Comparison: ==, !=, >, <, >=, <=
-- Logical: &&, ||, !
-- Bitwise: &, |, ^, <<, >>
+- Arithmetic: `+`, `-`, `*`, `/`, `%`
+- Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`
+- Comparison: `==`, `!=`, `>`, `<`, `>=`, `<=`
+- Logical: `&&`, `||`, `!`
+- Bitwise: `&`, `|`, `^`, `<<`, `>>`
 
-**Unary operators** require only one operand:
+Unary operators require only one operand:
 
-- Increment: ++ (pre and post)
-- Decrement: -- (pre and post)
-- Unary plus: +
-- Unary minus: -
-- Logical NOT: !
-- Address of: &
-- Indirection/dereference: *
-- Size of: sizeof()
+- Increment: `++` (pre and post)
+- Decrement: `--` (pre and post)
+- Unary plus: `+`
+- Unary minus: `-`
+- Logical NOT: `!`
+- Address of: `&`
+- Indirection/dereference: `*`
+- Size of: `sizeof()`
 
 ### Arithmetic Operators
 
 The basic arithmetic operators are:
 
-- Addition (+): Adds two operands
-- Subtraction (-): Subtracts the second operand from the first
-- Multiplication (*): Multiplies two operands
-- Division (/): Divides the first operand by the second
-- Modulus (%): Returns the remainder of division (only for integers)
+- Addition (`+`): Adds two operands
+- Subtraction (`-`): Subtracts the second operand from the first
+- Multiplication (`*`): Multiplies two operands
+- Division (`/`): Divides the first operand by the second
+- Modulus (`%`): Returns the remainder of division (only for integers)
 
 ```c
 int a = 10, b = 5;
@@ -110,7 +110,7 @@ int result3 = !a;      // 0 (false)
 ### Comparison Operators
 
 - `==` (Equal to): Returns 1 if operands are equal
-- `!=`kk (Not equal to): Returns 1 if operands are not equal
+- `!=` (Not equal to): Returns 1 if operands are not equal
 - `>` (Greater than): Returns 1 if first operand is greater than second
 - `<` (Less than): Returns 1 if first operand is less than second
 - `>=` (Greater than or equal to): Returns 1 if first operand is greater than or equal to second
@@ -162,41 +162,40 @@ int max = (x > y) ? x : y;  // max becomes 10
 Operator precedence determines the grouping of operations in expressions. Higher precedence operators are evaluated before lower precedence ones.
 
 | Precedence | Operator | Description |
-|------------|----------|-------------|
-| Highest    | () [] -> . | Function call, array subscript, member access |
-|            | ++ -- - ! ~ * & sizeof | Unary operators, increment/decrement |
-|            | * / % | Multiplicative operators |
-|            | + - | Additive operators |
-|            | << >> | Bitwise shifts |
-|            | < <= > >= | Relational operators |
-|            | == != | Equality operators |
-|            | & | Bitwise AND |
-|            | ^ | Bitwise XOR |
-|            | \| | Bitwise OR |
-|            | && | Logical AND |
-|            | \|\| | Logical OR |
-|            | ?: | Conditional operator |
-|            | = += -= *= /= %= &= ^= <<= >>= | Assignment operators |
-| Lowest     | , | Comma operator |
+|---|---|---|
+| Highest | `()`, `[]`, `->`, `.` | Function call, array subscript, member access |
+| | `++`, `--`, `-`, `!`, `~`, `*`, `&`, `sizeof` | Unary operators, increment/decrement |
+| | `*`, `/`, `%` | Multiplicative operators |
+| | `+`, `-` | Additive operators |
+| | `<<`, `>>` | Bitwise shifts |
+| | `<`, `<=`, `>`, `>=` | Relational operators |
+| | `==`, `!=` | Equality operators |
+| | `&` | Bitwise AND |
+| | `^` | Bitwise XOR |
+| | `|` | Bitwise OR |
+| | `&&` | Logical AND |
+| | `||` | Logical OR |
+| | `? :` | Conditional operator |
+| | `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `^=`, `<<=`, `>>=` | Assignment operators |
+| Lowest | `,` | Comma operator |
 
 ## Associativity of Operators
 
 When operators have the same precedence, associativity determines the order of evaluation.
 
-- **Left-to-right associativity**: Most operators have this
+**Left-to-right associativity (most operators have this)**:
 
-  - Arithmetic operators (+, -, *, /, %)
-  - Bitwise operators (&, ^, |, <<, >>)
-  - Relational operators (<, <=, >, >=)
-  - Equality operators (==, !=)
-  - Assignment operators (=, +=, etc.)
+  - Arithmetic operators (`+`, `-`, `*`, `/`, `%`)
+  - Bitwise operators (`&`, `^`, `|`, `<<`, `>>`)
+  - Relational operators (`<`, `<=`, `>`, `>=`)
+  - Equality operators (`==`, `!=`)
+  - Assignment operators (`=`, `+=`, etc.)
 
-- **Right-to-left associativity**:
+**Right-to-left associativity**:
 
-  - Unary operators (!, ~, ++, --, *, &)
-  - Conditional operator (? :)
+  - Unary operators (`!`, `~`, `++`, `--`, `*`, `&`)
+  - Conditional operator (`? :`)
   - Assignment operators
-
 Example of associativity:
 ```c
 int a = 10, b = 20, c = 30;
