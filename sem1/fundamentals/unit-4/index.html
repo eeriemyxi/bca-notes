@@ -1,0 +1,1949 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes for my college course.">
+      
+      
+        <meta name="author" content="myxi">
+      
+      
+      
+        <link rel="prev" href="../unit-3/">
+      
+      
+        <link rel="next" href="../unit-5/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Unit 4 - BCA Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#output-devices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BCA Notes" class="md-header__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BCA Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unit 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BCA Notes" class="md-nav__button md-logo" aria-label="BCA Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BCA Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eeriemyxi/bca-notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1st Semester
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/so-many-oaks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/the-palanquin-bearers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/no-second-troy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/photograph-of-me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/audition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aec-eng/the-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u1/sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u1/relations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u1/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definition and Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/second/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/three/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/u2/four/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications and Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/pyq/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitors-visual-display-units-vdu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitors (Visual Display Units - VDU)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitors (Visual Display Units - VDU)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquid-crystal-display-lcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liquid Crystal Display (LCD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light-emitting-diode-led-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Emitting Diode (LED) Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasma-display-panel-pdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma Display Panel (PDP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Printers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-vs-non-impact-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact vs. Non-Impact Printers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Impact vs. Non-Impact Printers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact Printers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-impact-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Impact Printers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Printers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Printers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dot-matrix-printer-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dot-Matrix Printer (Impact)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inkjet-printer-non-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkjet Printer (Non-impact)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laser-printer-non-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Laser Printer (Non-impact)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermal-printer-non-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermal Printer (Non-impact)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-output-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Output Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Output Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plotters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-output-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice Output Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projectors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction to C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u1-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u1-ii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u1-iii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/u4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitors-visual-display-units-vdu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitors (Visual Display Units - VDU)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitors (Visual Display Units - VDU)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquid-crystal-display-lcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liquid Crystal Display (LCD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light-emitting-diode-led-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Emitting Diode (LED) Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasma-display-panel-pdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma Display Panel (PDP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Printers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-vs-non-impact-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact vs. Non-Impact Printers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Impact vs. Non-Impact Printers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact Printers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-impact-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Impact Printers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Printers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Printers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dot-matrix-printer-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dot-Matrix Printer (Impact)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inkjet-printer-non-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkjet Printer (Non-impact)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laser-printer-non-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Laser Printer (Non-impact)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermal-printer-non-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermal Printer (Non-impact)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-output-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Output Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Output Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plotters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-output-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice Output Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projectors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="output-devices">Output Devices<a class="headerlink" href="#output-devices" title="Permanent link">&para;</a></h1>
+<p>An output device is any piece of computer hardware that converts information from electronic data into a human-perceptible form. This output can be visual (monitors), physical (printers), or auditory (speakers).</p>
+<hr />
+<h2 id="monitors-visual-display-units-vdu">Monitors (Visual Display Units - VDU)<a class="headerlink" href="#monitors-visual-display-units-vdu" title="Permanent link">&para;</a></h2>
+<p>Monitors are the most common visual output device, displaying data processed by the computer's video card. The display quality is determined by factors like resolution (number of pixels), refresh rate (how often the image is redrawn), response time (how quickly a pixel can change color), and the underlying panel technology.</p>
+<h3 id="liquid-crystal-display-lcd">Liquid Crystal Display (LCD)<a class="headerlink" href="#liquid-crystal-display-lcd" title="Permanent link">&para;</a></h3>
+<p>LCDs use a backlight (traditionally a CCFL - Cold Cathode Fluorescent Lamp) that passes light through a layer of liquid crystals. These crystals are aligned or twisted by an electric current to either block the light or allow it to pass through red, green, and blue (RGB) sub-pixels, which combine to form the final image.</p>
+<p>[insert image on how an LCD panel works here]</p>
+<ul>
+<li><strong>Active Matrix (TFT):</strong> Modern LCDs use Thin-Film Transistor (TFT) technology. This is an active-matrix display where each pixel is controlled by one to four dedicated transistors. This provides faster response times and better image quality (brighter, sharper) compared to older passive-matrix displays.</li>
+<li><strong>Panel Types:</strong> The orientation of the liquid crystals defines the panel type:<ul>
+<li><strong>TN (Twisted Nematic):</strong> Inexpensive and known for very fast response times, making them popular for gaming. They suffer from poor color reproduction and significant color shift when viewed from an angle (poor viewing angles).</li>
+<li><strong>IPS (In-Plane Switching):</strong> Offer the best color accuracy and the widest viewing angles. They are favored by graphic designers and professionals. Their main trade-offs are slower response times and "IPS glow" (a glow on dark scenes) compared to other types.</li>
+<li><strong>VA (Vertical Alignment):</strong> Provide a good balance. They offer much better contrast ratios (deeper blacks) and viewing angles than TN panels, but typically have slower response times than both TN and IPS, which can lead to "ghosting" in fast-moving scenes.</li>
+</ul>
+</li>
+</ul>
+<h3 id="light-emitting-diode-led-display">Light Emitting Diode (LED) Display<a class="headerlink" href="#light-emitting-diode-led-display" title="Permanent link">&para;</a></h3>
+<p>This term is a common source of confusion. In most consumer electronics, an "LED monitor" is <strong>not</strong> a true LED display.</p>
+<ul>
+<li>
+<p><strong>1. LED-Backlit LCD:</strong> This is what 99% of "LED monitors" are. It is simply an <strong>LCD panel</strong> (like the one described above) that uses <strong>LEDs</strong> as its backlight instead of the older, bulkier CCFLs.</p>
+<ul>
+<li><strong>Advantages over CCFL:</strong> Thinner designs, lower power consumption, better brightness, and improved contrast ratios.</li>
+<li><strong>Local Dimming:</strong> A feature in higher-end LED-backlit displays where zones of LEDs can be dimmed or brightened independently, allowing for deeper blacks in dark areas of the screen.</li>
+</ul>
+</li>
+<li>
+<p><strong>2. True LED (OLED/MicroLED):</strong> These are <strong>emissive</strong> displays. Each individual pixel is a tiny LED (or **O**rganic **L**ED) that produces its own light. There is no backlight.</p>
+<ul>
+<li><strong>Advantages:</strong> Since each pixel can be turned off completely, this technology achieves "perfect" black levels and an almost infinite contrast ratio. They also have exceptionally vibrant colors and instantaneous response times.</li>
+</ul>
+</li>
+</ul>
+<h3 id="plasma-display-panel-pdp">Plasma Display Panel (PDP)<a class="headerlink" href="#plasma-display-panel-pdp" title="Permanent link">&para;</a></h3>
+<p>Plasma displays are an emissive technology, now considered obsolete and replaced by LCD and OLED.</p>
+<ul>
+<li><strong>Mechanism:</strong> Each pixel is composed of three tiny cells (for RGB) containing a noble gas (like neon and xenon). When an electric current is applied, the gas turns into a <strong>plasma</strong>, which emits ultraviolet (UV) light. This UV light then strikes a phosphor coating on the cell, causing the phosphor to glow and produce visible light.</li>
+<li><strong>Pros:</strong> At their peak, they offered superior contrast ratios (deep blacks, similar to OLED) and excellent response times with no motion blur.</li>
+<li><strong>Cons:</strong> High power consumption, significant heat generation, heavy, and susceptible to <strong>"burn-in"</strong> (permanent image retention).</li>
+</ul>
+<hr />
+<h2 id="printers">Printers<a class="headerlink" href="#printers" title="Permanent link">&para;</a></h2>
+<p>Printers are output devices that generate a hard copy (a physical, permanent representation) of electronic data on a medium, usually paper.</p>
+<h3 id="impact-vs-non-impact-printers">Impact vs. Non-Impact Printers<a class="headerlink" href="#impact-vs-non-impact-printers" title="Permanent link">&para;</a></h3>
+<p>Printers are broadly classified based on how they transfer the image to the paper.</p>
+<h4 id="impact-printers">Impact Printers<a class="headerlink" href="#impact-printers" title="Permanent link">&para;</a></h4>
+<p>These printers create an image by physically <strong>striking</strong> an ink-soaked ribbon against the paper. A "hammer" or "pin" mechanism forces the contact.</p>
+<ul>
+<li><strong>Characteristics:</strong><ul>
+<li>Noisy operation.</li>
+<li><strong>Key Advantage:</strong> Can print on multi-part forms (carbon-copy or carbonless copy paper) because the physical force transfers the image through multiple layers.</li>
+<li>Low print quality (for graphics).</li>
+<li>Low cost per page.</li>
+</ul>
+</li>
+<li><strong>Examples:</strong> Dot-matrix printers, Daisy-wheel printers.</li>
+</ul>
+<h4 id="non-impact-printers">Non-Impact Printers<a class="headerlink" href="#non-impact-printers" title="Permanent link">&para;</a></h4>
+<p>These printers form an image <strong>without</strong> making direct physical contact with the paper. They use various technologies like spraying ink, fusing toner, or using heat.</p>
+<ul>
+<li><strong>Characteristics:</strong><ul>
+<li>Very quiet operation.</li>
+<li>Cannot be used for multi-part forms.</li>
+<li>Capable of high-resolution photo-quality output.</li>
+<li>Generally faster for high-quality output.</li>
+</ul>
+</li>
+<li><strong>Examples:</strong> Inkjet, Laser, Thermal printers.</li>
+</ul>
+<hr />
+<h3 id="types-of-printers">Types of Printers<a class="headerlink" href="#types-of-printers" title="Permanent link">&para;</a></h3>
+<h4 id="dot-matrix-printer-impact">Dot-Matrix Printer (Impact)<a class="headerlink" href="#dot-matrix-printer-impact" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Mechanism:</strong> Uses a print head that moves back and forth across the page. The print head contains a matrix of small <strong>pins</strong> (e.g., 9-pin for draft quality or 24-pin for "Near Letter Quality" - NLQ). These pins are fired selectively by electromagnets to strike an inked ribbon, forming characters from a pattern of dots.</li>
+<li>[insert image on dot-matrix printer mechanism here]</li>
+<li><strong>Use Case:</strong> Largely obsolete in consumer use, but still vital in industrial and business environments (e.g., logistics, auto garages, accounts departments) for printing invoices, shipping forms, and receipts that require multi-part copies.</li>
+</ul>
+<h4 id="inkjet-printer-non-impact">Inkjet Printer (Non-impact)<a class="headerlink" href="#inkjet-printer-non-impact" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Mechanism:</strong> Sprays microscopic droplets of liquid ink onto the paper from a print head containing hundreds of tiny nozzles.</li>
+<li><strong>Technologies:</strong><ul>
+<li><strong>1. Thermal Bubble (e.g., HP, Canon):</strong> A resistor in the nozzle chamber rapidly heats the ink, creating a steam bubble. This bubble expands, forcing a droplet of ink out of the nozzle. When the resistor cools, the bubble collapses, pulling more ink into the chamber.</li>
+<li><strong>2. Piezoelectric (e.g., Epson):</strong> A piezoelectric crystal is located in the ink chamber. When an electric current is applied, the crystal vibrates or flexes, creating pressure that ejects the ink droplet. This method provides more precise control over the droplet size.</li>
+</ul>
+</li>
+<li>[insert image on thermal bubble vs piezoelectric inkjet here]</li>
+<li><strong>Use Case:</strong> Ideal for high-quality color printing, especially photographs. Common for home use and small offices. Initial hardware cost is low, but the cost of ink cartridges (consumables) can be high.</li>
+</ul>
+<h4 id="laser-printer-non-impact">Laser Printer (Non-impact)<a class="headerlink" href="#laser-printer-non-impact" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Mechanism:</strong> A complex process based on electrostatics (xerography).<ol>
+<li><strong>Charging:</strong> A primary charge roller applies a uniform negative (or positive) electrostatic charge to a photosensitive <strong>drum</strong>.</li>
+<li><strong>Writing (Exposing):</strong> A laser beam is scanned across the drum, "writing" the image. Where the laser hits, it neutralizes the charge, creating an "electrostatic image."</li>
+<li><strong>Developing:</strong> The drum rotates past a developer roller, which holds <strong>toner</strong> (a fine, dry powder) with the same charge as the drum. The toner is repelled by the charged areas but attracted to the neutralized areas (where the laser wrote).</li>
+<li><strong>Transferring:</strong> The paper is fed past the drum and given a strong opposite charge, which pulls the toner from the drum onto the paper.</li>
+<li><strong>Fusing:</strong> The paper passes through a <strong>fuser</strong> unit (a pair of hot rollers), which melts and presses the toner, permanently bonding it to the paper.</li>
+</ol>
+</li>
+<li>[insert image on laser printer printing process here]</li>
+<li><strong>Use Case:</strong> Best for high-volume, high-speed text and monochrome graphics printing (e.g., large offices, libraries). Offers a very low cost per page and extremely fast print speeds. Color laser printers exist but are more complex and expensive.</li>
+</ul>
+<h4 id="thermal-printer-non-impact">Thermal Printer (Non-impact)<a class="headerlink" href="#thermal-printer-non-impact" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Mechanism:</strong> Uses heat to create an image.<ul>
+<li><strong>1. Direct Thermal:</strong> The print head contains heating elements that pass over special <strong>thermochromic</strong> (heat-sensitive) paper. The paper turns black in the areas that are heated. <strong>No ink, toner, or ribbon is required.</strong></li>
+<li><strong>2. Thermal Transfer:</strong> The print head heats a wax or resin-based <strong>ribbon</strong>, melting it onto the paper. This is more durable than direct thermal and can print in color (using CMY sections of the ribbon).</li>
+</ul>
+</li>
+<li><strong>Use Case:</strong><ul>
+<li><strong>Direct Thermal:</strong> Overwhelmingly used for receipts (Point-of-Sale systems), shipping labels, barcodes, and tickets. The print fades over time, especially when exposed to heat or sunlight.</li>
+<li><strong>Thermal Transfer:</strong> Used for durable labels, ID badges, and high-quality barcodes that need to last.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="other-output-devices">Other Output Devices<a class="headerlink" href="#other-output-devices" title="Permanent link">&para;</a></h2>
+<h3 id="plotters">Plotters<a class="headerlink" href="#plotters" title="Permanent link">&para;</a></h3>
+<p>A plotter is a specialized printer used for <strong>vector graphics</strong>. While a regular printer prints in a raster (dot-by-dot) fashion, a plotter draws continuous, smooth lines using a pen, marker, or cutting tool.</p>
+<ul>
+<li><strong>Types:</strong><ul>
+<li><strong>Pen Plotters:</strong> The classic type.<ul>
+<li><strong>Flatbed Plotter:</strong> The paper is held stationary, and a robotic arm moves a pen (or multiple pens of different colors) in both X andY axes over the paper.</li>
+<li><strong>Drum Plotter:</strong> The paper is rolled back and forth on a drum (providing the Y-axis) while the pen moves side-to-side on a carriage (providing the X-axis).</li>
+</ul>
+</li>
+<li><strong>Electrostatic/Thermal Plotters:</strong> Modern large-format plotters that operate more like a very wide laser or thermal printer, creating a raster image for large outputs.</li>
+</ul>
+</li>
+<li>[insert image on drum plotter vs flatbed plotter here]</li>
+<li><strong>Use Case:</strong> Used for large-scale, high-precision drawings, such as architectural blueprints, engineering designs (CAD), manufacturing schematics, and billboards.</li>
+</ul>
+<h3 id="voice-output-systems">Voice Output Systems<a class="headerlink" href="#voice-output-systems" title="Permanent link">&para;</a></h3>
+<p>These systems (also known as voice synthesizers) convert digital text data into audible, spoken language. This process is called <strong>Text-to-Speech (TTS)</strong>.</p>
+<ul>
+<li><strong>Mechanism (Simplified):</strong><ol>
+<li><strong>Text Pre-processing (Normalization):</strong> The system analyzes the text, expanding abbreviations (e.g., "Dr." -&gt; "Doctor," "123" -&gt; "one hundred twenty-three") and interpreting punctuation for pauses and intonation.</li>
+<li><strong>Phonetic Conversion:</strong> Converts the normalized text into a sequence of <strong>phonemes</strong> (the basic, distinct units of sound in a language).</li>
+<li><strong>Waveform Generation (Synthesis):</strong> Generates the final audio waveform.<ul>
+<li><strong>Concatenative Synthesis:</strong> Stitches together small snippets of pre-recorded human speech (phones, diphones) stored in a large database.</li>
+<li><strong>Neural Synthesis (Modern):</strong> Uses deep learning models (like Tacotron or WaveNet) to generate highly realistic, natural-sounding, and expressive speech from scratch.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Use Case:</strong> Accessibility tools for the visually impaired (screen readers), virtual assistants (Siri, Google Assistant, Alexa), GPS navigation, and public announcement systems.</li>
+</ul>
+<h3 id="projectors">Projectors<a class="headerlink" href="#projectors" title="Permanent link">&para;</a></h3>
+<p>A digital projector is an optical device that receives a video signal and projects the corresponding image onto a surface (like a screen or wall).</p>
+<ul>
+<li><strong>Key Technologies:</strong><ul>
+<li><strong>DLP (Digital Light Processing):</strong> Uses a <strong>DMD</strong> (Digital Micromirror Device) chip, which is a semiconductor covered in millions of microscopic mirrors. Each mirror represents a pixel and can be rapidly tilted to either reflect light through the lens (pixel ON) or away from it (pixel OFF).<ul>
+<li><strong>Single-chip DLP:</strong> Uses a high-speed spinning color wheel (RGB) to create sequential color.</li>
+<li><strong>3-chip DLP:</strong> Uses three separate DMD chips (one each for R, G, B), offering superior color and no "rainbow effect." Used in high-end cinema projectors.</li>
+</ul>
+</li>
+<li><strong>LCD (Liquid Crystal Display):</strong> Uses a powerful lamp that shines light through a dichroic mirror system, splitting the light into its red, green, and blue components. Each color channel passes through its own small, high-temperature LCD panel, which controls the brightness for each pixel. The three colored images are then recombined in a prism before passing through the main lens.</li>
+</ul>
+</li>
+<li>[insert image on DLP vs 3LCD projector technology here]</li>
+<li><strong>Use Case:</strong> Business presentations, classroom education, home cinema, and large-venue displays (e.g., concerts, auditoriums).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+      
+    
+  </body>
+</html>

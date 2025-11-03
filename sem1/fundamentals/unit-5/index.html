@@ -1,0 +1,1420 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Notes for my college course." name="description"/>
+<meta content="myxi" name="author"/>
+<link href="../unit-4/" rel="prev"/>
+<link href="../../c/syllabus/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.17" name="generator"/>
+<title>Unit 5 - BCA Notes</title>
+<link href="../../../assets/stylesheets/main.bcfcd587.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="deep-purple" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#cpu-and-instruction-cycle">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="BCA Notes" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="BCA Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            BCA Notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Unit 5
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eeriemyxi/bca-notes" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="BCA Notes" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="BCA Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    BCA Notes
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eeriemyxi/bca-notes" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    eeriemyxi/bca-notes
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    1st Semester
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            1st Semester
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    AEC: Alternative English
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            AEC: Alternative English
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/so-many-oaks/">
+<span class="md-ellipsis">
+    Sujata Bhatt: So Many Oaks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/the-palanquin-bearers/">
+<span class="md-ellipsis">
+    Sarojini Naidu: The Palanquin Bearers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/no-second-troy/">
+<span class="md-ellipsis">
+    W. B. Yeats: No Second Troy
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/photograph-of-me/">
+<span class="md-ellipsis">
+    Margaret Atwood: This is a Photograph of Me
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/audition/">
+<span class="md-ellipsis">
+    Mahim Bora: Audition
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aec-eng/the-ring/">
+<span class="md-ellipsis">
+    Bryan MacMahon: The Ring
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Mathematics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Unit 1
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u1/sets/">
+<span class="md-ellipsis">
+    Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u1/relations/">
+<span class="md-ellipsis">
+    Relations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u1/functions/">
+<span class="md-ellipsis">
+    Functions
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Unit 2
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/first/">
+<span class="md-ellipsis">
+    Definition and Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/second/">
+<span class="md-ellipsis">
+    Operations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/three/">
+<span class="md-ellipsis">
+    Identities and Inverses
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/u2/four/">
+<span class="md-ellipsis">
+    Applications and Properties
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Previous Year Papers
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Previous Year Papers
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../math/pyq/2024/">
+<span class="md-ellipsis">
+    2024
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Computer Fundamentals
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Computer Fundamentals
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unit-1/">
+<span class="md-ellipsis">
+    Unit 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unit-2/">
+<span class="md-ellipsis">
+    Unit 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unit-3/">
+<span class="md-ellipsis">
+    Unit 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unit-4/">
+<span class="md-ellipsis">
+    Unit 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Unit 5
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Unit 5
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu-and-instruction-cycle">
+<span class="md-ellipsis">
+      CPU and Instruction Cycle
+    </span>
+</a>
+<nav aria-label="CPU and Instruction Cycle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#control-unit-cu">
+<span class="md-ellipsis">
+      Control Unit (CU)
+    </span>
+</a>
+<nav aria-label="Control Unit (CU)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-of-the-control-unit">
+<span class="md-ellipsis">
+      Functions of the Control Unit
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computer-instruction-set">
+<span class="md-ellipsis">
+      Computer Instruction Set
+    </span>
+</a>
+<nav aria-label="Computer Instruction Set" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-instructions">
+<span class="md-ellipsis">
+      Types of Instructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instruction-execution-life-cycle">
+<span class="md-ellipsis">
+      Instruction Execution Life Cycle
+    </span>
+</a>
+<nav aria-label="Instruction Execution Life Cycle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stages-of-instruction-cycle">
+<span class="md-ellipsis">
+      Stages of Instruction Cycle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instruction-cycle-flowchart">
+<span class="md-ellipsis">
+      Instruction Cycle Flowchart
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-concepts">
+<span class="md-ellipsis">
+      Programming Concepts
+    </span>
+</a>
+<nav aria-label="Programming Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#program">
+<span class="md-ellipsis">
+      Program
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#algorithm">
+<span class="md-ellipsis">
+      Algorithm
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pseudocode">
+<span class="md-ellipsis">
+      Pseudocode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flowchart">
+<span class="md-ellipsis">
+      Flowchart
+    </span>
+</a>
+<nav aria-label="Flowchart" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-symbols">
+<span class="md-ellipsis">
+      Common Symbols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-languages">
+<span class="md-ellipsis">
+      Programming Languages
+    </span>
+</a>
+<nav aria-label="Programming Languages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-level-language">
+<span class="md-ellipsis">
+      Machine Level Language
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assembly-language-low-level">
+<span class="md-ellipsis">
+      Assembly Language (Low-Level)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#high-level-language">
+<span class="md-ellipsis">
+      High-Level Language
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-translators">
+<span class="md-ellipsis">
+      Language Translators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flowchart-examples">
+<span class="md-ellipsis">
+      Flowchart Examples
+    </span>
+</a>
+<nav aria-label="Flowchart Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-the-maximum-of-n-numbers">
+<span class="md-ellipsis">
+      Find the Maximum of N Numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-the-minimum-of-n-numbers">
+<span class="md-ellipsis">
+      Find the Minimum of N Numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-the-average-of-n-numbers">
+<span class="md-ellipsis">
+      Find the Average of N Numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#display-first-n-terms-of-fibonacci-series">
+<span class="md-ellipsis">
+      Display First N Terms of Fibonacci Series
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-if-a-number-is-prime">
+<span class="md-ellipsis">
+      Check if a Number is Prime
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software">
+<span class="md-ellipsis">
+      Software
+    </span>
+</a>
+<nav aria-label="Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-software">
+<span class="md-ellipsis">
+      Application Software
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-software">
+<span class="md-ellipsis">
+      System Software
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operating-system-os">
+<span class="md-ellipsis">
+      Operating System (OS)
+    </span>
+</a>
+<nav aria-label="Operating System (OS)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions">
+<span class="md-ellipsis">
+      Functions:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#device-driver">
+<span class="md-ellipsis">
+      Device Driver
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-source-vs-proprietary-software">
+<span class="md-ellipsis">
+      Open-Source vs. Proprietary Software
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Introduction to C
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Introduction to C
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/syllabus/">
+<span class="md-ellipsis">
+    Syllabus
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Unit 1
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/u1-i/">
+<span class="md-ellipsis">
+    C Fundamentals and Program Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/u1-ii/">
+<span class="md-ellipsis">
+    Data, Variables, and Constants in C
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/u1-iii/">
+<span class="md-ellipsis">
+    Operators, Expressions, and I/O
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/u2/">
+<span class="md-ellipsis">
+    Unit 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/u3/">
+<span class="md-ellipsis">
+    Unit 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../c/u4/">
+<span class="md-ellipsis">
+    Unit 4
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu-and-instruction-cycle">
+<span class="md-ellipsis">
+      CPU and Instruction Cycle
+    </span>
+</a>
+<nav aria-label="CPU and Instruction Cycle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#control-unit-cu">
+<span class="md-ellipsis">
+      Control Unit (CU)
+    </span>
+</a>
+<nav aria-label="Control Unit (CU)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-of-the-control-unit">
+<span class="md-ellipsis">
+      Functions of the Control Unit
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computer-instruction-set">
+<span class="md-ellipsis">
+      Computer Instruction Set
+    </span>
+</a>
+<nav aria-label="Computer Instruction Set" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-instructions">
+<span class="md-ellipsis">
+      Types of Instructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instruction-execution-life-cycle">
+<span class="md-ellipsis">
+      Instruction Execution Life Cycle
+    </span>
+</a>
+<nav aria-label="Instruction Execution Life Cycle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stages-of-instruction-cycle">
+<span class="md-ellipsis">
+      Stages of Instruction Cycle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instruction-cycle-flowchart">
+<span class="md-ellipsis">
+      Instruction Cycle Flowchart
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-concepts">
+<span class="md-ellipsis">
+      Programming Concepts
+    </span>
+</a>
+<nav aria-label="Programming Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#program">
+<span class="md-ellipsis">
+      Program
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#algorithm">
+<span class="md-ellipsis">
+      Algorithm
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pseudocode">
+<span class="md-ellipsis">
+      Pseudocode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flowchart">
+<span class="md-ellipsis">
+      Flowchart
+    </span>
+</a>
+<nav aria-label="Flowchart" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-symbols">
+<span class="md-ellipsis">
+      Common Symbols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-languages">
+<span class="md-ellipsis">
+      Programming Languages
+    </span>
+</a>
+<nav aria-label="Programming Languages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-level-language">
+<span class="md-ellipsis">
+      Machine Level Language
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assembly-language-low-level">
+<span class="md-ellipsis">
+      Assembly Language (Low-Level)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#high-level-language">
+<span class="md-ellipsis">
+      High-Level Language
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-translators">
+<span class="md-ellipsis">
+      Language Translators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flowchart-examples">
+<span class="md-ellipsis">
+      Flowchart Examples
+    </span>
+</a>
+<nav aria-label="Flowchart Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-the-maximum-of-n-numbers">
+<span class="md-ellipsis">
+      Find the Maximum of N Numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-the-minimum-of-n-numbers">
+<span class="md-ellipsis">
+      Find the Minimum of N Numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-the-average-of-n-numbers">
+<span class="md-ellipsis">
+      Find the Average of N Numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#display-first-n-terms-of-fibonacci-series">
+<span class="md-ellipsis">
+      Display First N Terms of Fibonacci Series
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-if-a-number-is-prime">
+<span class="md-ellipsis">
+      Check if a Number is Prime
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software">
+<span class="md-ellipsis">
+      Software
+    </span>
+</a>
+<nav aria-label="Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-software">
+<span class="md-ellipsis">
+      Application Software
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-software">
+<span class="md-ellipsis">
+      System Software
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operating-system-os">
+<span class="md-ellipsis">
+      Operating System (OS)
+    </span>
+</a>
+<nav aria-label="Operating System (OS)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions">
+<span class="md-ellipsis">
+      Functions:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#device-driver">
+<span class="md-ellipsis">
+      Device Driver
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-source-vs-proprietary-software">
+<span class="md-ellipsis">
+      Open-Source vs. Proprietary Software
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Unit 5</h1>
+<h2 id="cpu-and-instruction-cycle">CPU and Instruction Cycle<a class="headerlink" href="#cpu-and-instruction-cycle" title="Permanent link">¶</a></h2>
+<h3 id="control-unit-cu">Control Unit (CU)<a class="headerlink" href="#control-unit-cu" title="Permanent link">¶</a></h3>
+<p>The <strong>Control Unit (CU)</strong> is a critical component of the <strong>Central Processing Unit (CPU)</strong> that directs the operation of the processor.<br/>
+It coordinates all the activities of the computer system by interpreting instructions and controlling the flow of data between the CPU and other components.</p>
+<h4 id="functions-of-the-control-unit">Functions of the Control Unit<a class="headerlink" href="#functions-of-the-control-unit" title="Permanent link">¶</a></h4>
+<ul>
+<li>Fetches instructions from memory.</li>
+<li>Decodes instructions to determine the operation to perform.</li>
+<li>Directs the ALU (Arithmetic Logic Unit) and registers to execute instructions.</li>
+<li>Manages timing and control signals for the CPU and peripherals.</li>
+<li>Controls the movement of data within the CPU and between the CPU and memory or I/O devices.</li>
+</ul>
+<hr/>
+<h3 id="computer-instruction-set">Computer Instruction Set<a class="headerlink" href="#computer-instruction-set" title="Permanent link">¶</a></h3>
+<p>An <strong>instruction set</strong> is the collection of instructions that a CPU can execute. Each instruction tells the processor what operation to perform.</p>
+<h4 id="types-of-instructions">Types of Instructions<a class="headerlink" href="#types-of-instructions" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Data Transfer Instructions:</strong> Move data between registers, memory, and I/O devices.<br/>
+  Example: <code>MOV A, B</code></li>
+<li><strong>Arithmetic Instructions:</strong> Perform arithmetic operations.<br/>
+  Example: <code>ADD A, B</code></li>
+<li><strong>Logical Instructions:</strong> Perform logical operations such as AND, OR, NOT.<br/>
+  Example: <code>AND A, B</code></li>
+<li><strong>Control Transfer Instructions:</strong> Change the sequence of execution.<br/>
+  Example: <code>JUMP</code>, <code>CALL</code>, <code>RETURN</code></li>
+<li><strong>Input/Output Instructions:</strong> Handle data transfer between CPU and I/O devices.<br/>
+  Example: <code>IN</code>, <code>OUT</code></li>
+</ul>
+<hr/>
+<h3 id="instruction-execution-life-cycle">Instruction Execution Life Cycle<a class="headerlink" href="#instruction-execution-life-cycle" title="Permanent link">¶</a></h3>
+<p>The <strong>Instruction Cycle</strong> is the process by which a CPU retrieves and executes an instruction.</p>
+<h4 id="stages-of-instruction-cycle">Stages of Instruction Cycle<a class="headerlink" href="#stages-of-instruction-cycle" title="Permanent link">¶</a></h4>
+<h5 id="1-fetch">1. Fetch<a class="headerlink" href="#1-fetch" title="Permanent link">¶</a></h5>
+<ul>
+<li>The control unit fetches the next instruction from memory.</li>
+<li>The address of the instruction is stored in the <strong>Program Counter (PC)</strong>.</li>
+<li>The instruction is loaded into the <strong>Instruction Register (IR)</strong>.</li>
+</ul>
+<h5 id="2-decode">2. Decode<a class="headerlink" href="#2-decode" title="Permanent link">¶</a></h5>
+<ul>
+<li>The CU interprets the fetched instruction to understand what operation to perform.</li>
+</ul>
+<h5 id="3-execute">3. Execute<a class="headerlink" href="#3-execute" title="Permanent link">¶</a></h5>
+<ul>
+<li>The decoded instruction is executed using the ALU and registers.</li>
+</ul>
+<h5 id="4-store">4. Store<a class="headerlink" href="#4-store" title="Permanent link">¶</a></h5>
+<ul>
+<li>The result of execution is written back to memory or a register.</li>
+</ul>
+<h4 id="instruction-cycle-flowchart">Instruction Cycle Flowchart<a class="headerlink" href="#instruction-cycle-flowchart" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[Fetch Instruction]
+    B --&gt; C[Decode Instruction]
+    C --&gt; D[Execute Instruction]
+    D --&gt; E[Store Result]
+    E --&gt; F[Next Instruction?]
+    F --&gt;|Yes| B
+    F --&gt;|No| G[Stop]
+</code></pre>
+<hr/>
+<h2 id="programming-concepts">Programming Concepts<a class="headerlink" href="#programming-concepts" title="Permanent link">¶</a></h2>
+<h3 id="program">Program<a class="headerlink" href="#program" title="Permanent link">¶</a></h3>
+<p>A <strong>program</strong> is a set of instructions written in a programming language that performs a specific task when executed by a computer.</p>
+<h3 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">¶</a></h3>
+<p>An <strong>algorithm</strong> is a step-by-step procedure or formula for solving a problem.
+It is written in natural or structured language and must be:</p>
+<ul>
+<li>Finite (has an end)</li>
+<li>Definite (clear and unambiguous)</li>
+<li>Effective (produces the desired result)</li>
+</ul>
+<h3 id="pseudocode">Pseudocode<a class="headerlink" href="#pseudocode" title="Permanent link">¶</a></h3>
+<p><strong>Pseudocode</strong> is a way of expressing algorithms using a mixture of natural language and programming constructs.
+It helps in designing algorithms without worrying about syntax.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>Start
+Input A, B
+Sum = A + B
+Display Sum
+End
+</code></pre></div>
+<h3 id="flowchart">Flowchart<a class="headerlink" href="#flowchart" title="Permanent link">¶</a></h3>
+<p>A <strong>flowchart</strong> is a graphical representation of an algorithm using symbols to represent operations and arrows to show the flow of control.</p>
+<h4 id="common-symbols">Common Symbols<a class="headerlink" href="#common-symbols" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭘</td>
+<td>Start/End</td>
+</tr>
+<tr>
+<td>⬛</td>
+<td>Process/Computation</td>
+</tr>
+<tr>
+<td>⧫</td>
+<td>Decision/Condition</td>
+</tr>
+<tr>
+<td>⬒</td>
+<td>Input/Output</td>
+</tr>
+<tr>
+<td>⟶</td>
+<td>Flow Line</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="programming-languages">Programming Languages<a class="headerlink" href="#programming-languages" title="Permanent link">¶</a></h2>
+<h3 id="machine-level-language">Machine Level Language<a class="headerlink" href="#machine-level-language" title="Permanent link">¶</a></h3>
+<ul>
+<li>Written in binary code (0s and 1s).</li>
+<li>Directly executed by the CPU.</li>
+<li>Very fast but difficult to write and understand.</li>
+<li>Hardware-dependent.</li>
+</ul>
+<p><strong>Example:</strong>
+<code>10110000 01100001</code></p>
+<hr/>
+<h3 id="assembly-language-low-level">Assembly Language (Low-Level)<a class="headerlink" href="#assembly-language-low-level" title="Permanent link">¶</a></h3>
+<ul>
+<li>Uses <strong>mnemonics</strong> instead of binary.</li>
+<li>Easier to understand than machine language.</li>
+<li>Requires an <strong>Assembler</strong> to convert to machine code.</li>
+<li>Hardware-dependent.</li>
+</ul>
+<p><strong>Example:</strong>
+<code>MOV A, B</code></p>
+<hr/>
+<h3 id="high-level-language">High-Level Language<a class="headerlink" href="#high-level-language" title="Permanent link">¶</a></h3>
+<ul>
+<li>Uses human-readable syntax.</li>
+<li>Portable across different hardware.</li>
+<li>Requires a <strong>Compiler</strong> or <strong>Interpreter</strong>.</li>
+<li>Examples: C, Python, Java, C++, JavaScript.</li>
+</ul>
+<p><strong>Example (Python):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div>
+<hr/>
+<h2 id="language-translators">Language Translators<a class="headerlink" href="#language-translators" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Translator</th>
+<th>Function</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assembler</strong></td>
+<td>Converts Assembly Language to Machine Language</td>
+<td>NASM, MASM</td>
+</tr>
+<tr>
+<td><strong>Compiler</strong></td>
+<td>Converts entire High-Level Program into Machine Code at once</td>
+<td>GCC, Clang</td>
+</tr>
+<tr>
+<td><strong>Interpreter</strong></td>
+<td>Translates and executes High-Level Code line by line</td>
+<td>Python, Ruby</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="flowchart-examples">Flowchart Examples<a class="headerlink" href="#flowchart-examples" title="Permanent link">¶</a></h2>
+<h3 id="find-the-maximum-of-n-numbers">Find the Maximum of N Numbers<a class="headerlink" href="#find-the-maximum-of-n-numbers" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[Input N]
+    B --&gt; C[Initialize i=1, max=first number]
+    C --&gt; D[Input next number]
+    D --&gt; E{Is number &gt; max?}
+    E --&gt;|Yes| F[Set max = number]
+    E --&gt;|No| G[No change]
+    F --&gt; H[Increment i]
+    G --&gt; H
+    H --&gt; I{All numbers checked?}
+    I --&gt;|No| D
+    I --&gt;|Yes| J[Display max]
+    J --&gt; K[End]
+</code></pre>
+<hr/>
+<h3 id="find-the-minimum-of-n-numbers">Find the Minimum of N Numbers<a class="headerlink" href="#find-the-minimum-of-n-numbers" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[Input N]
+    B --&gt; C[Initialize i=1, min=first number]
+    C --&gt; D[Input next number]
+    D --&gt; E{Is number &lt; min?}
+    E --&gt;|Yes| F[Set min = number]
+    E --&gt;|No| G[No change]
+    F --&gt; H[Increment i]
+    G --&gt; H
+    H --&gt; I{All numbers checked?}
+    I --&gt;|No| D
+    I --&gt;|Yes| J[Display min]
+    J --&gt; K[End]
+</code></pre>
+<hr/>
+<h3 id="find-the-average-of-n-numbers">Find the Average of N Numbers<a class="headerlink" href="#find-the-average-of-n-numbers" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[Input N]
+    B --&gt; C[Initialize sum=0, i=1]
+    C --&gt; D[Input number]
+    D --&gt; E[sum = sum + number]
+    E --&gt; F[Increment i]
+    F --&gt; G{i &lt;= N?}
+    G --&gt;|Yes| D
+    G --&gt;|No| H[avg = sum / N]
+    H --&gt; I[Display avg]
+    I --&gt; J[End]
+</code></pre>
+<hr/>
+<h3 id="display-first-n-terms-of-fibonacci-series">Display First N Terms of Fibonacci Series<a class="headerlink" href="#display-first-n-terms-of-fibonacci-series" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[Input N]
+    B --&gt; C[Initialize a=0, b=1, i=1]
+    C --&gt; D[Display a]
+    D --&gt; E[temp = a + b]
+    E --&gt; F[a = b, b = temp]
+    F --&gt; G[Increment i]
+    G --&gt; H{i &lt; N?}
+    H --&gt;|Yes| D
+    H --&gt;|No| I[End]
+</code></pre>
+<hr/>
+<h3 id="check-if-a-number-is-prime">Check if a Number is Prime<a class="headerlink" href="#check-if-a-number-is-prime" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    A["Start"] --&gt; B["Input num"]
+    B --&gt; C["Set i = 2, flag = 0"]
+    C --&gt; D{"i &lt;= num/2?"}
+    D --&gt;|No| H{"flag == 0?"}
+    D --&gt;|Yes| E{"num % i == 0?"}
+    E --&gt;|Yes| F["flag = 1; Break"]
+    E --&gt;|No| G["Increment i"]
+    F --&gt; H
+    G --&gt; D
+    H --&gt;|Yes| I["Display 'Prime'"]
+    H --&gt;|No| J["Display 'Not Prime'"]
+    I --&gt; K["End"]
+    J --&gt; K
+</code></pre>
+<hr/>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">¶</a></h2>
+<h3 id="application-software">Application Software<a class="headerlink" href="#application-software" title="Permanent link">¶</a></h3>
+<p><strong>Definition:</strong>
+Software designed to perform specific user-oriented tasks.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Microsoft Word (Word Processing)</li>
+<li>Adobe Photoshop (Image Editing)</li>
+<li>VLC Media Player (Media Playback)</li>
+<li>Google Chrome (Web Browsing)</li>
+</ul>
+<hr/>
+<h3 id="system-software">System Software<a class="headerlink" href="#system-software" title="Permanent link">¶</a></h3>
+<p><strong>Definition:</strong>
+Software designed to control and manage computer hardware and to provide a platform for running application software.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Windows OS, Linux OS</li>
+<li>Device Drivers</li>
+<li>Utility Programs (e.g., Disk Management Tools)</li>
+</ul>
+<hr/>
+<h3 id="operating-system-os">Operating System (OS)<a class="headerlink" href="#operating-system-os" title="Permanent link">¶</a></h3>
+<p>An <strong>Operating System</strong> is system software that manages hardware resources and provides common services for computer programs.</p>
+<h4 id="functions">Functions:<a class="headerlink" href="#functions" title="Permanent link">¶</a></h4>
+<ul>
+<li>Process Management</li>
+<li>Memory Management</li>
+<li>File System Management</li>
+<li>Device Management</li>
+<li>User Interface</li>
+</ul>
+<p><strong>Examples:</strong> Windows, macOS, Linux, Android</p>
+<hr/>
+<h3 id="device-driver">Device Driver<a class="headerlink" href="#device-driver" title="Permanent link">¶</a></h3>
+<p>A <strong>Device Driver</strong> is a program that allows the OS to communicate with hardware devices.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Printer Driver</li>
+<li>Graphics Card Driver</li>
+<li>Network Adapter Driver</li>
+</ul>
+<hr/>
+<h3 id="open-source-vs-proprietary-software">Open-Source vs. Proprietary Software<a class="headerlink" href="#open-source-vs-proprietary-software" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Open-Source Software</strong></td>
+<td>Source code is available publicly for modification and distribution.</td>
+<td>Linux, Apache, LibreOffice</td>
+</tr>
+<tr>
+<td><strong>Proprietary Software</strong></td>
+<td>Source code is owned and restricted by the developer or company.</td>
+<td>Microsoft Office, Adobe Photoshop, macOS</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+<script src="../../../js/katex.js"></script>
+<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+window.mermaidConfig = {default: {
+    startOnLoad: false
+}};</script></body>
+</html>
