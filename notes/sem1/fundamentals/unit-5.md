@@ -1,11 +1,11 @@
-# CPU and Instruction Cycle
+## CPU and Instruction Cycle
 
-## Control Unit (CU)
+### Control Unit (CU)
 
 The **Control Unit (CU)** is a critical component of the **Central Processing Unit (CPU)** that directs the operation of the processor.  
 It coordinates all the activities of the computer system by interpreting instructions and controlling the flow of data between the CPU and other components.
 
-### Functions of the Control Unit
+#### Functions of the Control Unit
 - Fetches instructions from memory.
 - Decodes instructions to determine the operation to perform.
 - Directs the ALU (Arithmetic Logic Unit) and registers to execute instructions.
@@ -14,11 +14,11 @@ It coordinates all the activities of the computer system by interpreting instruc
 
 ---
 
-## Computer Instruction Set
+### Computer Instruction Set
 
 An **instruction set** is the collection of instructions that a CPU can execute. Each instruction tells the processor what operation to perform.
 
-### Types of Instructions
+#### Types of Instructions
 - **Data Transfer Instructions:** Move data between registers, memory, and I/O devices.  
   Example: `MOV A, B`
 - **Arithmetic Instructions:** Perform arithmetic operations.  
@@ -32,27 +32,27 @@ An **instruction set** is the collection of instructions that a CPU can execute.
 
 ---
 
-## Instruction Execution Life Cycle
+### Instruction Execution Life Cycle
 
 The **Instruction Cycle** is the process by which a CPU retrieves and executes an instruction.
 
-### Stages of Instruction Cycle
+#### Stages of Instruction Cycle
 
-#### 1. Fetch
+##### 1. Fetch
 - The control unit fetches the next instruction from memory.
 - The address of the instruction is stored in the **Program Counter (PC)**.
 - The instruction is loaded into the **Instruction Register (IR)**.
 
-#### 2. Decode
+##### 2. Decode
 - The CU interprets the fetched instruction to understand what operation to perform.
 
-#### 3. Execute
+##### 3. Execute
 - The decoded instruction is executed using the ALU and registers.
 
-#### 4. Store
+##### 4. Store
 - The result of execution is written back to memory or a register.
 
-### Instruction Cycle Flowchart
+#### Instruction Cycle Flowchart
 
 ```mermaid
 flowchart TD
@@ -67,13 +67,13 @@ flowchart TD
 
 ---
 
-# Programming Concepts
+## Programming Concepts
 
-## Program
+### Program
 
 A **program** is a set of instructions written in a programming language that performs a specific task when executed by a computer.
 
-## Algorithm
+### Algorithm
 
 An **algorithm** is a step-by-step procedure or formula for solving a problem.
 It is written in natural or structured language and must be:
@@ -82,7 +82,7 @@ It is written in natural or structured language and must be:
 * Definite (clear and unambiguous)
 * Effective (produces the desired result)
 
-## Pseudocode
+### Pseudocode
 
 **Pseudocode** is a way of expressing algorithms using a mixture of natural language and programming constructs.
 It helps in designing algorithms without worrying about syntax.
@@ -97,11 +97,11 @@ Display Sum
 End
 ```
 
-## Flowchart
+### Flowchart
 
 A **flowchart** is a graphical representation of an algorithm using symbols to represent operations and arrows to show the flow of control.
 
-### Common Symbols
+#### Common Symbols
 
 | Symbol | Meaning             |
 | ------ | ------------------- |
@@ -113,9 +113,9 @@ A **flowchart** is a graphical representation of an algorithm using symbols to r
 
 ---
 
-# Programming Languages
+## Programming Languages
 
-## Machine Level Language
+### Machine Level Language
 
 * Written in binary code (0s and 1s).
 * Directly executed by the CPU.
@@ -127,7 +127,7 @@ A **flowchart** is a graphical representation of an algorithm using symbols to r
 
 ---
 
-## Assembly Language (Low-Level)
+### Assembly Language (Low-Level)
 
 * Uses **mnemonics** instead of binary.
 * Easier to understand than machine language.
@@ -139,7 +139,7 @@ A **flowchart** is a graphical representation of an algorithm using symbols to r
 
 ---
 
-## High-Level Language
+### High-Level Language
 
 * Uses human-readable syntax.
 * Portable across different hardware.
@@ -157,7 +157,7 @@ print(sum)
 
 ---
 
-# Language Translators
+## Language Translators
 
 | Translator      | Function                                                     | Example      |
 | --------------- | ------------------------------------------------------------ | ------------ |
@@ -167,9 +167,9 @@ print(sum)
 
 ---
 
-# Flowchart Examples
+## Flowchart Examples
 
-## Find the Maximum of N Numbers
+### Find the Maximum of N Numbers
 
 ```mermaid
 flowchart TD
@@ -189,7 +189,7 @@ flowchart TD
 
 ---
 
-## Find the Minimum of N Numbers
+### Find the Minimum of N Numbers
 
 ```mermaid
 flowchart TD
@@ -209,7 +209,7 @@ flowchart TD
 
 ---
 
-## Find the Average of N Numbers
+### Find the Average of N Numbers
 
 ```mermaid
 flowchart TD
@@ -227,7 +227,7 @@ flowchart TD
 
 ---
 
-## Display First N Terms of Fibonacci Series
+### Display First N Terms of Fibonacci Series
 
 ```mermaid
 flowchart TD
@@ -244,7 +244,7 @@ flowchart TD
 
 ---
 
-## Check if a Number is Prime
+### Check if a Number is Prime
 
 ```mermaid
 flowchart TD
@@ -265,9 +265,9 @@ flowchart TD
 
 ---
 
-# Software
+## Software
 
-## Application Software
+### Application Software
 
 **Definition:**
 Software designed to perform specific user-oriented tasks.
@@ -281,7 +281,7 @@ Software designed to perform specific user-oriented tasks.
 
 ---
 
-## System Software
+### System Software
 
 **Definition:**
 Software designed to control and manage computer hardware and to provide a platform for running application software.
@@ -294,11 +294,11 @@ Software designed to control and manage computer hardware and to provide a platf
 
 ---
 
-## Operating System (OS)
+### Operating System (OS)
 
 An **Operating System** is system software that manages hardware resources and provides common services for computer programs.
 
-### Functions:
+#### Functions:
 
 * Process Management
 * Memory Management
@@ -310,7 +310,7 @@ An **Operating System** is system software that manages hardware resources and p
 
 ---
 
-## Device Driver
+### Device Driver
 
 A **Device Driver** is a program that allows the OS to communicate with hardware devices.
 
@@ -322,7 +322,7 @@ A **Device Driver** is a program that allows the OS to communicate with hardware
 
 ---
 
-## Open-Source vs. Proprietary Software
+### Open-Source vs. Proprietary Software
 
 | Type                     | Definition                                                           | Example                                  |
 | ------------------------ | -------------------------------------------------------------------- | ---------------------------------------- |
